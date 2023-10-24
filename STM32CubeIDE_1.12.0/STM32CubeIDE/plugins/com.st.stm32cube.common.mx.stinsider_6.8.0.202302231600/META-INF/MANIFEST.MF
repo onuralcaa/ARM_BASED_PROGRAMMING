@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.st.stm32cube.common.mx.stinsider;singleton:=tru
+ e
+Bundle-Version: 6.8.0.202302231600
+Fragment-Host: com.st.stm32cube.common.mx
+Bundle-Vendor: %providerName
+Bundle-Localization: fragment
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-BundleShape: dir
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+

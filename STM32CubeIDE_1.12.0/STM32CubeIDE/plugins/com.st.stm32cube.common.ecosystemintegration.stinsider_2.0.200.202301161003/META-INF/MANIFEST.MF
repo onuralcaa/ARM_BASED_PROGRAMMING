@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Automatic-Module-Name: com.st.stm32cube.ide.mcu.productdb.stinsider
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.st.stm32cube.common.ecosystemintegration.stinsi
+ der;singleton:=true
+Bundle-Version: 2.0.200.202301161003
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-BundleShape: dir
+Require-Bundle: com.st.stm32cube.common.mx,com.st.stm32cube.common.ecosy
+ stemintegration,com.st.stm32cube.common.logger,org.eclipse.equinox.comm
+ on,org.eclipse.osgi,org.eclipse.core.runtime,com.st.stm32cube.ide.mcu.p
+ roductdb
+

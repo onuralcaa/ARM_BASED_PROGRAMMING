@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.st.stm32cube.ide.feature.cdt.lockdown"
+      label="%pluginName"
+      version="1.0.100.202301251044"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.cdt.lockdown"
+         download-size="3"
+         install-size="7"
+         version="1.0.100.202301251044"
+         unpack="false"/>
+
+</feature>

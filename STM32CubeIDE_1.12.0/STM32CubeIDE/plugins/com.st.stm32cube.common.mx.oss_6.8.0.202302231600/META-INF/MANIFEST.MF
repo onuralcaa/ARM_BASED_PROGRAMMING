@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.st.stm32cube.common.mx.oss;singleton:=true
+Bundle-Version: 6.8.0.202302231600
+Bundle-Activator: com.st.stm32cube.common.mx.oss.MxOssActivator
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Eclipse-BundleShape: dir
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.osgi,org.eclipse.core.resources,org.eclipse.
+ core.runtime,org.eclipse.swt,org.eclipse.ui.workbench,org.eclipse.jface
+Export-Package: com.st.stm32cube.common.mx.oss.core.awtswtbridge,com.st.
+ stm32cube.common.mx.oss.core.legacysupport
+Automatic-Module-Name: com.st.stm32cube.common.mx.oss
+

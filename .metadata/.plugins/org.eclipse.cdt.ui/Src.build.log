@@ -1,0 +1,10 @@
+18:30:28 **** Incremental Build of configuration Debug for project Src ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\stm32f0xx_hal_msp.c -std=gnu11 -O0 -g -fstack-usage -Wall -specs=nano.specs -o stm32f0xx_hal_msp.o 
+..\stm32f0xx_hal_msp.c:22:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+
+18:30:28 Build Finished (took 121ms)
+

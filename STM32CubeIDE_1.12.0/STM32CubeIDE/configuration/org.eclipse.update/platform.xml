@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1677686444673" transient="false">
+	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="com.st.stm32cube.ide.feature.common.services" version="2.2.0.202302091318" url="features/com.st.stm32cube.ide.feature.common.services_2.2.0.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.targetadapter" version="2.0.100.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.targetadapter_2.0.100.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.build" version="10.6.2.202205081303" url="features/org.eclipse.cdt.gnu.build_10.6.2.202205081303/" plugin-identifier="org.eclipse.cdt.build.gcc.ui">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.ecosystemintegration.ui" version="2.0.200.202302091318" url="features/com.st.stm32cube.common.feature.ecosystemintegration.ui_2.0.200.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linux.debug" version="2.1.300.202301271901" url="features/com.st.stm32cube.ide.feature.mpu.linux.debug_2.1.300.202301271901/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.common.services.mx" version="2.2.0.202302091318" url="features/com.st.stm32cube.ide.feature.common.services.mx_2.2.0.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.openocd" version="2.2.300.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.openocd_2.2.300.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.productdb.debug" version="2.0.500.202302211408" url="features/com.st.stm32cube.ide.feature.mcu.productdb.debug_2.0.500.202302211408/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.ecosystemintegration.stinsider" version="2.0.200.202301271415" url="features/com.st.stm32cube.common.feature.ecosystemintegration.stinsider_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="4.23.0.v20220308-0630" url="features/org.eclipse.e4.rcp_4.23.0.v20220308-0630/">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.projectcreation" version="2.1.100.202301271415" url="features/com.st.stm32cube.common.feature.projectcreation_2.1.100.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.documentation" version="2.0.500.202302221339" url="features/com.st.stm32cube.ide.feature.documentation_2.0.500.202302221339/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.gnu_tools_for_stm32.10_3_2021_10.bin" version="1.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.gnu_tools_for_stm32.10_3_2021_10.bin_1.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.startup" version="2.0.100.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.startup_2.0.100.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.rtosproxy" version="1.0.500.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.rtosproxy_1.0.500.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.debug.openocd" version="2.0.500.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.debug.openocd_2.0.500.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.debug.openocd" version="2.0.500.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.debug.openocd_2.0.500.202302091318/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.1800.v20220215-0126" url="features/org.eclipse.ecf.filetransfer.feature_3.14.1800.v20220215-0126/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linkerdb" version="2.0.300.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.linkerdb_2.0.300.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.linker" version="2.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.linker_2.0.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.stackanalyzer" version="2.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.stackanalyzer_2.0.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.linker.ui" version="2.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.linker.ui_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.cubeprogrammer" version="2.0.600.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.cubeprogrammer_2.0.600.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.cdt.launch.remote" version="10.6.2.202205081303" url="features/org.eclipse.cdt.launch.remote_10.6.2.202205081303/">
+		</feature>
+		<feature id="org.eclipse.cdt.platform" version="10.6.2.202205170638" url="features/org.eclipse.cdt.platform_10.6.2.202205170638/" plugin-identifier="org.eclipse.cdt.platform.branding">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.startup" version="2.0.200.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.startup_2.0.200.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.productdb" version="2.0.400.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.productdb_2.0.400.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.resources.common" version="2.0.400.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.resources.common_2.0.400.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.threadx" version="2.0.200.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.threadx_2.0.200.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.remote.serial" version="10.6.0.202201121912" url="features/org.eclipse.remote.serial_10.6.0.202201121912/" plugin-identifier="org.eclipse.remote.serial.ui">
+		</feature>
+		<feature id="org.eclipse.rcp" version="4.23.0.v20220308-0722" url="features/org.eclipse.rcp_4.23.0.v20220308-0722/">
+		</feature>
+		<feature id="org.eclipse.cdt.debug.gdbjtag" version="10.6.2.202205081303" url="features/org.eclipse.cdt.debug.gdbjtag_10.6.2.202205081303/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.ui" version="2.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.ui_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.4.1500.v20220223-1131" url="features/org.eclipse.equinox.p2.extras.feature_1.4.1500.v20220223-1131/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.build.ui" version="2.1.200.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.build.ui_2.1.200.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.debug.swv" version="3.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.debug.swv_3.0.300.202302091318/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.debug.jlink" version="2.1.100.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.debug.jlink_2.1.100.202302091318/">
+		</feature>
+		<feature id="org.eclipse.cdt" version="10.6.2.202205170638" url="features/org.eclipse.cdt_10.6.2.202205170638/">
+		</feature>
+		<feature id="org.eclipse.remote.console" version="10.6.0.202201121912" url="features/org.eclipse.remote.console_10.6.0.202201121912/">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.dsf" version="10.6.2.202205081303" url="features/org.eclipse.cdt.gnu.dsf_10.6.2.202205081303/" plugin-identifier="org.eclipse.cdt.dsf.gdb.ui">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.control.feature" version="10.6.0.202202251626" url="features/org.eclipse.tm.terminal.control.feature_10.6.0.202202251626/" plugin-identifier="org.eclipse.tm.terminal.control">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.productdb.debug" version="2.0.200.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.productdb.debug_2.0.200.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.debug" version="10.6.2.202205081303" url="features/org.eclipse.cdt.gnu.debug_10.6.2.202205081303/" plugin-identifier="org.eclipse.cdt.launch">
+		</feature>
+		<feature id="org.eclipse.cdt.native" version="10.6.2.202205170638" url="features/org.eclipse.cdt.native_10.6.2.202205170638/" plugin-identifier="org.eclipse.cdt.core.native">
+		</feature>
+		<feature id="org.eclipse.epp.mpc" version="1.9.3.v20220121-1317" url="features/org.eclipse.epp.mpc_1.9.3.v20220121-1317/" plugin-identifier="org.eclipse.epp.mpc.ui">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linux.openstlinux.core" version="2.0.300.202301271901" url="features/com.st.stm32cube.ide.feature.mpu.linux.openstlinux.core_2.0.300.202301271901/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.cdt.gdb" version="10.6.2.202205081303" url="features/org.eclipse.cdt.gdb_10.6.2.202205081303/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.stlink_gdb_server" version="2.0.500.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.stlink_gdb_server_2.0.500.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.toolchain" version="2.2.0.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.toolchain_2.2.0.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.projectnatures" version="2.0.100.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.projectnatures_2.0.100.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" version="1.4.1500.v20220223-1131" url="features/org.eclipse.equinox.p2.rcp.feature_1.4.1500.v20220223-1131/">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.mx" version="6.8.0.202302231600" url="features/com.st.stm32cube.common.feature.mx_6.8.0.202302231600/" plugin-identifier="com.st.stm32cube.common.mx">
+		</feature>
+		<feature id="org.eclipse.help" version="2.3.900.v20220308-0310" url="features/org.eclipse.help_2.3.900.v20220308-0310/" plugin-identifier="org.eclipse.help.base">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.logger" version="2.0.100.202301271415" url="features/com.st.stm32cube.common.feature.logger_2.0.100.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools" version="2.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.externaltools_2.0.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.ecf.core.ssl.feature" version="1.1.501.v20210409-2301" url="features/org.eclipse.ecf.core.ssl.feature_1.1.501.v20210409-2301/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.common.utils" version="2.0.200.202302091318" url="features/com.st.stm32cube.ide.feature.common.utils_2.0.200.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.cdt.lockdown" version="1.0.100.202301251044" url="features/com.st.stm32cube.ide.feature.cdt.lockdown_1.0.100.202301251044/">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.utils" version="2.0.200.202301271415" url="features/com.st.stm32cube.common.feature.utils_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.gnu_tools_for_stm32.10_3_2021_10" version="1.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.gnu_tools_for_stm32.10_3_2021_10_1.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.projecttree" version="2.0.100.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.projecttree_2.0.100.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.gnu_tools_for_stm32" version="2.1.0.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.gnu_tools_for_stm32_2.1.0.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.debug" version="2.0.300.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.debug_2.0.300.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.buildanalyzer" version="2.0.500.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.buildanalyzer_2.0.500.202302091318/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.stlinkserver" version="2.0.100.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.stlinkserver_2.0.100.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.resources.extended" version="2.0.300.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.resources.extended_2.0.300.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.cdt.build.crossgcc" version="10.6.2.202205081303" url="features/org.eclipse.cdt.build.crossgcc_10.6.2.202205081303/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.remote.serial" version="2.1.100.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.remote.serial_2.1.100.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.userstorage" version="1.2.0.v20210517-0327" url="features/org.eclipse.userstorage_1.2.0.v20210517-0327/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.remote.ssh" version="2.0.400.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.remote.ssh_2.0.400.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linux.toolchain" version="2.0.200.202301271901" url="features/com.st.stm32cube.ide.feature.mpu.linux.toolchain_2.0.200.202301271901/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.productdb" version="2.0.500.202302211408" url="features/com.st.stm32cube.ide.feature.mcu.productdb_2.0.500.202302211408/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.cdt.debug.ui.memory" version="10.6.2.202205081303" url="features/org.eclipse.cdt.debug.ui.memory_10.6.2.202205081303/" plugin-identifier="org.eclipse.cdt.debug.ui.memory.memorybrowser">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.mx.stinsider" version="6.8.0.202302231600" url="features/com.st.stm32cube.common.feature.mx.stinsider_6.8.0.202302231600/" plugin-identifier="com.st.stm32cube.common.mx">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.projecttree" version="2.0.100.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.projecttree_2.0.100.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.freertos" version="2.0.200.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.freertos_2.0.200.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.ide" version="2.0.400.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.ide_2.0.400.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.jre" version="2.4.100.202301160955" url="features/com.st.stm32cube.ide.feature.jre_2.4.100.202301160955/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" version="2.27.0.v20220123-0838" url="features/org.eclipse.emf.ecore_2.27.0.v20220123-0838/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.cyclomaticcomplexity" version="1.0.0.202302141316" url="features/com.st.stm32cube.ide.feature.mcu.cyclomaticcomplexity_1.0.0.202302141316/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.targetadapter" version="2.0.100.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.targetadapter_2.0.100.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.preferences" version="2.0.100.202301271415" url="features/com.st.stm32cube.common.feature.preferences_2.0.100.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.ide" version="2.2.0.202302200949" url="features/com.st.stm32cube.ide.feature.mcu.ide_2.2.0.202302200949/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.25.0.v20220123-0838" url="features/org.eclipse.emf.common_2.25.0.v20220123-0838/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linux.ide" version="2.0.500.202302082053" url="features/com.st.stm32cube.ide.feature.mpu.linux.ide_2.0.500.202302082053/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linux.projectcreation" version="2.0.500.202301271901" url="features/com.st.stm32cube.ide.feature.mpu.linux.projectcreation_2.0.500.202301271901/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.informationcenter" version="2.1.700.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.informationcenter_2.1.700.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.rcp" version="2.1.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.rcp_2.1.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.p2" version="2.1.100.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.p2_2.1.100.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.debug.stlink" version="2.1.400.202302151203" url="features/com.st.stm32cube.ide.feature.mcu.debug.stlink_2.1.400.202302151203/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.debug" version="3.1.0.202302130921" url="features/com.st.stm32cube.ide.feature.mcu.debug_3.1.0.202302130921/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.make" version="2.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.make_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui" version="2.4.1500.v20220223-1131" url="features/org.eclipse.equinox.p2.user.ui_2.4.1500.v20220223-1131/">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.ecosystemintegration" version="2.0.200.202301271415" url="features/com.st.stm32cube.common.feature.ecosystemintegration_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.discovery.feature" version="1.2.1100.v20220210-1157" url="features/org.eclipse.equinox.p2.discovery.feature_1.2.1100.v20220210-1157/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" version="1.6.1300.v20220223-1131" url="features/org.eclipse.equinox.p2.core.feature_1.6.1300.v20220223-1131/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.projectnatures" version="2.0.100.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.projectnatures_2.0.100.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.remote" version="10.6.0.202201121912" url="features/org.eclipse.remote_10.6.0.202201121912/" plugin-identifier="org.eclipse.remote.ui">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.converters" version="2.2.0.202302200949" url="features/com.st.stm32cube.ide.feature.mcu.converters_2.2.0.202302200949/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.toolchain.ui" version="2.1.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.toolchain.ui_2.1.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient5.feature" version="1.1.600.v20220215-0126" url="features/org.eclipse.ecf.filetransfer.httpclient5.feature_1.1.600.v20220215-0126/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.resources.common" version="2.0.400.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.resources.common_2.0.400.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.livewatch" version="2.0.200.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.livewatch_2.0.200.202302091318/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.analytics" version="2.2.200.202302151257" url="features/com.st.stm32cube.ide.feature.mcu.analytics_2.2.200.202302151257/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.debug.sfrview" version="2.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.debug.sfrview_2.0.300.202302091318/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.resources.extended" version="2.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.resources.extended_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.resources.threadsafe" version="2.0.300.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.resources.threadsafe_2.0.300.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mpu.linker" version="2.0.200.202301271900" url="features/com.st.stm32cube.ide.feature.mpu.linker_2.0.200.202301271900/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.ecf.core.feature" version="1.6.1.v20211005-1944" url="features/org.eclipse.ecf.core.feature_1.6.1.v20211005-1944/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.gnu_arm_embedded" version="2.0.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.gnu_arm_embedded_2.0.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.projectcreation.ui" version="2.0.300.202302091318" url="features/com.st.stm32cube.common.feature.projectcreation.ui_2.0.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="org.eclipse.platform" version="4.23.0.v20220308-0722" url="features/org.eclipse.platform_4.23.0.v20220308-0722/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.common.services.adapted" version="2.2.0.202302091318" url="features/com.st.stm32cube.ide.feature.common.services.adapted_2.2.0.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.toolchain.arm_none" version="2.2.0.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.toolchain.arm_none_2.2.0.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.externaltools.jlink" version="2.1.200.202301271415" url="features/com.st.stm32cube.ide.feature.mcu.externaltools.jlink_2.1.200.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.common.feature.logger.ui" version="2.0.100.202301271415" url="features/com.st.stm32cube.common.feature.logger.ui_2.0.100.202301271415/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.build" version="2.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.build_2.0.300.202302091318/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.faultanalyzer" version="2.0.200.202302091318" url="features/com.st.stm32cube.ide.feature.mcu.faultanalyzer_2.0.200.202302091318/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature" version="1.1.401.v20210409-2301" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.401.v20210409-2301/">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.mcu.linkerdb" version="2.0.500.202301301146" url="features/com.st.stm32cube.ide.feature.mcu.linkerdb_2.0.500.202301301146/" plugin-identifier="com.st.stm32cube.ide.mcu.ide">
+		</feature>
+		<feature id="com.st.stm32cube.ide.feature.common.ui" version="2.0.300.202302091318" url="features/com.st.stm32cube.ide.feature.common.ui_2.0.300.202302091318/">
+		</feature>
+	</site>
+</config>

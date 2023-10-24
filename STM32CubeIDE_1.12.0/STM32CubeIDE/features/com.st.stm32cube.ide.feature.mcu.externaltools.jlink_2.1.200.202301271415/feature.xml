@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.st.stm32cube.ide.feature.mcu.externaltools.jlink"
+      label="%pluginName"
+      version="2.1.200.202301271415"
+      provider-name="%providerName"
+      plugin="com.st.stm32cube.ide.mcu.ide">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import plugin="com.st.stm32cube.ide.mcu.externaltools"/>
+   </requires>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.externaltools.jlink"
+         download-size="7"
+         install-size="11"
+         version="2.1.100.202301161003"
+         unpack="false"/>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.externaltools.jlink.win32"
+         os="win32"
+         download-size="93900"
+         install-size="154315"
+         version="2.1.200.202301161003"
+         fragment="true"/>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.externaltools.jlink.linux64"
+         os="linux"
+         arch="x86_64"
+         download-size="155912"
+         install-size="356373"
+         version="2.1.200.202301161003"
+         fragment="true"/>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.externaltools.jlink.macos64"
+         os="macosx"
+         ws="cocoa"
+         arch="x86_64"
+         download-size="233460"
+         install-size="516952"
+         version="2.1.200.202301161003"
+         fragment="true"/>
+
+</feature>

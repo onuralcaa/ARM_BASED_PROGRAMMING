@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.0
+Build-Jdk-Spec: 11
+Automatic-Module-Name: com.st.stm32cube.common.ecosystemintegration.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.st.stm32cube.common.ecosystemintegration.ui;sin
+ gleton:=true
+Bundle-Version: 2.0.200.202302091318
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.core.runtime,com.st.stm32cube.common.logger,
+ org.eclipse.core.resources,com.st.stm32cube.common.ecosystemintegration
+ ,org.eclipse.jface,org.eclipse.ui.ide
+Eclipse-BundleShape: dir
+Export-Package: com.st.stm32cube.common.ecosystemintegration.ui.core,com
+ .st.stm32cube.common.ecosystemintegration.ui.registry
+

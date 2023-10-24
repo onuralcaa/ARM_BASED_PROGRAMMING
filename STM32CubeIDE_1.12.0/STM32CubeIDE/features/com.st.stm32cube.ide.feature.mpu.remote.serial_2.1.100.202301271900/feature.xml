@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.st.stm32cube.ide.feature.mpu.remote.serial"
+      label="%featureName"
+      version="2.1.100.202301271900"
+      provider-name="%providerName"
+      plugin="com.st.stm32cube.ide.mcu.ide">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.cdt.native" version="10.6.0" match="compatible"/>
+      <import feature="org.eclipse.remote.serial" version="10.6.0" match="equivalent"/>
+      <import feature="org.eclipse.remote.console" version="10.6.0" match="equivalent"/>
+      <import feature="org.eclipse.remote" version="10.6.0" match="equivalent"/>
+   </requires>
+
+   <plugin
+         id="com.st.stm32cube.ide.mpu.remote.serial"
+         os="linux,win32"
+         download-size="53"
+         install-size="97"
+         version="2.0.200.202301161420"
+         unpack="false"/>
+
+   <plugin
+         id="com.st.stm32cube.ide.mpu.remote.serial.oss"
+         os="linux,win32"
+         download-size="15"
+         install-size="26"
+         version="2.0.100.202301161420"
+         unpack="false"/>
+
+</feature>

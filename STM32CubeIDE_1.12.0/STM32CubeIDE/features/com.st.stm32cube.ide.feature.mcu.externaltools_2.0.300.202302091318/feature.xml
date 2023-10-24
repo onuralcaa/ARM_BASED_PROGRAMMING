@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.st.stm32cube.ide.feature.mcu.externaltools"
+      label="%pluginName"
+      version="2.0.300.202302091318"
+      provider-name="%providerName"
+      plugin="com.st.stm32cube.ide.mcu.ide">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.externaltools"
+         download-size="44"
+         install-size="85"
+         version="2.0.300.202302091318"
+         unpack="false"/>
+
+   <plugin
+         id="com.st.stm32cube.ide.mcu.externaltools.oss"
+         download-size="8"
+         install-size="12"
+         version="2.0.100.202301161003"
+         unpack="false"/>
+
+</feature>

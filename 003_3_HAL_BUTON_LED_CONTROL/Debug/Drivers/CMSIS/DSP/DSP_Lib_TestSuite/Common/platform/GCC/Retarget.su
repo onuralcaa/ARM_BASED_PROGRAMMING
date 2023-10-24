@@ -1,0 +1,10 @@
+Retarget.c:20:5:SER_PutChar	16	static
+Retarget.c:25:5:SER_GetChar	4	static
+Retarget.c:35:5:_open	12	static
+Retarget.c:40:5:_close	16	static
+Retarget.c:45:5:_lseek	24	static
+Retarget.c:50:27:_fstat	16	static
+Retarget.c:57:5:_isatty	16	static
+Retarget.c:62:5:_read	32	static
+Retarget.c:77:5:_write	32	static
+Retarget.c:85:9:_sbrk	24	static

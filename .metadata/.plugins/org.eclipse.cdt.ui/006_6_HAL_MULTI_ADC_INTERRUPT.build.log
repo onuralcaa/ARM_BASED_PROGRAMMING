@@ -1,0 +1,7 @@
+23:01:41 **** Incremental Build of configuration Debug for project 006_6_HAL_MULTI_ADC_INTERRUPT ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-objcopy.exe -O ihex 006_6_HAL_MULTI_ADC_INTERRUPT.elf 006_6_HAL_MULTI_ADC_INTERRUPT.hex 
+Info: Parallel threads used: 0
+
+23:01:41 Build Finished (took 150ms)
+

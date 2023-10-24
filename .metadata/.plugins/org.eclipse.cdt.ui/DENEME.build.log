@@ -1,0 +1,9 @@
+13:07:20 **** Incremental Build of configuration Debug for project DENEME ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -o DENEME.elf Core\Src\main.o Core\Src\stm32f0xx_hal_msp.o Core\Src\stm32f0xx_it.o Core\Src\syscalls.o Core\Src\system_stm32f0xx.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_dma.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_exti.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash_ex.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c_ex.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_pwr.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_pwr_ex.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc_ex.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim.o Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim_ex.o startup\startup_stm32f030x6.o -mthumb -mcpu=cortex-m0 -T../STM32F030F4_FLASH.ld -specs=nosys.specs -static -Wl,-Map=DENEME.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe: cannot open linker script file ../STM32F030F4_FLASH.ld: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+Info: Parallel threads used: 1
+
+13:07:20 Build Finished (took 144ms)
+
