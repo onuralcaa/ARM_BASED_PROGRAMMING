@@ -6,9 +6,9 @@
 		<item key="DIALOG_HEIGHT" value="616"/>
 	</section>
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATION_PROPERTIES_DIALOG_SECTION">
-		<item key="DIALOG_WIDTH" value="795"/>
+		<item key="DIALOG_WIDTH" value="906"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.134328|0|WINDOWS|1|-17|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
-		<item key="DIALOG_HEIGHT" value="1014"/>
+		<item key="DIALOG_HEIGHT" value="702"/>
 	</section>
 	<section name="org.eclipse.debug.ui.sourcelookup.SourceLookupDialog">
 		<item key="DIALOG_WIDTH" value="788"/>
