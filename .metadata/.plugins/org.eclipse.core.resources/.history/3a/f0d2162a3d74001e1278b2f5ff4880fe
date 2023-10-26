@@ -1,0 +1,62 @@
+/*
+ * MPU6050.c
+ *
+ *  Created on: 26 Eki 2023
+ *      Author: onura
+ */
+
+#include "mpu6050.h"
+
+extern I2C_HandleTypeDef hi2c1;
+
+//Fonksiyon prototipleri
+uint8_t sensor_read_register(uint8_t address);
+
+
+
+sensor_status_e MPU_6050_TestSensor()
+{
+	HAL_StatusTypeDef status;
+
+	status = HAL_I2C_IsDeviceReady(&hi2c1, MPU_6050_I2C_ADDRESS_AD1, 4, 100);
+
+	if(HAL_OK == status)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+
+}
+
+sensor_status_e MPU6050_ReadID()
+{
+	int32_t IDval = 0;
+	int8_t buffer[1];
+	HAL_StatusTypeDef status;
+
+	HAL_I2C_Mem_Read(&hi2c1, MPU_6050_I2C_ADDRESS_AD1, MPU_REG_WHO_AM_I, 1, buffer, 1, 100);
+
+	if(status != HAL_OK)
+	{
+		//todo
+	}
+
+	if(0x68 == buffer[0])
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+
+}
+
+
+
+
+
+

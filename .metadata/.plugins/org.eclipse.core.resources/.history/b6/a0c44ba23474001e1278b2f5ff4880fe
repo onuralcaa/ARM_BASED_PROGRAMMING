@@ -1,0 +1,14 @@
+/*
+ * MPU6050.h
+ *
+ *  Created on: 26 Eki 2023
+ *      Author: onura
+ */
+
+#ifndef HWDRIVERS_MPU6050_H_
+#define HWDRIVERS_MPU6050_H_
+
+int16_t MPU_6050_TestSensor(void);
+int32_t MPU6050_ReadID(void);
+
+#endif /* HWDRIVERS_MPU6050_H_ */

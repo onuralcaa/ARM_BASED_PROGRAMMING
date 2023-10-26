@@ -1,0 +1,2 @@
+mpu6050.c:11:17:MPU_6050_TestSensor	1
+mpu6050.c:21:9:MPU6050_ReadID	1

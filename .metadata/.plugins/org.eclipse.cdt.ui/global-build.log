@@ -1,74 +1,7 @@
-00:00:54 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'MPU6050_ReadID':
-../Core/Src/main.c:138:47: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Read' differ in signedness [-Wpointer-sign]
-  138 |  HAL_I2C_Mem_Read(&hi2c1, (0x69<<1), 0x75, 1, buffer, 1, 100);
-      |                                               ^~~~~~
-      |                                               |
-      |                                               int8_t * {aka signed char *}
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:363,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int8_t *' {aka 'signed char *'}
-  571 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                                                                            ~~~~~~~~~^~~~~
-../Core/Src/main.c:134:10: warning: unused variable 'IDval' [-Wunused-variable]
-  134 |  int32_t IDval = 0;
-      |          ^~~~~
-arm-none-eabi-gcc -o "002_2_MPU_ADDRESS_EXAMPLE_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\002_2_MPU_ADDRESS_EXAMPLE_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_2_MPU_ADDRESS_EXAMPLE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 002_2_MPU_ADDRESS_EXAMPLE_2.elf
- 
-arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
-arm-none-eabi-objdump -h -S  002_2_MPU_ADDRESS_EXAMPLE_2.elf  > "002_2_MPU_ADDRESS_EXAMPLE_2.list"
-   text	   data	    bss	    dec	    hex	filename
-  10080	     20	   1652	  11752	   2de8	002_2_MPU_ADDRESS_EXAMPLE_2.elf
-Finished building: default.size.stdout
- 
-Finished building: 002_2_MPU_ADDRESS_EXAMPLE_2.list
- 
-00:01:08 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+00:33:04 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
 make -j8 all 
 arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
    text	   data	    bss	    dec	    hex	filename
-  10080	     20	   1652	  11752	   2de8	002_2_MPU_ADDRESS_EXAMPLE_2.elf
-Finished building: default.size.stdout
- 
-00:02:22 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'MPU6050_ReadID':
-../Core/Src/main.c:138:47: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Read' differ in signedness [-Wpointer-sign]
-  138 |  HAL_I2C_Mem_Read(&hi2c1, (0x69<<1), 0x75, 1, buffer, 1, 100);
-      |                                               ^~~~~~
-      |                                               |
-      |                                               int8_t * {aka signed char *}
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:363,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:133: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int8_t *' {aka 'signed char *'}
-  571 | HAL_StatusTypeDef HAL_I2C_Mem_Read(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                                                                            ~~~~~~~~~^~~~~
-../Core/Src/main.c:134:10: warning: unused variable 'IDval' [-Wunused-variable]
-  134 |  int32_t IDval = 0;
-      |          ^~~~~
-arm-none-eabi-gcc -o "002_2_MPU_ADDRESS_EXAMPLE_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\002_2_MPU_ADDRESS_EXAMPLE_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_2_MPU_ADDRESS_EXAMPLE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 002_2_MPU_ADDRESS_EXAMPLE_2.elf
- 
-arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
-arm-none-eabi-objdump -h -S  002_2_MPU_ADDRESS_EXAMPLE_2.elf  > "002_2_MPU_ADDRESS_EXAMPLE_2.list"
-   text	   data	    bss	    dec	    hex	filename
-  10080	     20	   1652	  11752	   2de8	002_2_MPU_ADDRESS_EXAMPLE_2.elf
-Finished building: default.size.stdout
- 
-Finished building: 002_2_MPU_ADDRESS_EXAMPLE_2.list
- 
-00:03:45 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
-make -j8 all 
-arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10080	     20	   1652	  11752	   2de8	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+  10160	     20	   1652	  11832	   2e38	002_2_MPU_ADDRESS_EXAMPLE_2.elf
 Finished building: default.size.stdout
  

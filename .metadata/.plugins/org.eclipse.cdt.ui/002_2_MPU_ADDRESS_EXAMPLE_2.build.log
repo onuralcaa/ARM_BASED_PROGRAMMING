@@ -1,10 +1,10 @@
-00:03:45 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+00:33:04 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
 make -j8 all 
 arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
    text	   data	    bss	    dec	    hex	filename
-  10080	     20	   1652	  11752	   2de8	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+  10160	     20	   1652	  11832	   2e38	002_2_MPU_ADDRESS_EXAMPLE_2.elf
 Finished building: default.size.stdout
  
 
-00:03:45 Build Finished. 0 errors, 0 warnings. (took 283ms)
+00:33:04 Build Finished. 0 errors, 0 warnings. (took 251ms)
 

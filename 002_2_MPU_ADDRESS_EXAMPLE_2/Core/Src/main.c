@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "mpu6050.h"
 
 /* USER CODE END Includes */
 
@@ -52,8 +53,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
-static int16_t MPU_6050_TestSensor(void);
-static int32_t MPU6050_ReadID(void);
+
 
 /* USER CODE END PFP */
 
@@ -111,49 +111,6 @@ int main(void)
   }
   /* USER CODE END 3 */
 }
-
-int16_t MPU_6050_TestSensor()
-{
-	HAL_StatusTypeDef status;
-
-	status = HAL_I2C_IsDeviceReady(&hi2c1, (0x69<<1), 4, 100);
-
-	if(HAL_OK == status)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-
-}
-
-int32_t MPU6050_ReadID()
-{
-	int32_t IDval = 0;
-	int8_t buffer[1];
-	HAL_StatusTypeDef status;
-
-	HAL_I2C_Mem_Read(&hi2c1, (0x69<<1), 0x75, 1, buffer, 1, 100);
-
-	if(status != HAL_OK)
-	{
-		//todo
-	}
-
-	if(0x68 == buffer[0])
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-
-}
-
-
 
 
 
