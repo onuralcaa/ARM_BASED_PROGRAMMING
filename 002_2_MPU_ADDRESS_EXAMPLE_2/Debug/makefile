@@ -62,7 +62,7 @@ main-build: 002_2_MPU_ADDRESS_EXAMPLE_2.elf secondary-outputs
 
 # Tool invocations
 002_2_MPU_ADDRESS_EXAMPLE_2.elf 002_2_MPU_ADDRESS_EXAMPLE_2.map: $(OBJS) $(USER_OBJS) C:\Users\onura\STM32CubeIDE\workspace_1.11.0\002_2_MPU_ADDRESS_EXAMPLE_2\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "002_2_MPU_ADDRESS_EXAMPLE_2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\002_2_MPU_ADDRESS_EXAMPLE_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_2_MPU_ADDRESS_EXAMPLE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "002_2_MPU_ADDRESS_EXAMPLE_2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\002_2_MPU_ADDRESS_EXAMPLE_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_2_MPU_ADDRESS_EXAMPLE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

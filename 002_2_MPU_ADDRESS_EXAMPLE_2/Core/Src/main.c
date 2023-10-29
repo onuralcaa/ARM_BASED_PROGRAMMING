@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "mpu6050.h"
+#include "sensortest.h"
 
 /* USER CODE END Includes */
 
@@ -42,6 +43,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
+
+
 
 /* USER CODE BEGIN PV */
 
@@ -93,8 +96,10 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
-  MPU_6050_TestSensor();
-  MPU6050_ReadID();
+
+
+  sensorTest_init();
+
 
   /* USER CODE END 2 */
 
@@ -105,6 +110,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+      sensorTest_Data();
 
 	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
 	  HAL_Delay(500);

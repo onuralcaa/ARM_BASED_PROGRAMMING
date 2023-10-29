@@ -1,0 +1,4 @@
+../Core/Src/sensortest.c:16:6:sensorTest_init	8	static
+../Core/Src/sensortest.c:21:6:sensorTest_print_acc_values	144	static
+../Core/Src/sensortest.c:32:6:sensorTest_print_gyro_values	144	static
+../Core/Src/sensortest.c:43:6:sensorTest_Data	56	static

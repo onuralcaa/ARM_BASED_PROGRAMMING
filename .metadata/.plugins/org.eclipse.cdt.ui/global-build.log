@@ -1,7 +1,88 @@
-00:33:04 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+01:20:47 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/sensortest.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/hwdrivers -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sensortest.d" -MT"Core/Src/sensortest.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sensortest.o"
+../Core/Src/sensortest.c: In function 'sensorTest_print_acc_values':
+../Core/Src/sensortest.c:28:11: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   28 |     len = sprintf(buffer,"Acc: X:%f Y:%f Z:%f\n",sensorData.acc.X, sensorData.acc.Y, sensorData.acc.Z );
+      |           ^~~~~~~
+../Core/Src/sensortest.c:28:11: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/sensortest.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    8 | #include "mpu6050.h"
+  +++ |+#include <stdio.h>
+    9 | //#include "usbd_cdc_if.h"
+../Core/Src/sensortest.c:24:13: warning: variable 'len' set but not used [-Wunused-but-set-variable]
+   24 |     int32_t len;
+      |             ^~~
+../Core/Src/sensortest.c: In function 'sensorTest_print_gyro_values':
+../Core/Src/sensortest.c:39:11: warning: incompatible implicit declaration of built-in function 'sprintf'
+   39 |     len = sprintf(buffer,"Gyro: X:%f Y:%f Z:%f\n",sensorData.gyro.X, sensorData.gyro.Y, sensorData.gyro.Z );
+      |           ^~~~~~~
+../Core/Src/sensortest.c:39:11: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/sensortest.c:35:13: warning: variable 'len' set but not used [-Wunused-but-set-variable]
+   35 |     int32_t len;
+      |             ^~~
+../Core/Src/sensortest.c: In function 'sensorTest_Data':
+../Core/Src/sensortest.c:48:23: warning: variable 'GyroZ' set but not used [-Wunused-but-set-variable]
+   48 |  double GyroX, GyroY, GyroZ;
+      |                       ^~~~~
+../Core/Src/sensortest.c:48:16: warning: variable 'GyroY' set but not used [-Wunused-but-set-variable]
+   48 |  double GyroX, GyroY, GyroZ;
+      |                ^~~~~
+../Core/Src/sensortest.c:48:9: warning: variable 'GyroX' set but not used [-Wunused-but-set-variable]
+   48 |  double GyroX, GyroY, GyroZ;
+      |         ^~~~~
+../Core/Src/sensortest.c:47:21: warning: variable 'AccZ' set but not used [-Wunused-but-set-variable]
+   47 |  double AccX, AccY, AccZ;
+      |                     ^~~~
+../Core/Src/sensortest.c:47:15: warning: variable 'AccY' set but not used [-Wunused-but-set-variable]
+   47 |  double AccX, AccY, AccZ;
+      |               ^~~~
+../Core/Src/sensortest.c:47:9: warning: variable 'AccX' set but not used [-Wunused-but-set-variable]
+   47 |  double AccX, AccY, AccZ;
+      |         ^~~~
+arm-none-eabi-gcc -o "002_2_MPU_ADDRESS_EXAMPLE_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\002_2_MPU_ADDRESS_EXAMPLE_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_2_MPU_ADDRESS_EXAMPLE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 002_2_MPU_ADDRESS_EXAMPLE_2.elf
+ 
+arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
+arm-none-eabi-objdump -h -S  002_2_MPU_ADDRESS_EXAMPLE_2.elf  > "002_2_MPU_ADDRESS_EXAMPLE_2.list"
+   text	   data	    bss	    dec	    hex	filename
+  26212	    484	   1752	  28448	   6f20	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 002_2_MPU_ADDRESS_EXAMPLE_2.list
+ 
+01:20:53 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
 make -j8 all 
 arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
    text	   data	    bss	    dec	    hex	filename
-  10160	     20	   1652	  11832	   2e38	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+  26212	    484	   1752	  28448	   6f20	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+Finished building: default.size.stdout
+ 
+01:22:00 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+make -j8 all 
+arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26212	    484	   1752	  28448	   6f20	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+Finished building: default.size.stdout
+ 
+01:23:22 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+make -j8 all 
+arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26212	    484	   1752	  28448	   6f20	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+Finished building: default.size.stdout
+ 
+01:23:36 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+make -j8 all 
+arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26212	    484	   1752	  28448	   6f20	002_2_MPU_ADDRESS_EXAMPLE_2.elf
+Finished building: default.size.stdout
+ 
+01:23:55 **** Incremental Build of configuration Debug for project 002_2_MPU_ADDRESS_EXAMPLE_2 ****
+make -j8 all 
+arm-none-eabi-size   002_2_MPU_ADDRESS_EXAMPLE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26212	    484	   1752	  28448	   6f20	002_2_MPU_ADDRESS_EXAMPLE_2.elf
 Finished building: default.size.stdout
  

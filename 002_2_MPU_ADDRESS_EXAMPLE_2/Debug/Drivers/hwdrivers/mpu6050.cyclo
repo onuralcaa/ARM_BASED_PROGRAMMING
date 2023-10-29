@@ -1,2 +1,7 @@
-mpu6050.c:11:17:MPU_6050_TestSensor	1
-mpu6050.c:21:9:MPU6050_ReadID	1
+mpu6050.c:14:17:MPU6050_initialize	3
+mpu6050.c:32:17:MPU6050_set_gyro_range	5
+mpu6050.c:53:17:MPU6050_set_acc_range	5
+mpu6050.c:74:17:MPU6050_test_sensor	1
+mpu6050.c:82:9:MPU6050_read_id	1
+mpu6050.c:89:17:MPU6050_set_sleep_mode	2
+mpu6050.c:108:17:MPU6050_read_data	2
