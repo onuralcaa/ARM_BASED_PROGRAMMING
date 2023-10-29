@@ -1,6 +1,6 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_2_MPU_ADDRESS_EXAMPLE_2,org.eclipse.launchbar.core.descriptorType.default\:008_2_PWM_ILE_LED_F030,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_3_MPU6050_WITH_COMP_FILTER
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:008_2_PWM_ILE_LED_F030,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_2_MPU_ADDRESS_EXAMPLE_2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_3_MPU6050_WITH_COMP_FILTER
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_2_MPU_ADDRESS_EXAMPLE_2/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:001_HAL_SYSTEM_CLK_CONFIG.elf/activeLaunchMode=debug
