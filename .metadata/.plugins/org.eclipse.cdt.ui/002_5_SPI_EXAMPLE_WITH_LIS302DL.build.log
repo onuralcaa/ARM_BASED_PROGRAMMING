@@ -1,0 +1,10 @@
+00:05:11 **** Incremental Build of configuration Debug for project 002_5_SPI_EXAMPLE_WITH_LIS302DL ****
+make -j8 all 
+arm-none-eabi-size   002_5_SPI_EXAMPLE_WITH_LIS302DL.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9204	     20	   1660	  10884	   2a84	002_5_SPI_EXAMPLE_WITH_LIS302DL.elf
+Finished building: default.size.stdout
+ 
+
+00:05:12 Build Finished. 0 errors, 0 warnings. (took 237ms)
+
