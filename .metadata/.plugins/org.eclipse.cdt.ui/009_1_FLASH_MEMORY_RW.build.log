@@ -1,0 +1,10 @@
+01:14:09 **** Incremental Build of configuration Debug for project 009_1_FLASH_MEMORY_RW ****
+make -j8 all 
+arm-none-eabi-size   009_1_FLASH_MEMORY_RW.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6060	     20	   1612	   7692	   1e0c	009_1_FLASH_MEMORY_RW.elf
+Finished building: default.size.stdout
+ 
+
+01:14:09 Build Finished. 0 errors, 0 warnings. (took 249ms)
+
