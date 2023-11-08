@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;010_1_USB_VCP&apos;" deleteContents="false" description="Delete resource &apos;010_1_USB_VCP&apos;" element1="/010_1_USB_VCP" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1699470219522"/>
+</session>
