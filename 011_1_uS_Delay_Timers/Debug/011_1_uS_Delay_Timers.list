@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  0002000c  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00008716  00000000  00000000  0002003c  2**0
+ 13 .debug_info   00008718  00000000  00000000  0002003c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000013b0  00000000  00000000  00028752  2**0
+ 14 .debug_abbrev 000013cc  00000000  00000000  00028754  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000948  00000000  00000000  00029b08  2**3
+ 15 .debug_aranges 00000948  00000000  00000000  00029b20  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 000008a0  00000000  00000000  0002a450  2**3
+ 16 .debug_ranges 000008a0  00000000  00000000  0002a468  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  0001fa96  00000000  00000000  0002acf0  2**0
+ 17 .debug_macro  0001fa96  00000000  00000000  0002ad08  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00009bd9  00000000  00000000  0004a786  2**0
+ 18 .debug_line   00009bd9  00000000  00000000  0004a79e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000c463b  00000000  00000000  0005435f  2**0
+ 19 .debug_str    000c463b  00000000  00000000  00054377  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000050  00000000  00000000  0011899a  2**0
+ 20 .comment      00000050  00000000  00000000  001189b2  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  000026b0  00000000  00000000  001189ec  2**2
+ 21 .debug_frame  000026b0  00000000  00000000  00118a04  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -394,14 +394,14 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	delay_uS(1000);
- 80004e6:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+	delay_uS(1000000);
+ 80004e6:	f244 2040 	movw	r0, #16960	; 0x4240
  80004ea:	f000 f903 	bl	80006f4 <delay_uS>
 	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
  80004ee:	f44f 5180 	mov.w	r1, #4096	; 0x1000
  80004f2:	4803      	ldr	r0, [pc, #12]	; (8000500 <main+0x34>)
  80004f4:	f000 fcc2 	bl	8000e7c <HAL_GPIO_TogglePin>
-	delay_uS(1000);
+	delay_uS(1000000);
  80004f8:	e7f5      	b.n	80004e6 <main+0x1a>
  80004fa:	bf00      	nop
  80004fc:	20000028 	.word	0x20000028

@@ -1,0 +1,10 @@
+22:52:22 **** Incremental Build of configuration Debug for project 012_1_STRING_PARSE_GPS_DATA ****
+make -j8 all 
+arm-none-eabi-size   012_1_STRING_PARSE_GPS_DATA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22040	    564	   1784	  24388	   5f44	012_1_STRING_PARSE_GPS_DATA.elf
+Finished building: default.size.stdout
+ 
+
+22:52:23 Build Finished. 0 errors, 0 warnings. (took 236ms)
+

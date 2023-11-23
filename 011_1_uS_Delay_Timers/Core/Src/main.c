@@ -104,8 +104,19 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	delay_uS(1000);
+	delay_uS(1000000);
 	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+
+
+	 /*
+
+	  __HAL_TIM_SET_COUNTER(&htim1, 0);
+
+	  HAL_Delay(1);
+
+	  int time = __HAL_TIM_GET_COUNTER(&htim1);
+
+	*/
 
   }
   /* USER CODE END 3 */

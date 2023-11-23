@@ -3,6 +3,10 @@
 	<section name="NewWizardAction">
 	</section>
 	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="com.st.stm32cube.ide.mcu.debug.importexecwizard"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.cdt.ui.importWizardCategory"/>
+		</list>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH" value="675"/>
@@ -17,5 +21,7 @@
 		</list>
 		<list key="textArray">
 		</list>
+	</section>
+	<section name="FileSystemImportWizard">
 	</section>
 </section>

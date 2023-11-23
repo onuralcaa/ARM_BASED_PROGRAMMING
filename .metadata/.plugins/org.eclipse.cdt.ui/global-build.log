@@ -1,7 +1,14 @@
-22:20:41 **** Incremental Build of configuration Debug for project 011_1_uS_Delay_Timers ****
+22:52:11 **** Incremental Build of configuration Debug for project 012_1_STRING_PARSE_GPS_DATA ****
 make -j8 all 
-arm-none-eabi-size   011_1_uS_Delay_Timers.elf 
+arm-none-eabi-size   012_1_STRING_PARSE_GPS_DATA.elf 
    text	   data	    bss	    dec	    hex	filename
-   7788	     20	   1644	   9452	   24ec	011_1_uS_Delay_Timers.elf
+  22040	    564	   1784	  24388	   5f44	012_1_STRING_PARSE_GPS_DATA.elf
+Finished building: default.size.stdout
+ 
+22:52:22 **** Incremental Build of configuration Debug for project 012_1_STRING_PARSE_GPS_DATA ****
+make -j8 all 
+arm-none-eabi-size   012_1_STRING_PARSE_GPS_DATA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22040	    564	   1784	  24388	   5f44	012_1_STRING_PARSE_GPS_DATA.elf
 Finished building: default.size.stdout
  

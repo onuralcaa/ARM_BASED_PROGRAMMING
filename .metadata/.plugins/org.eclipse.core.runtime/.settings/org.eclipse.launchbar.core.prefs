@@ -1,6 +1,6 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_2_MPU_ADDRESS_EXAMPLE_2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_3_MPU6050_WITH_COMP_FILTER,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_5_SPI_EXAMPLE_WITH_LIS302DL,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_6_PWM_EXAMPLE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:006_7_ADC_EXAMPLE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:009_1_FLASH_MEMORY_RW,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_4_DAC_NEW,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:010_1_USB_VCP_APP,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:009_2_FLASH_MEMORY_APP_2,org.eclipse.launchbar.core.descriptorType.default\:008_2_PWM_ILE_LED_F030,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_1_uS_Delay_Timers
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32_Parser.elf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_2_MPU_ADDRESS_EXAMPLE_2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_3_MPU6050_WITH_COMP_FILTER,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_5_SPI_EXAMPLE_WITH_LIS302DL,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_6_PWM_EXAMPLE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:006_7_ADC_EXAMPLE,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:009_1_FLASH_MEMORY_RW,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_4_DAC_NEW,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:010_1_USB_VCP_APP,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:009_2_FLASH_MEMORY_APP_2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_1_uS_Delay_Timers,org.eclipse.launchbar.core.descriptorType.default\:008_2_PWM_ILE_LED_F030,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_1_STRING_PARSE_GPS_DATA
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_2_MPU_ADDRESS_EXAMPLE_2/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_5_SPI_EXAMPLE_WITH_LIS302DL/activeLaunchMode=debug
@@ -8,6 +8,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_4_DAC_NEW/activeLaunchMode=
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:010_1_USB_VCP/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:010_1_USB_VCP_APP/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_1_uS_Delay_Timers/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32_Parser.elf/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:001_HAL_SYSTEM_CLK_CONFIG.elf/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:001_HAL_SYSTEM_CLK_CONFIG.elf/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:001_SYSTEM_CLOCK_CONFIG_MANUAL_WITH_REGISTER.elf/activeLaunchMode=debug
@@ -16,3 +17,4 @@ org.eclipse.launchbar.core.descriptorType.default\:001_SYSTEM_CLOCK_CONF\u0130G_
 org.eclipse.launchbar.core.descriptorType.default\:001_SYSTEM_CLOCK_CONF\u0130G_AND_PLL.elf/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:008_2_PWM_ILE_LED_F030/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:008_2_PWM_ILE_LED_F030/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:STM32_Parser.elf/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
