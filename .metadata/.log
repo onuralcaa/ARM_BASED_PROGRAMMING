@@ -1680,3 +1680,30 @@ java.lang.Exception
 !MESSAGE Program file does not exist
 !SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2023-11-23 22:52:13.968
 !MESSAGE 
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-23 23:19:25.738
+!MESSAGE Indexed '011_2_TIMEOUT_WITH_HAL' (19 sources, 81 headers) in 1.99 sec: 4,376 declarations; 17,620 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0091%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2023-11-23 23:25:30.906
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2023-11-23 23:25:30.906
+!MESSAGE 
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-11-23 23:27:31.403
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2023-11-23 23:27:31.403
+!MESSAGE Setup exceptions

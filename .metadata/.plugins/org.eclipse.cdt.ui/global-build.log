@@ -1,14 +1,7 @@
-22:52:11 **** Incremental Build of configuration Debug for project 012_1_STRING_PARSE_GPS_DATA ****
+23:31:56 **** Incremental Build of configuration Debug for project 011_2_TIMEOUT_WITH_HAL ****
 make -j8 all 
-arm-none-eabi-size   012_1_STRING_PARSE_GPS_DATA.elf 
+arm-none-eabi-size   011_2_TIMEOUT_WITH_HAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  22040	    564	   1784	  24388	   5f44	012_1_STRING_PARSE_GPS_DATA.elf
-Finished building: default.size.stdout
- 
-22:52:22 **** Incremental Build of configuration Debug for project 012_1_STRING_PARSE_GPS_DATA ****
-make -j8 all 
-arm-none-eabi-size   012_1_STRING_PARSE_GPS_DATA.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22040	    564	   1784	  24388	   5f44	012_1_STRING_PARSE_GPS_DATA.elf
+   5036	     20	   1572	   6628	   19e4	011_2_TIMEOUT_WITH_HAL.elf
 Finished building: default.size.stdout
  
