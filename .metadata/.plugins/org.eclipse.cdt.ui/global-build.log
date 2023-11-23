@@ -1,132 +1,35 @@
-23:16:21 **** Incremental Build of configuration Debug for project 010_1_USB_VCP_APP ****
+21:09:19 **** Incremental Build of configuration Debug for project 009_2_FLASH_MEMORY_APP_2 ****
 make -j8 all 
-arm-none-eabi-gcc "../USB_DEVICE/App/usbd_cdc_if.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_DEVICE/App/usbd_cdc_if.d" -MT"USB_DEVICE/App/usbd_cdc_if.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_DEVICE/App/usbd_cdc_if.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../USB_DEVICE/App/usbd_cdc_if.c: In function 'CDC_Receive_FS':
-../USB_DEVICE/App/usbd_cdc_if.c:271:22: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
-  271 |   strncpy(Rx_Buffer, Buf, Len);
-      |                      ^~~
-      |                      |
-      |                      uint8_t * {aka unsigned char *}
-In file included from ../USB_DEVICE/Target/usbd_conf.h:32,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:28,
-                 from ../USB_DEVICE/App/usbd_cdc_if.h:30,
-                 from ../USB_DEVICE/App/usbd_cdc_if.c:22:
-c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:44:35: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-   44 | char  *strncpy (char *__restrict, const char *__restrict, size_t);
-      |                                   ^
-../USB_DEVICE/App/usbd_cdc_if.c:271:27: warning: passing argument 3 of 'strncpy' makes integer from pointer without a cast [-Wint-conversion]
-  271 |   strncpy(Rx_Buffer, Buf, Len);
-      |                           ^~~
-      |                           |
-      |                           uint32_t * {aka long unsigned int *}
-In file included from ../USB_DEVICE/Target/usbd_conf.h:32,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:28,
-                 from ../USB_DEVICE/App/usbd_cdc_if.h:30,
-                 from ../USB_DEVICE/App/usbd_cdc_if.c:22:
-c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:44:59: note: expected 'size_t' {aka 'unsigned int'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
-   44 | char  *strncpy (char *__restrict, const char *__restrict, size_t);
-      |                                                           ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:113:5: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
-  113 |     CDC_Transmit_FS(Rx_Buffer, strlen(Rx_Buffer));
-      |     ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "010_1_USB_VCP_APP.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\010_1_USB_VCP_APP\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_1_USB_VCP_APP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_1_USB_VCP_APP.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "009_2_FLASH_MEMORY_APP_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\009_2_FLASH_MEMORY_APP_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="009_2_FLASH_MEMORY_APP_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 009_2_FLASH_MEMORY_APP_2.elf
  
-arm-none-eabi-size   010_1_USB_VCP_APP.elf 
-arm-none-eabi-objdump -h -S  010_1_USB_VCP_APP.elf  > "010_1_USB_VCP_APP.list"
+arm-none-eabi-size   009_2_FLASH_MEMORY_APP_2.elf 
+arm-none-eabi-objdump -h -S  009_2_FLASH_MEMORY_APP_2.elf  > "009_2_FLASH_MEMORY_APP_2.list"
    text	   data	    bss	    dec	    hex	filename
-  28400	    260	  12364	  41024	   a040	010_1_USB_VCP_APP.elf
+   4880	     23	   1572	   6475	   194b	009_2_FLASH_MEMORY_APP_2.elf
 Finished building: default.size.stdout
  
-Finished building: 010_1_USB_VCP_APP.list
+Finished building: 009_2_FLASH_MEMORY_APP_2.list
  
-23:16:28 **** Incremental Build of configuration Debug for project 010_1_USB_VCP_APP ****
+21:09:22 **** Incremental Build of configuration Debug for project 009_2_FLASH_MEMORY_APP_2 ****
 make -j8 all 
-arm-none-eabi-size   010_1_USB_VCP_APP.elf 
+arm-none-eabi-size   009_2_FLASH_MEMORY_APP_2.elf 
    text	   data	    bss	    dec	    hex	filename
-  28400	    260	  12364	  41024	   a040	010_1_USB_VCP_APP.elf
+   4880	     23	   1572	   6475	   194b	009_2_FLASH_MEMORY_APP_2.elf
 Finished building: default.size.stdout
  
-23:21:47 **** Incremental Build of configuration Debug for project 010_1_USB_VCP_APP ****
+21:12:54 **** Incremental Build of configuration Debug for project 009_2_FLASH_MEMORY_APP_2 ****
 make -j8 all 
-arm-none-eabi-gcc "../USB_DEVICE/App/usbd_cdc_if.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_DEVICE/App/usbd_cdc_if.d" -MT"USB_DEVICE/App/usbd_cdc_if.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_DEVICE/App/usbd_cdc_if.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../USB_DEVICE/App/usbd_cdc_if.c: In function 'CDC_Receive_FS':
-../USB_DEVICE/App/usbd_cdc_if.c:271:26: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
-  271 |   strncpy(&Rx_Buffer[0], &Buf[0], 1);
-      |                          ^~~~~~~
-      |                          |
-      |                          uint8_t * {aka unsigned char *}
-In file included from ../USB_DEVICE/Target/usbd_conf.h:32,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:28,
-                 from ../USB_DEVICE/App/usbd_cdc_if.h:30,
-                 from ../USB_DEVICE/App/usbd_cdc_if.c:22:
-c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:44:35: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-   44 | char  *strncpy (char *__restrict, const char *__restrict, size_t);
-      |                                   ^
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:114:5: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
-  114 |     CDC_Transmit_FS(Rx_Buffer, strlen(Rx_Buffer));
-      |     ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "010_1_USB_VCP_APP.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\010_1_USB_VCP_APP\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_1_USB_VCP_APP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_1_USB_VCP_APP.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "009_2_FLASH_MEMORY_APP_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\009_2_FLASH_MEMORY_APP_2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="009_2_FLASH_MEMORY_APP_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 009_2_FLASH_MEMORY_APP_2.elf
  
-arm-none-eabi-size   010_1_USB_VCP_APP.elf 
-arm-none-eabi-objdump -h -S  010_1_USB_VCP_APP.elf  > "010_1_USB_VCP_APP.list"
+arm-none-eabi-size   009_2_FLASH_MEMORY_APP_2.elf 
+arm-none-eabi-objdump -h -S  009_2_FLASH_MEMORY_APP_2.elf  > "009_2_FLASH_MEMORY_APP_2.list"
    text	   data	    bss	    dec	    hex	filename
-  28404	    260	  12364	  41028	   a044	010_1_USB_VCP_APP.elf
+   4880	     32	   1572	   6484	   1954	009_2_FLASH_MEMORY_APP_2.elf
 Finished building: default.size.stdout
  
-Finished building: 010_1_USB_VCP_APP.list
- 
-23:32:27 **** Incremental Build of configuration Debug for project 010_1_USB_VCP_APP ****
-make -j8 all 
-arm-none-eabi-gcc "../USB_DEVICE/App/usbd_cdc_if.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_DEVICE/App/usbd_cdc_if.d" -MT"USB_DEVICE/App/usbd_cdc_if.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_DEVICE/App/usbd_cdc_if.o"
-../USB_DEVICE/App/usbd_cdc_if.c: In function 'CDC_Receive_FS':
-../USB_DEVICE/App/usbd_cdc_if.c:271:26: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
-  271 |   strncpy(&Rx_Buffer[0], &Buf[0], 25);
-      |                          ^~~~~~~
-      |                          |
-      |                          uint8_t * {aka unsigned char *}
-In file included from ../USB_DEVICE/Target/usbd_conf.h:32,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:28,
-                 from ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:28,
-                 from ../USB_DEVICE/App/usbd_cdc_if.h:30,
-                 from ../USB_DEVICE/App/usbd_cdc_if.c:22:
-c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:44:35: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-   44 | char  *strncpy (char *__restrict, const char *__restrict, size_t);
-      |                                   ^
-arm-none-eabi-gcc -o "010_1_USB_VCP_APP.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\010_1_USB_VCP_APP\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_1_USB_VCP_APP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_1_USB_VCP_APP.elf
- 
-arm-none-eabi-size   010_1_USB_VCP_APP.elf 
-arm-none-eabi-objdump -h -S  010_1_USB_VCP_APP.elf  > "010_1_USB_VCP_APP.list"
-   text	   data	    bss	    dec	    hex	filename
-  28404	    260	  12364	  41028	   a044	010_1_USB_VCP_APP.elf
-Finished building: default.size.stdout
- 
-Finished building: 010_1_USB_VCP_APP.list
- 
-23:33:38 **** Incremental Build of configuration Debug for project 010_1_USB_VCP_APP ****
-make -j8 all 
-arm-none-eabi-size   010_1_USB_VCP_APP.elf 
-   text	   data	    bss	    dec	    hex	filename
-  28404	    260	  12364	  41028	   a044	010_1_USB_VCP_APP.elf
-Finished building: default.size.stdout
- 
-23:34:25 **** Incremental Build of configuration Debug for project 010_1_USB_VCP_APP ****
-make -j8 all 
-arm-none-eabi-size   010_1_USB_VCP_APP.elf 
-   text	   data	    bss	    dec	    hex	filename
-  28404	    260	  12364	  41028	   a044	010_1_USB_VCP_APP.elf
-Finished building: default.size.stdout
+Finished building: 009_2_FLASH_MEMORY_APP_2.list
  
