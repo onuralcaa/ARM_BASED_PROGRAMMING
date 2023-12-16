@@ -21,7 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "dwt_stm32_delay.h";
+
+#include "dwt_stm32_delay.h"
+#include "Servo_control.h"
 
 /* USER CODE END Includes */
 
@@ -42,11 +44,12 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 
-uint32_t time;
-uint8_t distance; //0-255 olcum araligi
+
+float distance; //0-255 olcum araligi
 
 /* USER CODE END PV */
 
@@ -54,7 +57,18 @@ uint8_t distance; //0-255 olcum araligi
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
+
+/*
+void delay_uS(uint16_t us)
+  {
+	  __HAL_TIM_SET_COUNTER(&htim2, 0);
+	  while(__HAL_TIM_GET_COUNTER(&htim2) < us);
+
+  }
+  */
+
 
 /* USER CODE END PFP */
 
@@ -65,10 +79,14 @@ static void MX_TIM1_Init(void);
 uint32_t Read_HCSR04()
 {
 	uint32_t local_time = 0;
+	float distance_temp = 0;
 
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+    DWT_Delay_us(10);
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
 	DWT_Delay_us(10);
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+	DWT_Delay_us(10);
 
 	while(!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0));
 
@@ -78,10 +96,10 @@ uint32_t Read_HCSR04()
 		DWT_Delay_us(1);
 	}
 
-	return local_time;
+	distance_temp = (float)local_time/15.1;
+	HAL_Delay(50);
+	return distance_temp;
 }
-
-
 
 void Servo1_Angle(int angle1)
 {
@@ -134,7 +152,6 @@ void Servo4_Angle(int angle4)
 
 
 
-
 /* USER CODE END 0 */
 
 /**
@@ -153,6 +170,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+
+
   DWT_Delay_Init();
 
   /* USER CODE END Init */
@@ -167,7 +186,10 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+
+  HAL_TIM_Base_Start(&htim2);
 
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
@@ -185,8 +207,8 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	  	  time = Read_HCSR04();
-	  	  distance = time * 0.034 / 2; //cm cinsinden mesafe
+	  	  distance = Read_HCSR04(); //cm cinsinden mesafe
+	  	  distance -=3.0; //offset
 
 
 //-----------SERVO AYARLARI-------------------------------------------
@@ -275,8 +297,8 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
@@ -358,6 +380,52 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);
+
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 31;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 65536;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+
+  /* USER CODE END TIM2_Init 2 */
 
 }
 

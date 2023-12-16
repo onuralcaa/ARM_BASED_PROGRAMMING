@@ -1,0 +1,61 @@
+/*
+ * Servo_control.c
+ *
+ *  Created on: Dec 16, 2023
+ *      Author: onura
+ */
+#include "Servo_control.h"
+
+TIM_HandleTypeDef htim1;
+
+void Servo1_Angle(int angle1)
+{
+	if(angle1 < 0)
+		angle1 = 0;
+	if(angle1 > 180)
+		angle1 = 180;
+
+	angle1 += 45; //offset değeri
+
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, angle1);
+}
+
+void Servo2_Angle(int angle2)
+{
+	if(angle2 < 0)
+		angle2 = 0;
+	if(angle2 > 90)
+		angle2 = 90;
+
+	angle2 += 45; //offset değeri
+
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, angle2);
+}
+
+void Servo3_Angle(int angle3)
+{
+	if(angle3 < 0)
+		angle3 = 0;
+	if(angle3 > 90)
+		angle3 = 90;
+
+	angle3 += 45; //offset değeri
+
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, angle3);
+}
+
+void Servo4_Angle(int angle4)
+{
+	if(angle4 < 0)
+		angle4 = 0;
+	if(angle4 > 90)
+		angle4 = 90;
+
+	angle4 += 45; //offset değeri
+
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, angle4);
+}
+
+
+
+

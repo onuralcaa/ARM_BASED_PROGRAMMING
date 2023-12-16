@@ -1,0 +1,22 @@
+/*
+ * Servo_control.h
+ *
+ *  Created on: Dec 16, 2023
+ *      Author: onura
+ */
+
+#ifndef INC_SERVO_CONTROL_H_
+#define INC_SERVO_CONTROL_H_
+
+
+#include "stm32f4xx_hal.h"
+
+void Servo1_Angle(int angle1);
+void Servo1_Angle(int angle2);
+void Servo1_Angle(int angle3);
+void Servo1_Angle(int angle4);
+
+
+
+
+#endif /* INC_SERVO_CONTROL_H_ */
