@@ -24,11 +24,6 @@
 
 #include "dwt_stm32_delay.h"
 
-uint16_t readValue1;
-uint16_t readValue2;
-uint16_t readValue3;
-ADC_ChannelConfTypeDef sConfigPrivate = {0};
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -81,31 +76,6 @@ void delay_uS(uint16_t us)
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-void  Read_ADC()
-{
-	  sConfigPrivate.Rank = 'ADC_REGULAR_RANK_1';
-	  sConfigPrivate.SamplingTime = 'ADC_SAMPLETIME_3CYCLE';
-	  sConfigPrivate.Channel = ADC_CHANNEL_0;
-  	  HAL_ADC_ConfigChannel(&hadc1, &sConfigPrivate);
-	  HAL_ADC_Start(&hadc1);
-	  HAL_ADC_PollForConversion(&hadc1,1000);
-	  readValue1 = HAL_ADC_GetValue(&hadc1);
-	  HAL_ADC_Stop(&hadc1);
-	  sConfigPrivate.Channel = ADC_CHANNEL_1;
-	  HAL_ADC_ConfigChannel(&hadc1, &sConfigPrivate);
-	  HAL_ADC_Start(&hadc1);
-	  HAL_ADC_PollForConversion(&hadc1,1000);
-	  readValue2 = HAL_ADC_GetValue(&hadc1);
-	  HAL_ADC_Stop(&hadc1);
-	  sConfigPrivate.Channel = ADC_CHANNEL_2;
-	  HAL_ADC_ConfigChannel(&hadc1, &sConfigPrivate);
-	  HAL_ADC_Start(&hadc1);
-	  HAL_ADC_PollForConversion(&hadc1,1000);
-	  readValue3 = HAL_ADC_GetValue(&hadc1);
-	  HAL_ADC_Stop(&hadc1);
-}
-
 
 
 uint32_t Read_HCSR04()
@@ -239,9 +209,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-	  Read_ADC();
-
 
 	  	  distance = Read_HCSR04(); //cm cinsinden mesafe
 	  	  distance -=3.0; //offset

@@ -1,28 +1,14 @@
-20:23:26 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+20:50:52 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'Read_ADC':
-../Core/Src/main.c:87:26: warning: character constant too long for its type
-   87 |    sConfigPrivate.Rank = 'ADC_REGULAR_RANK_1';
-      |                          ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:88:34: warning: character constant too long for its type
-   88 |    sConfigPrivate.SamplingTime = 'ADC_SAMPLETIME_3CYCLE';
-      |                                  ^~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
  
 arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
 arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
    text	   data	    bss	    dec	    hex	filename
-  16584	     20	   1812	  18416	   47f0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+  15552	     20	   1788	  17360	   43d0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
 Finished building: default.size.stdout
  
 Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
- 
-20:23:29 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
-make -j8 all 
-arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16584	     20	   1812	  18416	   47f0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
-Finished building: default.size.stdout
  
