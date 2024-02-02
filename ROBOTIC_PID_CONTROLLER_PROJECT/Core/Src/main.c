@@ -49,7 +49,7 @@ TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 
-
+uint16_t readValue;
 
 float distance; //0-255 olcum araligi
 
@@ -206,16 +206,24 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+	  HAL_ADC_Start(&hadc1);
+	      HAL_ADC_PollForConversion(&hadc1,1000);
+	      readValue = HAL_ADC_GetValue(&hadc1);
+	      HAL_ADC_Stop(&hadc1);
+	      //HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+
 
 	  	  distance = Read_HCSR04(); //cm cinsinden mesafe
 	  	  distance -=3.0; //offset
 
 
 //-----------SERVO AYARLARI-------------------------------------------
-	  Servo1_Angle(75);
+	  Servo1_Angle(70);
 	  Servo2_Angle(45);
 	  Servo3_Angle(45);
 	  Servo4_Angle(45);
