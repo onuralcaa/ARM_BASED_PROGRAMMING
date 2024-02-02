@@ -1,2 +1,6 @@
 distance
-readValue
+Servo_Angle
+control_output
+error
+integral
+derivative
