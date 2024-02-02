@@ -86,16 +86,15 @@ float Servo_Angle = 45.0;  // Başlangıçta servo açısı (derece)
 float Servo_Max_Angle = 90.0;  // Servo maksimum açısı (derece)
 float Servo_Min_Angle = 0.0;   // Servo minimum açısı (derece)
 
-//çıkış
-int control_output = 0;
+// Sensörden alınan uzaklık değeri
+float distance = 13.0;  // Başlangıçta sensörden alınan uzaklık değeri
 
 // PID kontrol değişkenleri
-float error = 0.0, integral = 0.0, derivative = 0.0;
+float error, integral, derivative;
 float last_error = 0.0;
 
 // PID kontrol fonksiyonu
-float pid_control(float setpoint, float measured_value)
-{
+float pid_control(float setpoint, float measured_value) {
     // Hata hesapla
     error = setpoint - measured_value;
 
@@ -109,12 +108,9 @@ float pid_control(float setpoint, float measured_value)
     float output = Kp * error + Ki * integral + Kd * derivative;
 
     // Çıkış sınırlarını kontrol et
-    if (output > Servo_Max_Angle)
-    {
+    if (output > Servo_Max_Angle) {
         output = Servo_Max_Angle;
-    }
-    else if (output < Servo_Min_Angle)
-    {
+    } else if (output < Servo_Min_Angle) {
         output = Servo_Min_Angle;
     }
 
@@ -267,15 +263,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  //Mesafe hesaplanması*************************
-	  distance = Read_HCSR04(); //cm cinsinden mesafe
-  	  distance -=3.0; //offset
-
-
-
-
 	  // PID kontrol çıkışını al
-	  control_output = pid_control(13.0, distance);
+	  float control_output = pid_control(13, distance);
 
 	  // Servo açısını güncelle
 	  Servo_Angle += control_output;
@@ -301,6 +290,8 @@ int main(void)
 
 
 
+	  	  distance = Read_HCSR04(); //cm cinsinden mesafe
+	  	  distance -=3.0; //offset
 
 
 //-----------SERVO AYARLARI-------------------------------------------
