@@ -78,7 +78,7 @@ void delay_uS(uint16_t us)
 
 // PID kontrol parametreleri
 float Kp = 5;   // Oransal (P) katsayısı
-float Ki = 1;   // Integral (I) katsayısı
+float Ki = 0.1;   // Integral (I) katsayısı
 float Kd =0.01;  // Türev (D) katsayısı
 
 // Servo kontrol parametreleri
