@@ -1,10 +1,10 @@
-18:53:45 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+21:20:23 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
 make -j8 all 
 arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
    text	   data	    bss	    dec	    hex	filename
-  14404	     40	   1744	  16188	   3f3c	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+  14420	     40	   1744	  16204	   3f4c	ROBOTIC_PID_CONTROLLER_PROJECT.elf
 Finished building: default.size.stdout
  
 
-18:53:45 Build Finished. 0 errors, 0 warnings. (took 299ms)
+21:20:23 Build Finished. 0 errors, 0 warnings. (took 317ms)
 

@@ -77,14 +77,14 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL****************************
 
 // PID kontrol parametreleri
-float Kp = 1.0;   // Oransal (P) katsayısı
-float Ki = 0.1;   // Integral (I) katsayısı
-float Kd = 0.01;  // Türev (D) katsayısı
+float Kp = 1;   // Oransal (P) katsayısı
+float Ki = 5;   // Integral (I) katsayısı
+float Kd = 1;  // Türev (D) katsayısı
 
 // Servo kontrol parametreleri
-float Servo_Angle = 45.0;  // Başlangıçta servo açısı (derece)
-float Servo_Max_Angle = 90.0;  // Servo maksimum açısı (derece)
-float Servo_Min_Angle = 0.0;   // Servo minimum açısı (derece)
+int Servo_Angle = 45;  // Başlangıçta servo açısı (derece)
+int Servo_Max_Angle = 90;  // Servo maksimum açısı (derece)
+int Servo_Min_Angle = 0;   // Servo minimum açısı (derece)
 
 //çıkış
 int control_output = 0;
@@ -94,7 +94,7 @@ float error = 0.0, integral = 0.0, derivative = 0.0;
 float last_error = 0.0;
 
 // PID kontrol fonksiyonu
-float pid_control(float setpoint, float measured_value)
+int pid_control(float setpoint, float measured_value)
 {
     // Hata hesapla
     error = setpoint - measured_value;
@@ -269,9 +269,7 @@ int main(void)
   {
 	  //Mesafe hesaplanması*************************
 	  distance = Read_HCSR04(); //cm cinsinden mesafe
-  	  distance -=3.0; //offset
-
-
+  	  distance -= 3.1; //offset
 
 
 	  // PID kontrol çıkışını al
