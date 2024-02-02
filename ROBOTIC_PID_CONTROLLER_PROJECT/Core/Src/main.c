@@ -74,6 +74,54 @@ void delay_uS(uint16_t us)
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+//************************PID KONTROL****************************
+
+// PID kontrol parametreleri
+float Kp = 1.0;   // Oransal (P) katsayısı
+float Ki = 0.1;   // Integral (I) katsayısı
+float Kd = 0.01;  // Türev (D) katsayısı
+
+// Servo kontrol parametreleri
+float Servo_Angle = 45.0;  // Başlangıçta servo açısı (derece)
+float Servo_Max_Angle = 90.0;  // Servo maksimum açısı (derece)
+float Servo_Min_Angle = 0.0;   // Servo minimum açısı (derece)
+
+// Sensörden alınan uzaklık değeri
+float distance = 13.0;  // Başlangıçta sensörden alınan uzaklık değeri
+
+// PID kontrol değişkenleri
+float error, integral, derivative;
+float last_error = 0.0;
+
+// PID kontrol fonksiyonu
+float pid_control(float setpoint, float measured_value) {
+    // Hata hesapla
+    error = setpoint - measured_value;
+
+    // İntegral hesapla
+    integral += error;
+
+    // Türev hesapla
+    derivative = error - last_error;
+
+    // PID kontrol çıkışını hesapla
+    float output = Kp * error + Ki * integral + Kd * derivative;
+
+    // Çıkış sınırlarını kontrol et
+    if (output > Servo_Max_Angle) {
+        output = Servo_Max_Angle;
+    } else if (output < Servo_Min_Angle) {
+        output = Servo_Min_Angle;
+    }
+
+    // Son hata değerini güncelle
+    last_error = error;
+
+    return output;
+}
+//**********************************************************************
+
+
 /*
 void Read_ADC()
 {
@@ -215,6 +263,24 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  // PID kontrol çıkışını al
+	  float control_output = pid_control(0.0, distance);
+
+	  // Servo açısını güncelle
+	  Servo_Angle += control_output;
+
+	  // Servo açısını sınırla
+	  if (Servo_Angle > Servo_Max_Angle)
+	  {
+	      Servo_Angle = Servo_Max_Angle;
+	  }
+	  else if (Servo_Angle < Servo_Min_Angle)
+	  {
+	      Servo_Angle = Servo_Min_Angle;
+	  }
+
+	  Servo4_Angle(Servo_Angle);
+
 	  //Read_ADC();
 
 	      //HAL_Delay(1000);
@@ -230,9 +296,9 @@ int main(void)
 
 //-----------SERVO AYARLARI-------------------------------------------
 	  Servo1_Angle(90);
-	  Servo2_Angle(55);
-	  Servo3_Angle(25);
-	  Servo4_Angle(45);
+	  Servo2_Angle(45);
+	  Servo3_Angle(45);
+	  //Servo4_Angle(45);
 
 
 /*
