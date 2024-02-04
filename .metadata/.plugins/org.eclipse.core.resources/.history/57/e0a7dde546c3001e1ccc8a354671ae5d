@@ -77,9 +77,9 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL****************************
 
 // PID kontrol değişkenleri
-double Kp = 1.55; // P (Proportional) katsayısı
+double Kp = 2.55; // P (Proportional) katsayısı
 double Ki = 0; // I (Integral) katsayısı
-double Kd = 0.025; // D (Derivative) katsayısı
+double Kd = 0.055; // D (Derivative) katsayısı
 
 // Hesaplanan PID kontrol çıkışı
 double pidOutput = 0.0;
@@ -273,8 +273,7 @@ int main(void)
 	          servoAngle = 60.0;
 	      }
 
-	  //Servo4_Angle(servoAngle);
-	  Servo4_Angle(45);
+	  Servo4_Angle(servoAngle);
 
 	  //Read_ADC();
 

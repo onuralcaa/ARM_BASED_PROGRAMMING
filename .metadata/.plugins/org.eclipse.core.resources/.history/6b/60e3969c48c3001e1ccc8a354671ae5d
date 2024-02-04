@@ -273,8 +273,7 @@ int main(void)
 	          servoAngle = 60.0;
 	      }
 
-	  //Servo4_Angle(servoAngle);
-	  Servo4_Angle(45);
+	  Servo4_Angle(servoAngle);
 
 	  //Read_ADC();
 
