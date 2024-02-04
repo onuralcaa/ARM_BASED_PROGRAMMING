@@ -99,13 +99,33 @@ float setpoint = 10.8999996;
 float servoAngle = 45.0;
 float servoAngle_rev;
 
-/*
 // PID kontrol fonksiyonu
 void calculatePID() {
+    // Hata hesapla
+    error = setpoint - distance;
 
+    if(error > 6) error = 6;
+        else if(error < -6) error = -6;
+        else error = error;
+
+    // İntegral hesapla
+    integral += error;
+
+    if(integral > 6) integral = 6;
+    else if(integral < -6) integral = -6;
+    else integral = integral;
+
+    // Türev hesapla
+    derivative = error - lastError;
+
+    // PID çıkışını hesapla
+    pidOutput = Kp * error + Ki * integral + Kd * derivative;
+
+    // Güncel hata değerini sakla
+    lastError = error;
 }
 //**********************************************************************
-*/
+
 
 /*
 void Read_ADC()
@@ -121,7 +141,7 @@ void Read_ADC()
 
 */
 
-void PID_Control()
+uint32_t Read_HCSR04()
 {
 	uint32_t local_time = 0;
 	float distance_temp = 0;
@@ -142,38 +162,8 @@ void PID_Control()
 	}
 
 	distance_temp = (float)local_time/15.1;
-	//return distance_temp;
-
-	distance = distance_temp - 3.1; //offset
-
-	if(distance > 26) distance = 26;
-	else if(distance < 0) distance = 0;
-	else distance = distance;
-
-	//------------PID HESAPLAMA------------------------
-
-	// Hata hesapla
-	    error = setpoint - distance;
-
-	    if(error > 6) error = 6;
-	        else if(error < -6) error = -6;
-	        else error = error;
-
-	    // İntegral hesapla
-	    integral += error;
-
-	    if(integral > 6) integral = 6;
-	    else if(integral < -6) integral = -6;
-	    else integral = integral;
-
-	    // Türev hesapla
-	    derivative = error - lastError;
-
-	    // PID çıkışını hesapla
-	    pidOutput = Kp * error + Ki * integral + Kd * derivative;
-
-	    // Güncel hata değerini sakla
-	    lastError = error;
+	return distance_temp;
+	DWT_Delay_us(10);
 }
 
 void Servo1_Angle(int angle1)
@@ -260,7 +250,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  PID_Control();
+
+
+	  //Mesafe hesaplanması*************************
+	  distance = Read_HCSR04(); //cm cinsinden mesafe
+	  distance -= 3.1; //offset
+
+	  // PID kontrolünü hesapla
+	  calculatePID();
+
 
 	  // Servo açısını güncelle
 	      servoAngle = servoAngle + pidOutput * (-1);

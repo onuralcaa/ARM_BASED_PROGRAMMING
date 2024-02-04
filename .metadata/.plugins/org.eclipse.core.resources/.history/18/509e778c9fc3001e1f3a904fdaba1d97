@@ -146,10 +146,6 @@ void PID_Control()
 
 	distance = distance_temp - 3.1; //offset
 
-	if(distance > 26) distance = 26;
-	else if(distance < 0) distance = 0;
-	else distance = distance;
-
 	//------------PID HESAPLAMA------------------------
 
 	// Hata hesapla
@@ -260,7 +256,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  PID_Control();
+	  PID_Control()
+
+	  //Mesafe hesaplanması*************************
+	  distance = Read_HCSR04(); //cm cinsinden mesafe
+
+
+	  // PID kontrolünü hesapla
+	  calculatePID();
+
 
 	  // Servo açısını güncelle
 	      servoAngle = servoAngle + pidOutput * (-1);

@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00020020  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00009c9d  00000000  00000000  00020050  2**0
+ 12 .debug_info   00009c87  00000000  00000000  00020050  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00001755  00000000  00000000  00029ced  2**0
+ 13 .debug_abbrev 0000173b  00000000  00000000  00029cd7  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000a28  00000000  00000000  0002b448  2**3
+ 14 .debug_aranges 00000a20  00000000  00000000  0002b418  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000960  00000000  00000000  0002be70  2**3
+ 15 .debug_ranges 00000958  00000000  00000000  0002be38  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00020b5f  00000000  00000000  0002c7d0  2**0
+ 16 .debug_macro  00020b5f  00000000  00000000  0002c790  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000b8e3  00000000  00000000  0004d32f  2**0
+ 17 .debug_line   0000b8e2  00000000  00000000  0004d2ef  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000ca46b  00000000  00000000  00058c12  2**0
+ 18 .debug_str    000ca45e  00000000  00000000  00058bd1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  0012307d  2**0
+ 19 .comment      00000050  00000000  00000000  0012302f  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002b38  00000000  00000000  001230d0  2**2
+ 20 .debug_frame  00002b18  00000000  00000000  00123080  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1150,519 +1150,516 @@ __STATIC_INLINE void DWT_Delay_us(volatile uint32_t microseconds)
  8000de8:	e0001000 	.word	0xe0001000
  8000dec:	431bde83 	.word	0x431bde83
 
-08000df0 <calculatePID>:
-// Servo açısı
-float servoAngle = 45.0;
-float servoAngle_rev;
-
-// PID kontrol fonksiyonu
-void calculatePID() {
- 8000df0:	b480      	push	{r7}
- 8000df2:	af00      	add	r7, sp, #0
-    // Hata hesapla
-    error = setpoint - distance;
- 8000df4:	4b44      	ldr	r3, [pc, #272]	; (8000f08 <calculatePID+0x118>)
- 8000df6:	ed93 7a00 	vldr	s14, [r3]
- 8000dfa:	4b44      	ldr	r3, [pc, #272]	; (8000f0c <calculatePID+0x11c>)
- 8000dfc:	edd3 7a00 	vldr	s15, [r3]
- 8000e00:	ee77 7a67 	vsub.f32	s15, s14, s15
- 8000e04:	4b42      	ldr	r3, [pc, #264]	; (8000f10 <calculatePID+0x120>)
- 8000e06:	edc3 7a00 	vstr	s15, [r3]
-
-    if(error > 6) error = 6;
- 8000e0a:	4b41      	ldr	r3, [pc, #260]	; (8000f10 <calculatePID+0x120>)
- 8000e0c:	edd3 7a00 	vldr	s15, [r3]
- 8000e10:	eeb1 7a08 	vmov.f32	s14, #24	; 0x40c00000  6.0
- 8000e14:	eef4 7ac7 	vcmpe.f32	s15, s14
- 8000e18:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8000e1c:	dd03      	ble.n	8000e26 <calculatePID+0x36>
- 8000e1e:	4b3c      	ldr	r3, [pc, #240]	; (8000f10 <calculatePID+0x120>)
- 8000e20:	4a3c      	ldr	r2, [pc, #240]	; (8000f14 <calculatePID+0x124>)
- 8000e22:	601a      	str	r2, [r3, #0]
- 8000e24:	e011      	b.n	8000e4a <calculatePID+0x5a>
-        else if(error < -6) error = -6;
- 8000e26:	4b3a      	ldr	r3, [pc, #232]	; (8000f10 <calculatePID+0x120>)
- 8000e28:	edd3 7a00 	vldr	s15, [r3]
- 8000e2c:	eeb9 7a08 	vmov.f32	s14, #152	; 0xc0c00000 -6.0
- 8000e30:	eef4 7ac7 	vcmpe.f32	s15, s14
- 8000e34:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8000e38:	d503      	bpl.n	8000e42 <calculatePID+0x52>
- 8000e3a:	4b35      	ldr	r3, [pc, #212]	; (8000f10 <calculatePID+0x120>)
- 8000e3c:	4a36      	ldr	r2, [pc, #216]	; (8000f18 <calculatePID+0x128>)
- 8000e3e:	601a      	str	r2, [r3, #0]
- 8000e40:	e003      	b.n	8000e4a <calculatePID+0x5a>
-        else error = error;
- 8000e42:	4b33      	ldr	r3, [pc, #204]	; (8000f10 <calculatePID+0x120>)
- 8000e44:	681b      	ldr	r3, [r3, #0]
- 8000e46:	4a32      	ldr	r2, [pc, #200]	; (8000f10 <calculatePID+0x120>)
- 8000e48:	6013      	str	r3, [r2, #0]
-
-    // İntegral hesapla
-    integral += error;
- 8000e4a:	4b34      	ldr	r3, [pc, #208]	; (8000f1c <calculatePID+0x12c>)
- 8000e4c:	ed93 7a00 	vldr	s14, [r3]
- 8000e50:	4b2f      	ldr	r3, [pc, #188]	; (8000f10 <calculatePID+0x120>)
- 8000e52:	edd3 7a00 	vldr	s15, [r3]
- 8000e56:	ee77 7a27 	vadd.f32	s15, s14, s15
- 8000e5a:	4b30      	ldr	r3, [pc, #192]	; (8000f1c <calculatePID+0x12c>)
- 8000e5c:	edc3 7a00 	vstr	s15, [r3]
-
-    if(integral > 6) integral = 6;
- 8000e60:	4b2e      	ldr	r3, [pc, #184]	; (8000f1c <calculatePID+0x12c>)
- 8000e62:	edd3 7a00 	vldr	s15, [r3]
- 8000e66:	eeb1 7a08 	vmov.f32	s14, #24	; 0x40c00000  6.0
- 8000e6a:	eef4 7ac7 	vcmpe.f32	s15, s14
- 8000e6e:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8000e72:	dd03      	ble.n	8000e7c <calculatePID+0x8c>
- 8000e74:	4b29      	ldr	r3, [pc, #164]	; (8000f1c <calculatePID+0x12c>)
- 8000e76:	4a27      	ldr	r2, [pc, #156]	; (8000f14 <calculatePID+0x124>)
- 8000e78:	601a      	str	r2, [r3, #0]
- 8000e7a:	e011      	b.n	8000ea0 <calculatePID+0xb0>
-    else if(integral < -6) integral = -6;
- 8000e7c:	4b27      	ldr	r3, [pc, #156]	; (8000f1c <calculatePID+0x12c>)
- 8000e7e:	edd3 7a00 	vldr	s15, [r3]
- 8000e82:	eeb9 7a08 	vmov.f32	s14, #152	; 0xc0c00000 -6.0
- 8000e86:	eef4 7ac7 	vcmpe.f32	s15, s14
- 8000e8a:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8000e8e:	d503      	bpl.n	8000e98 <calculatePID+0xa8>
- 8000e90:	4b22      	ldr	r3, [pc, #136]	; (8000f1c <calculatePID+0x12c>)
- 8000e92:	4a21      	ldr	r2, [pc, #132]	; (8000f18 <calculatePID+0x128>)
- 8000e94:	601a      	str	r2, [r3, #0]
- 8000e96:	e003      	b.n	8000ea0 <calculatePID+0xb0>
-    else integral = integral;
- 8000e98:	4b20      	ldr	r3, [pc, #128]	; (8000f1c <calculatePID+0x12c>)
- 8000e9a:	681b      	ldr	r3, [r3, #0]
- 8000e9c:	4a1f      	ldr	r2, [pc, #124]	; (8000f1c <calculatePID+0x12c>)
- 8000e9e:	6013      	str	r3, [r2, #0]
-
-    // Türev hesapla
-    derivative = error - lastError;
- 8000ea0:	4b1b      	ldr	r3, [pc, #108]	; (8000f10 <calculatePID+0x120>)
- 8000ea2:	ed93 7a00 	vldr	s14, [r3]
- 8000ea6:	4b1e      	ldr	r3, [pc, #120]	; (8000f20 <calculatePID+0x130>)
- 8000ea8:	edd3 7a00 	vldr	s15, [r3]
- 8000eac:	ee77 7a67 	vsub.f32	s15, s14, s15
- 8000eb0:	4b1c      	ldr	r3, [pc, #112]	; (8000f24 <calculatePID+0x134>)
- 8000eb2:	edc3 7a00 	vstr	s15, [r3]
-
-    // PID çıkışını hesapla
-    pidOutput = Kp * error + Ki * integral + Kd * derivative;
- 8000eb6:	4b1c      	ldr	r3, [pc, #112]	; (8000f28 <calculatePID+0x138>)
- 8000eb8:	ed93 7a00 	vldr	s14, [r3]
- 8000ebc:	4b14      	ldr	r3, [pc, #80]	; (8000f10 <calculatePID+0x120>)
- 8000ebe:	edd3 7a00 	vldr	s15, [r3]
- 8000ec2:	ee27 7a27 	vmul.f32	s14, s14, s15
- 8000ec6:	4b19      	ldr	r3, [pc, #100]	; (8000f2c <calculatePID+0x13c>)
- 8000ec8:	edd3 6a00 	vldr	s13, [r3]
- 8000ecc:	4b13      	ldr	r3, [pc, #76]	; (8000f1c <calculatePID+0x12c>)
- 8000ece:	edd3 7a00 	vldr	s15, [r3]
- 8000ed2:	ee66 7aa7 	vmul.f32	s15, s13, s15
- 8000ed6:	ee37 7a27 	vadd.f32	s14, s14, s15
- 8000eda:	4b15      	ldr	r3, [pc, #84]	; (8000f30 <calculatePID+0x140>)
- 8000edc:	edd3 6a00 	vldr	s13, [r3]
- 8000ee0:	4b10      	ldr	r3, [pc, #64]	; (8000f24 <calculatePID+0x134>)
- 8000ee2:	edd3 7a00 	vldr	s15, [r3]
- 8000ee6:	ee66 7aa7 	vmul.f32	s15, s13, s15
- 8000eea:	ee77 7a27 	vadd.f32	s15, s14, s15
- 8000eee:	4b11      	ldr	r3, [pc, #68]	; (8000f34 <calculatePID+0x144>)
- 8000ef0:	edc3 7a00 	vstr	s15, [r3]
-
-    // Güncel hata değerini sakla
-    lastError = error;
- 8000ef4:	4b06      	ldr	r3, [pc, #24]	; (8000f10 <calculatePID+0x120>)
- 8000ef6:	681b      	ldr	r3, [r3, #0]
- 8000ef8:	4a09      	ldr	r2, [pc, #36]	; (8000f20 <calculatePID+0x130>)
- 8000efa:	6013      	str	r3, [r2, #0]
-}
- 8000efc:	bf00      	nop
- 8000efe:	46bd      	mov	sp, r7
- 8000f00:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8000f04:	4770      	bx	lr
- 8000f06:	bf00      	nop
- 8000f08:	2000000c 	.word	0x2000000c
- 8000f0c:	200000cc 	.word	0x200000cc
- 8000f10:	200000d4 	.word	0x200000d4
- 8000f14:	40c00000 	.word	0x40c00000
- 8000f18:	c0c00000 	.word	0xc0c00000
- 8000f1c:	200000d8 	.word	0x200000d8
- 8000f20:	200000e0 	.word	0x200000e0
- 8000f24:	200000dc 	.word	0x200000dc
- 8000f28:	20000000 	.word	0x20000000
- 8000f2c:	20000004 	.word	0x20000004
- 8000f30:	20000008 	.word	0x20000008
- 8000f34:	200000d0 	.word	0x200000d0
-
-08000f38 <Read_HCSR04>:
+08000df0 <PID_Control>:
 }
 
 */
 
-uint32_t Read_HCSR04()
+void PID_Control()
 {
- 8000f38:	b580      	push	{r7, lr}
- 8000f3a:	b082      	sub	sp, #8
- 8000f3c:	af00      	add	r7, sp, #0
+ 8000df0:	b580      	push	{r7, lr}
+ 8000df2:	b082      	sub	sp, #8
+ 8000df4:	af00      	add	r7, sp, #0
 	uint32_t local_time = 0;
- 8000f3e:	2300      	movs	r3, #0
- 8000f40:	607b      	str	r3, [r7, #4]
+ 8000df6:	2300      	movs	r3, #0
+ 8000df8:	607b      	str	r3, [r7, #4]
 	float distance_temp = 0;
- 8000f42:	f04f 0300 	mov.w	r3, #0
- 8000f46:	603b      	str	r3, [r7, #0]
+ 8000dfa:	f04f 0300 	mov.w	r3, #0
+ 8000dfe:	603b      	str	r3, [r7, #0]
 
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
- 8000f48:	2200      	movs	r2, #0
- 8000f4a:	2102      	movs	r1, #2
- 8000f4c:	4828      	ldr	r0, [pc, #160]	; (8000ff0 <Read_HCSR04+0xb8>)
- 8000f4e:	f000 fee5 	bl	8001d1c <HAL_GPIO_WritePin>
+ 8000e00:	2200      	movs	r2, #0
+ 8000e02:	2102      	movs	r1, #2
+ 8000e04:	4880      	ldr	r0, [pc, #512]	; (8001008 <PID_Control+0x218>)
+ 8000e06:	f000 ff89 	bl	8001d1c <HAL_GPIO_WritePin>
     DWT_Delay_us(10);
- 8000f52:	200a      	movs	r0, #10
- 8000f54:	f7ff ff28 	bl	8000da8 <DWT_Delay_us>
+ 8000e0a:	200a      	movs	r0, #10
+ 8000e0c:	f7ff ffcc 	bl	8000da8 <DWT_Delay_us>
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
- 8000f58:	2201      	movs	r2, #1
- 8000f5a:	2102      	movs	r1, #2
- 8000f5c:	4824      	ldr	r0, [pc, #144]	; (8000ff0 <Read_HCSR04+0xb8>)
- 8000f5e:	f000 fedd 	bl	8001d1c <HAL_GPIO_WritePin>
+ 8000e10:	2201      	movs	r2, #1
+ 8000e12:	2102      	movs	r1, #2
+ 8000e14:	487c      	ldr	r0, [pc, #496]	; (8001008 <PID_Control+0x218>)
+ 8000e16:	f000 ff81 	bl	8001d1c <HAL_GPIO_WritePin>
 	DWT_Delay_us(10);
- 8000f62:	200a      	movs	r0, #10
- 8000f64:	f7ff ff20 	bl	8000da8 <DWT_Delay_us>
+ 8000e1a:	200a      	movs	r0, #10
+ 8000e1c:	f7ff ffc4 	bl	8000da8 <DWT_Delay_us>
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
- 8000f68:	2200      	movs	r2, #0
- 8000f6a:	2102      	movs	r1, #2
- 8000f6c:	4820      	ldr	r0, [pc, #128]	; (8000ff0 <Read_HCSR04+0xb8>)
- 8000f6e:	f000 fed5 	bl	8001d1c <HAL_GPIO_WritePin>
+ 8000e20:	2200      	movs	r2, #0
+ 8000e22:	2102      	movs	r1, #2
+ 8000e24:	4878      	ldr	r0, [pc, #480]	; (8001008 <PID_Control+0x218>)
+ 8000e26:	f000 ff79 	bl	8001d1c <HAL_GPIO_WritePin>
 	DWT_Delay_us(10);
- 8000f72:	200a      	movs	r0, #10
- 8000f74:	f7ff ff18 	bl	8000da8 <DWT_Delay_us>
+ 8000e2a:	200a      	movs	r0, #10
+ 8000e2c:	f7ff ffbc 	bl	8000da8 <DWT_Delay_us>
 
 	while(!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0));
- 8000f78:	bf00      	nop
- 8000f7a:	2101      	movs	r1, #1
- 8000f7c:	481c      	ldr	r0, [pc, #112]	; (8000ff0 <Read_HCSR04+0xb8>)
- 8000f7e:	f000 feb5 	bl	8001cec <HAL_GPIO_ReadPin>
- 8000f82:	4603      	mov	r3, r0
- 8000f84:	2b00      	cmp	r3, #0
- 8000f86:	d0f8      	beq.n	8000f7a <Read_HCSR04+0x42>
+ 8000e30:	bf00      	nop
+ 8000e32:	2101      	movs	r1, #1
+ 8000e34:	4874      	ldr	r0, [pc, #464]	; (8001008 <PID_Control+0x218>)
+ 8000e36:	f000 ff59 	bl	8001cec <HAL_GPIO_ReadPin>
+ 8000e3a:	4603      	mov	r3, r0
+ 8000e3c:	2b00      	cmp	r3, #0
+ 8000e3e:	d0f8      	beq.n	8000e32 <PID_Control+0x42>
 
 	while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
- 8000f88:	e005      	b.n	8000f96 <Read_HCSR04+0x5e>
+ 8000e40:	e005      	b.n	8000e4e <PID_Control+0x5e>
 	{
 		local_time++;
- 8000f8a:	687b      	ldr	r3, [r7, #4]
- 8000f8c:	3301      	adds	r3, #1
- 8000f8e:	607b      	str	r3, [r7, #4]
+ 8000e42:	687b      	ldr	r3, [r7, #4]
+ 8000e44:	3301      	adds	r3, #1
+ 8000e46:	607b      	str	r3, [r7, #4]
 		DWT_Delay_us(1);
- 8000f90:	2001      	movs	r0, #1
- 8000f92:	f7ff ff09 	bl	8000da8 <DWT_Delay_us>
+ 8000e48:	2001      	movs	r0, #1
+ 8000e4a:	f7ff ffad 	bl	8000da8 <DWT_Delay_us>
 	while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))
- 8000f96:	2101      	movs	r1, #1
- 8000f98:	4815      	ldr	r0, [pc, #84]	; (8000ff0 <Read_HCSR04+0xb8>)
- 8000f9a:	f000 fea7 	bl	8001cec <HAL_GPIO_ReadPin>
- 8000f9e:	4603      	mov	r3, r0
- 8000fa0:	2b00      	cmp	r3, #0
- 8000fa2:	d1f2      	bne.n	8000f8a <Read_HCSR04+0x52>
+ 8000e4e:	2101      	movs	r1, #1
+ 8000e50:	486d      	ldr	r0, [pc, #436]	; (8001008 <PID_Control+0x218>)
+ 8000e52:	f000 ff4b 	bl	8001cec <HAL_GPIO_ReadPin>
+ 8000e56:	4603      	mov	r3, r0
+ 8000e58:	2b00      	cmp	r3, #0
+ 8000e5a:	d1f2      	bne.n	8000e42 <PID_Control+0x52>
 	}
 
 	distance_temp = (float)local_time/15.1;
- 8000fa4:	687b      	ldr	r3, [r7, #4]
- 8000fa6:	ee07 3a90 	vmov	s15, r3
- 8000faa:	eef8 7a67 	vcvt.f32.u32	s15, s15
- 8000fae:	ee17 0a90 	vmov	r0, s15
- 8000fb2:	f7ff fa8d 	bl	80004d0 <__aeabi_f2d>
- 8000fb6:	a30c      	add	r3, pc, #48	; (adr r3, 8000fe8 <Read_HCSR04+0xb0>)
- 8000fb8:	e9d3 2300 	ldrd	r2, r3, [r3]
- 8000fbc:	f7ff fc0a 	bl	80007d4 <__aeabi_ddiv>
- 8000fc0:	4602      	mov	r2, r0
- 8000fc2:	460b      	mov	r3, r1
- 8000fc4:	4610      	mov	r0, r2
- 8000fc6:	4619      	mov	r1, r3
- 8000fc8:	f7ff fcec 	bl	80009a4 <__aeabi_d2f>
- 8000fcc:	4603      	mov	r3, r0
- 8000fce:	603b      	str	r3, [r7, #0]
-	return distance_temp;
- 8000fd0:	edd7 7a00 	vldr	s15, [r7]
- 8000fd4:	eefc 7ae7 	vcvt.u32.f32	s15, s15
- 8000fd8:	ee17 3a90 	vmov	r3, s15
-	DWT_Delay_us(10);
-}
- 8000fdc:	4618      	mov	r0, r3
- 8000fde:	3708      	adds	r7, #8
- 8000fe0:	46bd      	mov	sp, r7
- 8000fe2:	bd80      	pop	{r7, pc}
- 8000fe4:	f3af 8000 	nop.w
- 8000fe8:	33333333 	.word	0x33333333
- 8000fec:	402e3333 	.word	0x402e3333
- 8000ff0:	40020000 	.word	0x40020000
+ 8000e5c:	687b      	ldr	r3, [r7, #4]
+ 8000e5e:	ee07 3a90 	vmov	s15, r3
+ 8000e62:	eef8 7a67 	vcvt.f32.u32	s15, s15
+ 8000e66:	ee17 0a90 	vmov	r0, s15
+ 8000e6a:	f7ff fb31 	bl	80004d0 <__aeabi_f2d>
+ 8000e6e:	a362      	add	r3, pc, #392	; (adr r3, 8000ff8 <PID_Control+0x208>)
+ 8000e70:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8000e74:	f7ff fcae 	bl	80007d4 <__aeabi_ddiv>
+ 8000e78:	4602      	mov	r2, r0
+ 8000e7a:	460b      	mov	r3, r1
+ 8000e7c:	4610      	mov	r0, r2
+ 8000e7e:	4619      	mov	r1, r3
+ 8000e80:	f7ff fd90 	bl	80009a4 <__aeabi_d2f>
+ 8000e84:	4603      	mov	r3, r0
+ 8000e86:	603b      	str	r3, [r7, #0]
+	//return distance_temp;
 
-08000ff4 <Servo1_Angle>:
+	distance = distance_temp - 3.1; //offset
+ 8000e88:	6838      	ldr	r0, [r7, #0]
+ 8000e8a:	f7ff fb21 	bl	80004d0 <__aeabi_f2d>
+ 8000e8e:	a35c      	add	r3, pc, #368	; (adr r3, 8001000 <PID_Control+0x210>)
+ 8000e90:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8000e94:	f7ff f9bc 	bl	8000210 <__aeabi_dsub>
+ 8000e98:	4602      	mov	r2, r0
+ 8000e9a:	460b      	mov	r3, r1
+ 8000e9c:	4610      	mov	r0, r2
+ 8000e9e:	4619      	mov	r1, r3
+ 8000ea0:	f7ff fd80 	bl	80009a4 <__aeabi_d2f>
+ 8000ea4:	4603      	mov	r3, r0
+ 8000ea6:	4a59      	ldr	r2, [pc, #356]	; (800100c <PID_Control+0x21c>)
+ 8000ea8:	6013      	str	r3, [r2, #0]
+
+	if(distance > 26) distance = 26;
+ 8000eaa:	4b58      	ldr	r3, [pc, #352]	; (800100c <PID_Control+0x21c>)
+ 8000eac:	edd3 7a00 	vldr	s15, [r3]
+ 8000eb0:	eeb3 7a0a 	vmov.f32	s14, #58	; 0x41d00000  26.0
+ 8000eb4:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 8000eb8:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8000ebc:	dd03      	ble.n	8000ec6 <PID_Control+0xd6>
+ 8000ebe:	4b53      	ldr	r3, [pc, #332]	; (800100c <PID_Control+0x21c>)
+ 8000ec0:	4a53      	ldr	r2, [pc, #332]	; (8001010 <PID_Control+0x220>)
+ 8000ec2:	601a      	str	r2, [r3, #0]
+ 8000ec4:	e010      	b.n	8000ee8 <PID_Control+0xf8>
+	else if(distance < 0) distance = 0;
+ 8000ec6:	4b51      	ldr	r3, [pc, #324]	; (800100c <PID_Control+0x21c>)
+ 8000ec8:	edd3 7a00 	vldr	s15, [r3]
+ 8000ecc:	eef5 7ac0 	vcmpe.f32	s15, #0.0
+ 8000ed0:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8000ed4:	d504      	bpl.n	8000ee0 <PID_Control+0xf0>
+ 8000ed6:	4b4d      	ldr	r3, [pc, #308]	; (800100c <PID_Control+0x21c>)
+ 8000ed8:	f04f 0200 	mov.w	r2, #0
+ 8000edc:	601a      	str	r2, [r3, #0]
+ 8000ede:	e003      	b.n	8000ee8 <PID_Control+0xf8>
+	else distance = distance;
+ 8000ee0:	4b4a      	ldr	r3, [pc, #296]	; (800100c <PID_Control+0x21c>)
+ 8000ee2:	681b      	ldr	r3, [r3, #0]
+ 8000ee4:	4a49      	ldr	r2, [pc, #292]	; (800100c <PID_Control+0x21c>)
+ 8000ee6:	6013      	str	r3, [r2, #0]
+
+	//------------PID HESAPLAMA------------------------
+
+	// Hata hesapla
+	    error = setpoint - distance;
+ 8000ee8:	4b4a      	ldr	r3, [pc, #296]	; (8001014 <PID_Control+0x224>)
+ 8000eea:	ed93 7a00 	vldr	s14, [r3]
+ 8000eee:	4b47      	ldr	r3, [pc, #284]	; (800100c <PID_Control+0x21c>)
+ 8000ef0:	edd3 7a00 	vldr	s15, [r3]
+ 8000ef4:	ee77 7a67 	vsub.f32	s15, s14, s15
+ 8000ef8:	4b47      	ldr	r3, [pc, #284]	; (8001018 <PID_Control+0x228>)
+ 8000efa:	edc3 7a00 	vstr	s15, [r3]
+
+	    if(error > 6) error = 6;
+ 8000efe:	4b46      	ldr	r3, [pc, #280]	; (8001018 <PID_Control+0x228>)
+ 8000f00:	edd3 7a00 	vldr	s15, [r3]
+ 8000f04:	eeb1 7a08 	vmov.f32	s14, #24	; 0x40c00000  6.0
+ 8000f08:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 8000f0c:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8000f10:	dd03      	ble.n	8000f1a <PID_Control+0x12a>
+ 8000f12:	4b41      	ldr	r3, [pc, #260]	; (8001018 <PID_Control+0x228>)
+ 8000f14:	4a41      	ldr	r2, [pc, #260]	; (800101c <PID_Control+0x22c>)
+ 8000f16:	601a      	str	r2, [r3, #0]
+ 8000f18:	e011      	b.n	8000f3e <PID_Control+0x14e>
+	        else if(error < -6) error = -6;
+ 8000f1a:	4b3f      	ldr	r3, [pc, #252]	; (8001018 <PID_Control+0x228>)
+ 8000f1c:	edd3 7a00 	vldr	s15, [r3]
+ 8000f20:	eeb9 7a08 	vmov.f32	s14, #152	; 0xc0c00000 -6.0
+ 8000f24:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 8000f28:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8000f2c:	d503      	bpl.n	8000f36 <PID_Control+0x146>
+ 8000f2e:	4b3a      	ldr	r3, [pc, #232]	; (8001018 <PID_Control+0x228>)
+ 8000f30:	4a3b      	ldr	r2, [pc, #236]	; (8001020 <PID_Control+0x230>)
+ 8000f32:	601a      	str	r2, [r3, #0]
+ 8000f34:	e003      	b.n	8000f3e <PID_Control+0x14e>
+	        else error = error;
+ 8000f36:	4b38      	ldr	r3, [pc, #224]	; (8001018 <PID_Control+0x228>)
+ 8000f38:	681b      	ldr	r3, [r3, #0]
+ 8000f3a:	4a37      	ldr	r2, [pc, #220]	; (8001018 <PID_Control+0x228>)
+ 8000f3c:	6013      	str	r3, [r2, #0]
+
+	    // İntegral hesapla
+	    integral += error;
+ 8000f3e:	4b39      	ldr	r3, [pc, #228]	; (8001024 <PID_Control+0x234>)
+ 8000f40:	ed93 7a00 	vldr	s14, [r3]
+ 8000f44:	4b34      	ldr	r3, [pc, #208]	; (8001018 <PID_Control+0x228>)
+ 8000f46:	edd3 7a00 	vldr	s15, [r3]
+ 8000f4a:	ee77 7a27 	vadd.f32	s15, s14, s15
+ 8000f4e:	4b35      	ldr	r3, [pc, #212]	; (8001024 <PID_Control+0x234>)
+ 8000f50:	edc3 7a00 	vstr	s15, [r3]
+
+	    if(integral > 6) integral = 6;
+ 8000f54:	4b33      	ldr	r3, [pc, #204]	; (8001024 <PID_Control+0x234>)
+ 8000f56:	edd3 7a00 	vldr	s15, [r3]
+ 8000f5a:	eeb1 7a08 	vmov.f32	s14, #24	; 0x40c00000  6.0
+ 8000f5e:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 8000f62:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8000f66:	dd03      	ble.n	8000f70 <PID_Control+0x180>
+ 8000f68:	4b2e      	ldr	r3, [pc, #184]	; (8001024 <PID_Control+0x234>)
+ 8000f6a:	4a2c      	ldr	r2, [pc, #176]	; (800101c <PID_Control+0x22c>)
+ 8000f6c:	601a      	str	r2, [r3, #0]
+ 8000f6e:	e011      	b.n	8000f94 <PID_Control+0x1a4>
+	    else if(integral < -6) integral = -6;
+ 8000f70:	4b2c      	ldr	r3, [pc, #176]	; (8001024 <PID_Control+0x234>)
+ 8000f72:	edd3 7a00 	vldr	s15, [r3]
+ 8000f76:	eeb9 7a08 	vmov.f32	s14, #152	; 0xc0c00000 -6.0
+ 8000f7a:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 8000f7e:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8000f82:	d503      	bpl.n	8000f8c <PID_Control+0x19c>
+ 8000f84:	4b27      	ldr	r3, [pc, #156]	; (8001024 <PID_Control+0x234>)
+ 8000f86:	4a26      	ldr	r2, [pc, #152]	; (8001020 <PID_Control+0x230>)
+ 8000f88:	601a      	str	r2, [r3, #0]
+ 8000f8a:	e003      	b.n	8000f94 <PID_Control+0x1a4>
+	    else integral = integral;
+ 8000f8c:	4b25      	ldr	r3, [pc, #148]	; (8001024 <PID_Control+0x234>)
+ 8000f8e:	681b      	ldr	r3, [r3, #0]
+ 8000f90:	4a24      	ldr	r2, [pc, #144]	; (8001024 <PID_Control+0x234>)
+ 8000f92:	6013      	str	r3, [r2, #0]
+
+	    // Türev hesapla
+	    derivative = error - lastError;
+ 8000f94:	4b20      	ldr	r3, [pc, #128]	; (8001018 <PID_Control+0x228>)
+ 8000f96:	ed93 7a00 	vldr	s14, [r3]
+ 8000f9a:	4b23      	ldr	r3, [pc, #140]	; (8001028 <PID_Control+0x238>)
+ 8000f9c:	edd3 7a00 	vldr	s15, [r3]
+ 8000fa0:	ee77 7a67 	vsub.f32	s15, s14, s15
+ 8000fa4:	4b21      	ldr	r3, [pc, #132]	; (800102c <PID_Control+0x23c>)
+ 8000fa6:	edc3 7a00 	vstr	s15, [r3]
+
+	    // PID çıkışını hesapla
+	    pidOutput = Kp * error + Ki * integral + Kd * derivative;
+ 8000faa:	4b21      	ldr	r3, [pc, #132]	; (8001030 <PID_Control+0x240>)
+ 8000fac:	ed93 7a00 	vldr	s14, [r3]
+ 8000fb0:	4b19      	ldr	r3, [pc, #100]	; (8001018 <PID_Control+0x228>)
+ 8000fb2:	edd3 7a00 	vldr	s15, [r3]
+ 8000fb6:	ee27 7a27 	vmul.f32	s14, s14, s15
+ 8000fba:	4b1e      	ldr	r3, [pc, #120]	; (8001034 <PID_Control+0x244>)
+ 8000fbc:	edd3 6a00 	vldr	s13, [r3]
+ 8000fc0:	4b18      	ldr	r3, [pc, #96]	; (8001024 <PID_Control+0x234>)
+ 8000fc2:	edd3 7a00 	vldr	s15, [r3]
+ 8000fc6:	ee66 7aa7 	vmul.f32	s15, s13, s15
+ 8000fca:	ee37 7a27 	vadd.f32	s14, s14, s15
+ 8000fce:	4b1a      	ldr	r3, [pc, #104]	; (8001038 <PID_Control+0x248>)
+ 8000fd0:	edd3 6a00 	vldr	s13, [r3]
+ 8000fd4:	4b15      	ldr	r3, [pc, #84]	; (800102c <PID_Control+0x23c>)
+ 8000fd6:	edd3 7a00 	vldr	s15, [r3]
+ 8000fda:	ee66 7aa7 	vmul.f32	s15, s13, s15
+ 8000fde:	ee77 7a27 	vadd.f32	s15, s14, s15
+ 8000fe2:	4b16      	ldr	r3, [pc, #88]	; (800103c <PID_Control+0x24c>)
+ 8000fe4:	edc3 7a00 	vstr	s15, [r3]
+
+	    // Güncel hata değerini sakla
+	    lastError = error;
+ 8000fe8:	4b0b      	ldr	r3, [pc, #44]	; (8001018 <PID_Control+0x228>)
+ 8000fea:	681b      	ldr	r3, [r3, #0]
+ 8000fec:	4a0e      	ldr	r2, [pc, #56]	; (8001028 <PID_Control+0x238>)
+ 8000fee:	6013      	str	r3, [r2, #0]
+}
+ 8000ff0:	bf00      	nop
+ 8000ff2:	3708      	adds	r7, #8
+ 8000ff4:	46bd      	mov	sp, r7
+ 8000ff6:	bd80      	pop	{r7, pc}
+ 8000ff8:	33333333 	.word	0x33333333
+ 8000ffc:	402e3333 	.word	0x402e3333
+ 8001000:	cccccccd 	.word	0xcccccccd
+ 8001004:	4008cccc 	.word	0x4008cccc
+ 8001008:	40020000 	.word	0x40020000
+ 800100c:	200000cc 	.word	0x200000cc
+ 8001010:	41d00000 	.word	0x41d00000
+ 8001014:	2000000c 	.word	0x2000000c
+ 8001018:	200000d4 	.word	0x200000d4
+ 800101c:	40c00000 	.word	0x40c00000
+ 8001020:	c0c00000 	.word	0xc0c00000
+ 8001024:	200000d8 	.word	0x200000d8
+ 8001028:	200000e0 	.word	0x200000e0
+ 800102c:	200000dc 	.word	0x200000dc
+ 8001030:	20000000 	.word	0x20000000
+ 8001034:	20000004 	.word	0x20000004
+ 8001038:	20000008 	.word	0x20000008
+ 800103c:	200000d0 	.word	0x200000d0
+
+08001040 <Servo1_Angle>:
 
 void Servo1_Angle(int angle1)
 {
- 8000ff4:	b480      	push	{r7}
- 8000ff6:	b083      	sub	sp, #12
- 8000ff8:	af00      	add	r7, sp, #0
- 8000ffa:	6078      	str	r0, [r7, #4]
+ 8001040:	b480      	push	{r7}
+ 8001042:	b083      	sub	sp, #12
+ 8001044:	af00      	add	r7, sp, #0
+ 8001046:	6078      	str	r0, [r7, #4]
 	if(angle1 < 0)
- 8000ffc:	687b      	ldr	r3, [r7, #4]
- 8000ffe:	2b00      	cmp	r3, #0
- 8001000:	da01      	bge.n	8001006 <Servo1_Angle+0x12>
+ 8001048:	687b      	ldr	r3, [r7, #4]
+ 800104a:	2b00      	cmp	r3, #0
+ 800104c:	da01      	bge.n	8001052 <Servo1_Angle+0x12>
 		angle1 = 0;
- 8001002:	2300      	movs	r3, #0
- 8001004:	607b      	str	r3, [r7, #4]
+ 800104e:	2300      	movs	r3, #0
+ 8001050:	607b      	str	r3, [r7, #4]
 	if(angle1 > 180)
- 8001006:	687b      	ldr	r3, [r7, #4]
- 8001008:	2bb4      	cmp	r3, #180	; 0xb4
- 800100a:	dd01      	ble.n	8001010 <Servo1_Angle+0x1c>
+ 8001052:	687b      	ldr	r3, [r7, #4]
+ 8001054:	2bb4      	cmp	r3, #180	; 0xb4
+ 8001056:	dd01      	ble.n	800105c <Servo1_Angle+0x1c>
 		angle1 = 180;
- 800100c:	23b4      	movs	r3, #180	; 0xb4
- 800100e:	607b      	str	r3, [r7, #4]
+ 8001058:	23b4      	movs	r3, #180	; 0xb4
+ 800105a:	607b      	str	r3, [r7, #4]
 
 	angle1 += 45; //offset değeri
- 8001010:	687b      	ldr	r3, [r7, #4]
- 8001012:	332d      	adds	r3, #45	; 0x2d
- 8001014:	607b      	str	r3, [r7, #4]
+ 800105c:	687b      	ldr	r3, [r7, #4]
+ 800105e:	332d      	adds	r3, #45	; 0x2d
+ 8001060:	607b      	str	r3, [r7, #4]
 
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, angle1);
- 8001016:	4b05      	ldr	r3, [pc, #20]	; (800102c <Servo1_Angle+0x38>)
- 8001018:	681b      	ldr	r3, [r3, #0]
- 800101a:	687a      	ldr	r2, [r7, #4]
- 800101c:	635a      	str	r2, [r3, #52]	; 0x34
+ 8001062:	4b05      	ldr	r3, [pc, #20]	; (8001078 <Servo1_Angle+0x38>)
+ 8001064:	681b      	ldr	r3, [r3, #0]
+ 8001066:	687a      	ldr	r2, [r7, #4]
+ 8001068:	635a      	str	r2, [r3, #52]	; 0x34
 }
- 800101e:	bf00      	nop
- 8001020:	370c      	adds	r7, #12
- 8001022:	46bd      	mov	sp, r7
- 8001024:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8001028:	4770      	bx	lr
- 800102a:	bf00      	nop
- 800102c:	2000003c 	.word	0x2000003c
+ 800106a:	bf00      	nop
+ 800106c:	370c      	adds	r7, #12
+ 800106e:	46bd      	mov	sp, r7
+ 8001070:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8001074:	4770      	bx	lr
+ 8001076:	bf00      	nop
+ 8001078:	2000003c 	.word	0x2000003c
 
-08001030 <Servo2_Angle>:
+0800107c <Servo2_Angle>:
 
 void Servo2_Angle(int angle2)
 {
- 8001030:	b480      	push	{r7}
- 8001032:	b083      	sub	sp, #12
- 8001034:	af00      	add	r7, sp, #0
- 8001036:	6078      	str	r0, [r7, #4]
+ 800107c:	b480      	push	{r7}
+ 800107e:	b083      	sub	sp, #12
+ 8001080:	af00      	add	r7, sp, #0
+ 8001082:	6078      	str	r0, [r7, #4]
 	if(angle2 < 0)
- 8001038:	687b      	ldr	r3, [r7, #4]
- 800103a:	2b00      	cmp	r3, #0
- 800103c:	da01      	bge.n	8001042 <Servo2_Angle+0x12>
+ 8001084:	687b      	ldr	r3, [r7, #4]
+ 8001086:	2b00      	cmp	r3, #0
+ 8001088:	da01      	bge.n	800108e <Servo2_Angle+0x12>
 		angle2 = 0;
- 800103e:	2300      	movs	r3, #0
- 8001040:	607b      	str	r3, [r7, #4]
+ 800108a:	2300      	movs	r3, #0
+ 800108c:	607b      	str	r3, [r7, #4]
 	if(angle2 > 90)
- 8001042:	687b      	ldr	r3, [r7, #4]
- 8001044:	2b5a      	cmp	r3, #90	; 0x5a
- 8001046:	dd01      	ble.n	800104c <Servo2_Angle+0x1c>
+ 800108e:	687b      	ldr	r3, [r7, #4]
+ 8001090:	2b5a      	cmp	r3, #90	; 0x5a
+ 8001092:	dd01      	ble.n	8001098 <Servo2_Angle+0x1c>
 		angle2 = 90;
- 8001048:	235a      	movs	r3, #90	; 0x5a
- 800104a:	607b      	str	r3, [r7, #4]
+ 8001094:	235a      	movs	r3, #90	; 0x5a
+ 8001096:	607b      	str	r3, [r7, #4]
 
 	angle2 += 45; //offset değeri
- 800104c:	687b      	ldr	r3, [r7, #4]
- 800104e:	332d      	adds	r3, #45	; 0x2d
- 8001050:	607b      	str	r3, [r7, #4]
+ 8001098:	687b      	ldr	r3, [r7, #4]
+ 800109a:	332d      	adds	r3, #45	; 0x2d
+ 800109c:	607b      	str	r3, [r7, #4]
 
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, angle2);
- 8001052:	4b05      	ldr	r3, [pc, #20]	; (8001068 <Servo2_Angle+0x38>)
- 8001054:	681b      	ldr	r3, [r3, #0]
- 8001056:	687a      	ldr	r2, [r7, #4]
- 8001058:	639a      	str	r2, [r3, #56]	; 0x38
+ 800109e:	4b05      	ldr	r3, [pc, #20]	; (80010b4 <Servo2_Angle+0x38>)
+ 80010a0:	681b      	ldr	r3, [r3, #0]
+ 80010a2:	687a      	ldr	r2, [r7, #4]
+ 80010a4:	639a      	str	r2, [r3, #56]	; 0x38
 }
- 800105a:	bf00      	nop
- 800105c:	370c      	adds	r7, #12
- 800105e:	46bd      	mov	sp, r7
- 8001060:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8001064:	4770      	bx	lr
- 8001066:	bf00      	nop
- 8001068:	2000003c 	.word	0x2000003c
+ 80010a6:	bf00      	nop
+ 80010a8:	370c      	adds	r7, #12
+ 80010aa:	46bd      	mov	sp, r7
+ 80010ac:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80010b0:	4770      	bx	lr
+ 80010b2:	bf00      	nop
+ 80010b4:	2000003c 	.word	0x2000003c
 
-0800106c <Servo3_Angle>:
+080010b8 <Servo3_Angle>:
 
 void Servo3_Angle(int angle3)
 {
- 800106c:	b480      	push	{r7}
- 800106e:	b083      	sub	sp, #12
- 8001070:	af00      	add	r7, sp, #0
- 8001072:	6078      	str	r0, [r7, #4]
+ 80010b8:	b480      	push	{r7}
+ 80010ba:	b083      	sub	sp, #12
+ 80010bc:	af00      	add	r7, sp, #0
+ 80010be:	6078      	str	r0, [r7, #4]
 
 	angle3 += 45; //offset değeri
- 8001074:	687b      	ldr	r3, [r7, #4]
- 8001076:	332d      	adds	r3, #45	; 0x2d
- 8001078:	607b      	str	r3, [r7, #4]
+ 80010c0:	687b      	ldr	r3, [r7, #4]
+ 80010c2:	332d      	adds	r3, #45	; 0x2d
+ 80010c4:	607b      	str	r3, [r7, #4]
 
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, angle3);
- 800107a:	4b05      	ldr	r3, [pc, #20]	; (8001090 <Servo3_Angle+0x24>)
- 800107c:	681b      	ldr	r3, [r3, #0]
- 800107e:	687a      	ldr	r2, [r7, #4]
- 8001080:	63da      	str	r2, [r3, #60]	; 0x3c
+ 80010c6:	4b05      	ldr	r3, [pc, #20]	; (80010dc <Servo3_Angle+0x24>)
+ 80010c8:	681b      	ldr	r3, [r3, #0]
+ 80010ca:	687a      	ldr	r2, [r7, #4]
+ 80010cc:	63da      	str	r2, [r3, #60]	; 0x3c
 }
- 8001082:	bf00      	nop
- 8001084:	370c      	adds	r7, #12
- 8001086:	46bd      	mov	sp, r7
- 8001088:	f85d 7b04 	ldr.w	r7, [sp], #4
- 800108c:	4770      	bx	lr
- 800108e:	bf00      	nop
- 8001090:	2000003c 	.word	0x2000003c
- 8001094:	00000000 	.word	0x00000000
+ 80010ce:	bf00      	nop
+ 80010d0:	370c      	adds	r7, #12
+ 80010d2:	46bd      	mov	sp, r7
+ 80010d4:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80010d8:	4770      	bx	lr
+ 80010da:	bf00      	nop
+ 80010dc:	2000003c 	.word	0x2000003c
 
-08001098 <main>:
+080010e0 <main>:
 /**
   * @brief  The application entry point.
   * @retval int
   */
 int main(void)
 {
- 8001098:	b580      	push	{r7, lr}
- 800109a:	af00      	add	r7, sp, #0
+ 80010e0:	b580      	push	{r7, lr}
+ 80010e2:	af00      	add	r7, sp, #0
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
- 800109c:	f000 fb3a 	bl	8001714 <HAL_Init>
+ 80010e4:	f000 fb16 	bl	8001714 <HAL_Init>
 
   /* USER CODE BEGIN Init */
 
   DWT_Delay_Init();
- 80010a0:	f7ff fe52 	bl	8000d48 <DWT_Delay_Init>
+ 80010e8:	f7ff fe2e 	bl	8000d48 <DWT_Delay_Init>
 
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
- 80010a4:	f000 f882 	bl	80011ac <SystemClock_Config>
+ 80010ec:	f000 f85e 	bl	80011ac <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
- 80010a8:	f000 f9d6 	bl	8001458 <MX_GPIO_Init>
+ 80010f0:	f000 f9b2 	bl	8001458 <MX_GPIO_Init>
   MX_TIM1_Init();
- 80010ac:	f000 f8ec 	bl	8001288 <MX_TIM1_Init>
+ 80010f4:	f000 f8c8 	bl	8001288 <MX_TIM1_Init>
   MX_TIM2_Init();
- 80010b0:	f000 f986 	bl	80013c0 <MX_TIM2_Init>
+ 80010f8:	f000 f962 	bl	80013c0 <MX_TIM2_Init>
   /* USER CODE BEGIN 2 */
 
 
   HAL_TIM_Base_Start(&htim2);
- 80010b4:	4834      	ldr	r0, [pc, #208]	; (8001188 <main+0xf0>)
- 80010b6:	f001 fc5b 	bl	8002970 <HAL_TIM_Base_Start>
+ 80010fc:	4823      	ldr	r0, [pc, #140]	; (800118c <main+0xac>)
+ 80010fe:	f001 fc37 	bl	8002970 <HAL_TIM_Base_Start>
 
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
- 80010ba:	2100      	movs	r1, #0
- 80010bc:	4833      	ldr	r0, [pc, #204]	; (800118c <main+0xf4>)
- 80010be:	f001 fd0f 	bl	8002ae0 <HAL_TIM_PWM_Start>
+ 8001102:	2100      	movs	r1, #0
+ 8001104:	4822      	ldr	r0, [pc, #136]	; (8001190 <main+0xb0>)
+ 8001106:	f001 fceb 	bl	8002ae0 <HAL_TIM_PWM_Start>
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
- 80010c2:	2104      	movs	r1, #4
- 80010c4:	4831      	ldr	r0, [pc, #196]	; (800118c <main+0xf4>)
- 80010c6:	f001 fd0b 	bl	8002ae0 <HAL_TIM_PWM_Start>
+ 800110a:	2104      	movs	r1, #4
+ 800110c:	4820      	ldr	r0, [pc, #128]	; (8001190 <main+0xb0>)
+ 800110e:	f001 fce7 	bl	8002ae0 <HAL_TIM_PWM_Start>
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
- 80010ca:	2108      	movs	r1, #8
- 80010cc:	482f      	ldr	r0, [pc, #188]	; (800118c <main+0xf4>)
- 80010ce:	f001 fd07 	bl	8002ae0 <HAL_TIM_PWM_Start>
+ 8001112:	2108      	movs	r1, #8
+ 8001114:	481e      	ldr	r0, [pc, #120]	; (8001190 <main+0xb0>)
+ 8001116:	f001 fce3 	bl	8002ae0 <HAL_TIM_PWM_Start>
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-
-	  //Mesafe hesaplanması*************************
-	  distance = Read_HCSR04(); //cm cinsinden mesafe
- 80010d2:	f7ff ff31 	bl	8000f38 <Read_HCSR04>
- 80010d6:	ee07 0a90 	vmov	s15, r0
- 80010da:	eef8 7a67 	vcvt.f32.u32	s15, s15
- 80010de:	4b2c      	ldr	r3, [pc, #176]	; (8001190 <main+0xf8>)
- 80010e0:	edc3 7a00 	vstr	s15, [r3]
-	  distance -= 3.1; //offset
- 80010e4:	4b2a      	ldr	r3, [pc, #168]	; (8001190 <main+0xf8>)
- 80010e6:	681b      	ldr	r3, [r3, #0]
- 80010e8:	4618      	mov	r0, r3
- 80010ea:	f7ff f9f1 	bl	80004d0 <__aeabi_f2d>
- 80010ee:	a324      	add	r3, pc, #144	; (adr r3, 8001180 <main+0xe8>)
- 80010f0:	e9d3 2300 	ldrd	r2, r3, [r3]
- 80010f4:	f7ff f88c 	bl	8000210 <__aeabi_dsub>
- 80010f8:	4602      	mov	r2, r0
- 80010fa:	460b      	mov	r3, r1
- 80010fc:	4610      	mov	r0, r2
- 80010fe:	4619      	mov	r1, r3
- 8001100:	f7ff fc50 	bl	80009a4 <__aeabi_d2f>
- 8001104:	4603      	mov	r3, r0
- 8001106:	4a22      	ldr	r2, [pc, #136]	; (8001190 <main+0xf8>)
- 8001108:	6013      	str	r3, [r2, #0]
-
-	  // PID kontrolünü hesapla
-	  calculatePID();
- 800110a:	f7ff fe71 	bl	8000df0 <calculatePID>
-
+	  PID_Control();
+ 800111a:	f7ff fe69 	bl	8000df0 <PID_Control>
 
 	  // Servo açısını güncelle
 	      servoAngle = servoAngle + pidOutput * (-1);
- 800110e:	4b21      	ldr	r3, [pc, #132]	; (8001194 <main+0xfc>)
- 8001110:	ed93 7a00 	vldr	s14, [r3]
- 8001114:	4b20      	ldr	r3, [pc, #128]	; (8001198 <main+0x100>)
- 8001116:	edd3 7a00 	vldr	s15, [r3]
- 800111a:	ee77 7a67 	vsub.f32	s15, s14, s15
- 800111e:	4b1d      	ldr	r3, [pc, #116]	; (8001194 <main+0xfc>)
- 8001120:	edc3 7a00 	vstr	s15, [r3]
+ 800111e:	4b1d      	ldr	r3, [pc, #116]	; (8001194 <main+0xb4>)
+ 8001120:	ed93 7a00 	vldr	s14, [r3]
+ 8001124:	4b1c      	ldr	r3, [pc, #112]	; (8001198 <main+0xb8>)
+ 8001126:	edd3 7a00 	vldr	s15, [r3]
+ 800112a:	ee77 7a67 	vsub.f32	s15, s14, s15
+ 800112e:	4b19      	ldr	r3, [pc, #100]	; (8001194 <main+0xb4>)
+ 8001130:	edc3 7a00 	vstr	s15, [r3]
 
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
 	      if (servoAngle < 35.0)
- 8001124:	4b1b      	ldr	r3, [pc, #108]	; (8001194 <main+0xfc>)
- 8001126:	edd3 7a00 	vldr	s15, [r3]
- 800112a:	ed9f 7a1c 	vldr	s14, [pc, #112]	; 800119c <main+0x104>
- 800112e:	eef4 7ac7 	vcmpe.f32	s15, s14
- 8001132:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8001136:	d503      	bpl.n	8001140 <main+0xa8>
+ 8001134:	4b17      	ldr	r3, [pc, #92]	; (8001194 <main+0xb4>)
+ 8001136:	edd3 7a00 	vldr	s15, [r3]
+ 800113a:	ed9f 7a18 	vldr	s14, [pc, #96]	; 800119c <main+0xbc>
+ 800113e:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 8001142:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8001146:	d503      	bpl.n	8001150 <main+0x70>
 	      {
 	          servoAngle = 35.0;
- 8001138:	4b16      	ldr	r3, [pc, #88]	; (8001194 <main+0xfc>)
- 800113a:	4a19      	ldr	r2, [pc, #100]	; (80011a0 <main+0x108>)
- 800113c:	601a      	str	r2, [r3, #0]
- 800113e:	e00c      	b.n	800115a <main+0xc2>
+ 8001148:	4b12      	ldr	r3, [pc, #72]	; (8001194 <main+0xb4>)
+ 800114a:	4a15      	ldr	r2, [pc, #84]	; (80011a0 <main+0xc0>)
+ 800114c:	601a      	str	r2, [r3, #0]
+ 800114e:	e00c      	b.n	800116a <main+0x8a>
 	      }
 
 	      else if (servoAngle > 50.0)
- 8001140:	4b14      	ldr	r3, [pc, #80]	; (8001194 <main+0xfc>)
- 8001142:	edd3 7a00 	vldr	s15, [r3]
- 8001146:	ed9f 7a17 	vldr	s14, [pc, #92]	; 80011a4 <main+0x10c>
- 800114a:	eef4 7ac7 	vcmpe.f32	s15, s14
- 800114e:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8001152:	dd02      	ble.n	800115a <main+0xc2>
+ 8001150:	4b10      	ldr	r3, [pc, #64]	; (8001194 <main+0xb4>)
+ 8001152:	edd3 7a00 	vldr	s15, [r3]
+ 8001156:	ed9f 7a13 	vldr	s14, [pc, #76]	; 80011a4 <main+0xc4>
+ 800115a:	eef4 7ac7 	vcmpe.f32	s15, s14
+ 800115e:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8001162:	dd02      	ble.n	800116a <main+0x8a>
 	      {
 	          servoAngle = 50.0;
- 8001154:	4b0f      	ldr	r3, [pc, #60]	; (8001194 <main+0xfc>)
- 8001156:	4a14      	ldr	r2, [pc, #80]	; (80011a8 <main+0x110>)
- 8001158:	601a      	str	r2, [r3, #0]
+ 8001164:	4b0b      	ldr	r3, [pc, #44]	; (8001194 <main+0xb4>)
+ 8001166:	4a10      	ldr	r2, [pc, #64]	; (80011a8 <main+0xc8>)
+ 8001168:	601a      	str	r2, [r3, #0]
 	      }
 
 	  Servo3_Angle(servoAngle);
- 800115a:	4b0e      	ldr	r3, [pc, #56]	; (8001194 <main+0xfc>)
- 800115c:	edd3 7a00 	vldr	s15, [r3]
- 8001160:	eefd 7ae7 	vcvt.s32.f32	s15, s15
- 8001164:	ee17 0a90 	vmov	r0, s15
- 8001168:	f7ff ff80 	bl	800106c <Servo3_Angle>
+ 800116a:	4b0a      	ldr	r3, [pc, #40]	; (8001194 <main+0xb4>)
+ 800116c:	edd3 7a00 	vldr	s15, [r3]
+ 8001170:	eefd 7ae7 	vcvt.s32.f32	s15, s15
+ 8001174:	ee17 0a90 	vmov	r0, s15
+ 8001178:	f7ff ff9e 	bl	80010b8 <Servo3_Angle>
 
 
 
 
 //-----------SERVO AYARLARI-------------------------------------------
 	  Servo1_Angle(90);
- 800116c:	205a      	movs	r0, #90	; 0x5a
- 800116e:	f7ff ff41 	bl	8000ff4 <Servo1_Angle>
+ 800117c:	205a      	movs	r0, #90	; 0x5a
+ 800117e:	f7ff ff5f 	bl	8001040 <Servo1_Angle>
 	  Servo2_Angle(59);
- 8001172:	203b      	movs	r0, #59	; 0x3b
- 8001174:	f7ff ff5c 	bl	8001030 <Servo2_Angle>
-	  distance = Read_HCSR04(); //cm cinsinden mesafe
- 8001178:	e7ab      	b.n	80010d2 <main+0x3a>
- 800117a:	bf00      	nop
- 800117c:	f3af 8000 	nop.w
- 8001180:	cccccccd 	.word	0xcccccccd
- 8001184:	4008cccc 	.word	0x4008cccc
- 8001188:	20000084 	.word	0x20000084
- 800118c:	2000003c 	.word	0x2000003c
- 8001190:	200000cc 	.word	0x200000cc
+ 8001182:	203b      	movs	r0, #59	; 0x3b
+ 8001184:	f7ff ff7a 	bl	800107c <Servo2_Angle>
+	  PID_Control();
+ 8001188:	e7c7      	b.n	800111a <main+0x3a>
+ 800118a:	bf00      	nop
+ 800118c:	20000084 	.word	0x20000084
+ 8001190:	2000003c 	.word	0x2000003c
  8001194:	20000010 	.word	0x20000010
  8001198:	200000d0 	.word	0x200000d0
  800119c:	420c0000 	.word	0x420c0000
@@ -2739,7 +2736,7 @@ LoopFillZerobss:
  80016ee:	f002 f827 	bl	8003740 <__libc_init_array>
 /* Call the application's entry point.*/
   bl  main
- 80016f2:	f7ff fcd1 	bl	8001098 <main>
+ 80016f2:	f7ff fcf5 	bl	80010e0 <main>
   bx  lr    
  80016f6:	4770      	bx	lr
   ldr   sp, =_estack      /* set stack pointer */
