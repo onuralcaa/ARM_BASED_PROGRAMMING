@@ -77,9 +77,9 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL****************************
 
 // PID kontrol değişkenleri
-double Kp = 1.75; // P (Proportional) katsayısı
+double Kp = 1.55; // P (Proportional) katsayısı
 double Ki = 0; // I (Integral) katsayısı
-double Kd = 0.05; // D (Derivative) katsayısı
+double Kd = 0.025; // D (Derivative) katsayısı
 
 // Hesaplanan PID kontrol çıkışı
 double pidOutput = 0.0;
@@ -255,10 +255,10 @@ int main(void)
 	      servoAngle = servoAngle + pidOutput * (-1);
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 30.0) {
-	          servoAngle = 30.0;
-	      } else if (servoAngle > 55.0) {
-	          servoAngle = 55.0;
+	      if (servoAngle < 25.0) {
+	          servoAngle = 25.0;
+	      } else if (servoAngle > 60.0) {
+	          servoAngle = 60.0;
 	      }
 
 	  Servo3_Angle(servoAngle);

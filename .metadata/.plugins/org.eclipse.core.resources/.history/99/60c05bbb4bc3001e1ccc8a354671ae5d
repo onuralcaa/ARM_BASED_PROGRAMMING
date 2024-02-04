@@ -255,10 +255,10 @@ int main(void)
 	      servoAngle = servoAngle + pidOutput * (-1);
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 30.0) {
-	          servoAngle = 30.0;
-	      } else if (servoAngle > 55.0) {
-	          servoAngle = 55.0;
+	      if (servoAngle < 25.0) {
+	          servoAngle = 25.0;
+	      } else if (servoAngle > 60.0) {
+	          servoAngle = 60.0;
 	      }
 
 	  Servo3_Angle(servoAngle);
