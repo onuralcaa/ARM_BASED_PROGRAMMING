@@ -74,29 +74,29 @@ void delay_uS(uint16_t us)
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-//************************PID KONTROL****************************
+//************************PID KONTROL BOLUMU****************************
 
 // PID kontrol değişkenleri
-double Kp = 0.05; // P (Proportional) katsayısı
-double Ki = 0; // I (Integral) katsayısı
-double Kd = 0.0; // D (Derivative) katsayısı
+float Kp = 0.0025; // P (Proportional) katsayısı
+float Ki = 0; // I (Integral) katsayısı
+float Kd = 0; // D (Derivative) katsayısı
 
 // Hesaplanan PID kontrol çıkışı
-double pidOutput = 0.0;
+float pidOutput = 0.0;
 
 // PID kontrol değişkenleri
-double error = 0.0; // Hata
-double integral = 0.0; // İntegral
-double derivative = 0.0; // Türev
-double lastError = 0.0; // Son hata
+float error = 0.0; // Hata
+float integral = 0.0; // İntegral
+float derivative = 0.0; // Türev
+float lastError = 0.0; // Son hata
 
 // Hedef uzaklık
-double setpoint = 13.0;
+float setpoint = 13.0;
 
 
 // Servo açısı
-double servoAngle = 45.0;
-double servoAngle_rev;
+float servoAngle = 45.0;
+float servoAngle_rev;
 
 // PID kontrol fonksiyonu
 void calculatePID() {
@@ -253,10 +253,14 @@ int main(void)
 	      servoAngle = servoAngle + pidOutput * (-1);
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 35.0) {
-	          servoAngle = 35.0;
-	      } else if (servoAngle > 50.0) {
-	          servoAngle = 50.0;
+	      if (servoAngle < 25.0)
+	      {
+	          servoAngle = 25.0;
+	      }
+
+	      else if (servoAngle > 60.0)
+	      {
+	          servoAngle = 60.0;
 	      }
 
 	  Servo3_Angle(servoAngle);
