@@ -77,7 +77,7 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL BOLUMU****************************
 
 // PID kontrol değişkenleri
-float Kp = 0.175; // P (Proportional) katsayısı
+float Kp = 0.0175; // P (Proportional) katsayısı
 float Ki = 0.0001; // I (Integral) katsayısı
 float Kd = 0.0025; // D (Derivative) katsayısı
 
@@ -104,15 +104,15 @@ void calculatePID() {
     // Hata hesapla
     error = setpoint - distance;
 
-    if(error > 6) error = 6;
-        else if(error < -6) error = -6;
+    if(error > 13) error = 13;
+        else if(error < -13) error = -13;
         else error = error;
 
     // İntegral hesapla
     integral += error;
 
-    if(integral > 6) integral = 6;
-    else if(integral < -6) integral = -6;
+    if(integral > 8) integral = 8;
+    else if(integral < -8) integral = -8;
     else integral = integral;
 
     // Türev hesapla
@@ -265,14 +265,14 @@ int main(void)
 
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 35.0)
+	      if (servoAngle < 30.0)
 	      {
-	          servoAngle = 35.0;
+	          servoAngle = 30.0;
 	      }
 
-	      else if (servoAngle > 50.0)
+	      else if (servoAngle > 52.0)
 	      {
-	          servoAngle = 50.0;
+	          servoAngle = 52.0;
 	      }
 
 	  Servo3_Angle(servoAngle);
