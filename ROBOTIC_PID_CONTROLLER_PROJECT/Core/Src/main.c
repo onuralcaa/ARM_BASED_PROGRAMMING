@@ -77,9 +77,10 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL BOLUMU****************************
 
 // PID kontrol değişkenleri
-float Kp = 0.0025; // P (Proportional) katsayısı
+float Kp = 0.1; // P (Proportional) katsayısı
 float Ki = 0; // I (Integral) katsayısı
-float Kd = 0; // D (Derivative) katsayısı
+float Kd = 0.1; // D (Derivative) katsayısı
+
 
 // Hesaplanan PID kontrol çıkışı
 float pidOutput = 0.0;
@@ -91,7 +92,7 @@ float derivative = 0.0; // Türev
 float lastError = 0.0; // Son hata
 
 // Hedef uzaklık
-float setpoint = 13.0;
+float setpoint = 10.89;
 
 
 // Servo açısı
@@ -240,27 +241,28 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
 	  //Mesafe hesaplanması*************************
 	  distance = Read_HCSR04(); //cm cinsinden mesafe
-  	  distance -= 3.1; //offset
+	  distance -= 3.1; //offset
 
+	  // PID kontrolünü hesapla
+	  calculatePID();
 
-
-      // PID kontrolünü hesapla
-      calculatePID();
 
 	  // Servo açısını güncelle
 	      servoAngle = servoAngle + pidOutput * (-1);
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 25.0)
+	      if (servoAngle < 35.0)
 	      {
-	          servoAngle = 25.0;
+	          servoAngle = 35.0;
 	      }
 
-	      else if (servoAngle > 60.0)
+	      else if (servoAngle > 48.0)
 	      {
-	          servoAngle = 60.0;
+	          servoAngle = 48.0;
 	      }
 
 	  Servo3_Angle(servoAngle);
