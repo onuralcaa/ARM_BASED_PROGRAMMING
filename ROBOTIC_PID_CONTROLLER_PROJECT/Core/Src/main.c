@@ -77,9 +77,9 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL BOLUMU****************************
 
 // PID kontrol değişkenleri
-float Kp = 0.1; // P (Proportional) katsayısı
-float Ki = 0; // I (Integral) katsayısı
-float Kd = 0.1; // D (Derivative) katsayısı
+float Kp = 0.0075; // P (Proportional) katsayısı
+float Ki = 0.0001; // I (Integral) katsayısı
+float Kd = 0.0025; // D (Derivative) katsayısı
 
 
 // Hesaplanan PID kontrol çıkışı
@@ -106,6 +106,10 @@ void calculatePID() {
 
     // İntegral hesapla
     integral += error;
+
+    if(integral > 8) integral = 8;
+    else if(integral < -8) integral = -8;
+    else integral = integral;
 
     // Türev hesapla
     derivative = error - lastError;
@@ -154,6 +158,7 @@ uint32_t Read_HCSR04()
 	}
 
 	distance_temp = (float)local_time/15.1;
+	HAL_Delay(100);
 	return distance_temp;
 }
 
