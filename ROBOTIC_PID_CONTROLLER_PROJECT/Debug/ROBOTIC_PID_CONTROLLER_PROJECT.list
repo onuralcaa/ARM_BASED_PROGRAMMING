@@ -9,41 +9,41 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .rodata       00000010  080038d0  080038d0  000138d0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  080038e0  080038e0  0002002c  2**0
+  3 .ARM.extab    00000000  080038e0  080038e0  00020024  2**0
                   CONTENTS
   4 .ARM          00000008  080038e0  080038e0  000138e0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  080038e8  080038e8  0002002c  2**0
+  5 .preinit_array 00000000  080038e8  080038e8  00020024  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   6 .init_array   00000004  080038e8  080038e8  000138e8  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   7 .fini_array   00000004  080038ec  080038ec  000138ec  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         0000002c  20000000  080038f0  00020000  2**3
+  8 .data         00000024  20000000  080038f0  00020000  2**3
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          000000e4  20000030  0800391c  00020030  2**3
+  9 .bss          000000ec  20000028  08003914  00020028  2**3
                   ALLOC
- 10 ._user_heap_stack 00000604  20000114  0800391c  00020114  2**0
+ 10 ._user_heap_stack 00000604  20000114  08003914  00020114  2**0
                   ALLOC
- 11 .ARM.attributes 00000030  00000000  00000000  0002002c  2**0
+ 11 .ARM.attributes 00000030  00000000  00000000  00020024  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00009c92  00000000  00000000  0002005c  2**0
+ 12 .debug_info   00009ca4  00000000  00000000  00020054  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00001755  00000000  00000000  00029cee  2**0
+ 13 .debug_abbrev 00001755  00000000  00000000  00029cf8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000a28  00000000  00000000  0002b448  2**3
+ 14 .debug_aranges 00000a28  00000000  00000000  0002b450  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000960  00000000  00000000  0002be70  2**3
+ 15 .debug_ranges 00000960  00000000  00000000  0002be78  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00020b5f  00000000  00000000  0002c7d0  2**0
+ 16 .debug_macro  00020b5f  00000000  00000000  0002c7d8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000b8ab  00000000  00000000  0004d32f  2**0
+ 17 .debug_line   0000b8ab  00000000  00000000  0004d337  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000ca45c  00000000  00000000  00058bda  2**0
+ 18 .debug_str    000ca46b  00000000  00000000  00058be2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  00123036  2**0
+ 19 .comment      00000050  00000000  00000000  0012304d  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002c20  00000000  00000000  00123088  2**2
+ 20 .debug_frame  00002c20  00000000  00000000  001230a0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -60,7 +60,7 @@ Disassembly of section .text:
  80001da:	2301      	movs	r3, #1
  80001dc:	7023      	strb	r3, [r4, #0]
  80001de:	bd10      	pop	{r4, pc}
- 80001e0:	20000030 	.word	0x20000030
+ 80001e0:	20000028 	.word	0x20000028
  80001e4:	00000000 	.word	0x00000000
  80001e8:	080038b8 	.word	0x080038b8
 
@@ -73,7 +73,7 @@ Disassembly of section .text:
  80001f6:	f3af 8000 	nop.w
  80001fa:	bd08      	pop	{r3, pc}
  80001fc:	00000000 	.word	0x00000000
- 8000200:	20000034 	.word	0x20000034
+ 8000200:	2000002c 	.word	0x2000002c
  8000204:	080038b8 	.word	0x080038b8
 
 08000208 <__aeabi_drsub>:
@@ -1295,9 +1295,9 @@ __STATIC_INLINE void DWT_Delay_us(volatile uint32_t microseconds)
  8000f4c:	431bde83 	.word	0x431bde83
 
 08000f50 <calculatePID>:
-
 // Servo açısı
 double servoAngle = 45.0;
+double servoAngle_rev;
 
 // PID kontrol fonksiyonu
 void calculatePID() {
@@ -1394,15 +1394,15 @@ void calculatePID() {
 }
  800101c:	bf00      	nop
  800101e:	bdb0      	pop	{r4, r5, r7, pc}
- 8001020:	20000010 	.word	0x20000010
- 8001024:	200000dc 	.word	0x200000dc
+ 8001020:	20000008 	.word	0x20000008
+ 8001024:	200000d4 	.word	0x200000d4
  8001028:	200000f0 	.word	0x200000f0
  800102c:	200000f8 	.word	0x200000f8
  8001030:	20000108 	.word	0x20000108
  8001034:	20000100 	.word	0x20000100
  8001038:	20000000 	.word	0x20000000
- 800103c:	200000e0 	.word	0x200000e0
- 8001040:	20000008 	.word	0x20000008
+ 800103c:	200000d8 	.word	0x200000d8
+ 8001040:	200000e0 	.word	0x200000e0
  8001044:	200000e8 	.word	0x200000e8
 
 08001048 <Read_HCSR04>:
@@ -1545,7 +1545,7 @@ void Servo1_Angle(int angle1)
  8001134:	f85d 7b04 	ldr.w	r7, [sp], #4
  8001138:	4770      	bx	lr
  800113a:	bf00      	nop
- 800113c:	2000004c 	.word	0x2000004c
+ 800113c:	20000044 	.word	0x20000044
 
 08001140 <Servo2_Angle>:
 
@@ -1587,7 +1587,7 @@ void Servo2_Angle(int angle2)
  8001170:	f85d 7b04 	ldr.w	r7, [sp], #4
  8001174:	4770      	bx	lr
  8001176:	bf00      	nop
- 8001178:	2000004c 	.word	0x2000004c
+ 8001178:	20000044 	.word	0x20000044
 
 0800117c <Servo3_Angle>:
 
@@ -1615,7 +1615,7 @@ void Servo3_Angle(int angle3)
  8001198:	f85d 7b04 	ldr.w	r7, [sp], #4
  800119c:	4770      	bx	lr
  800119e:	bf00      	nop
- 80011a0:	2000004c 	.word	0x2000004c
+ 80011a0:	20000044 	.word	0x20000044
  80011a4:	00000000 	.word	0x00000000
 
 080011a8 <main>:
@@ -1722,7 +1722,7 @@ int main(void)
  8001234:	e9c1 2300 	strd	r2, r3, [r1]
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 30.0) {
+	      if (servoAngle < 35.0) {
  8001238:	4b20      	ldr	r3, [pc, #128]	; (80012bc <main+0x114>)
  800123a:	e9d3 0100 	ldrd	r0, r1, [r3]
  800123e:	f04f 0200 	mov.w	r2, #0
@@ -1731,13 +1731,13 @@ int main(void)
  8001248:	4603      	mov	r3, r0
  800124a:	2b00      	cmp	r3, #0
  800124c:	d006      	beq.n	800125c <main+0xb4>
-	          servoAngle = 30.0;
+	          servoAngle = 35.0;
  800124e:	491b      	ldr	r1, [pc, #108]	; (80012bc <main+0x114>)
  8001250:	f04f 0200 	mov.w	r2, #0
  8001254:	4b1b      	ldr	r3, [pc, #108]	; (80012c4 <main+0x11c>)
  8001256:	e9c1 2300 	strd	r2, r3, [r1]
  800125a:	e010      	b.n	800127e <main+0xd6>
-	      } else if (servoAngle > 55.0) {
+	      } else if (servoAngle > 50.0) {
  800125c:	4b17      	ldr	r3, [pc, #92]	; (80012bc <main+0x114>)
  800125e:	e9d3 0100 	ldrd	r0, r1, [r3]
  8001262:	f04f 0200 	mov.w	r2, #0
@@ -1746,7 +1746,7 @@ int main(void)
  800126c:	4603      	mov	r3, r0
  800126e:	2b00      	cmp	r3, #0
  8001270:	d005      	beq.n	800127e <main+0xd6>
-	          servoAngle = 55.0;
+	          servoAngle = 50.0;
  8001272:	4912      	ldr	r1, [pc, #72]	; (80012bc <main+0x114>)
  8001274:	f04f 0200 	mov.w	r2, #0
  8001278:	4b13      	ldr	r3, [pc, #76]	; (80012c8 <main+0x120>)
@@ -1779,13 +1779,13 @@ int main(void)
  80012a4:	f3af 8000 	nop.w
  80012a8:	cccccccd 	.word	0xcccccccd
  80012ac:	4008cccc 	.word	0x4008cccc
- 80012b0:	20000094 	.word	0x20000094
- 80012b4:	2000004c 	.word	0x2000004c
- 80012b8:	200000dc 	.word	0x200000dc
- 80012bc:	20000018 	.word	0x20000018
+ 80012b0:	2000008c 	.word	0x2000008c
+ 80012b4:	20000044 	.word	0x20000044
+ 80012b8:	200000d4 	.word	0x200000d4
+ 80012bc:	20000010 	.word	0x20000010
  80012c0:	200000e8 	.word	0x200000e8
- 80012c4:	403e0000 	.word	0x403e0000
- 80012c8:	404b8000 	.word	0x404b8000
+ 80012c4:	40418000 	.word	0x40418000
+ 80012c8:	40490000 	.word	0x40490000
 
 080012cc <SystemClock_Config>:
 /**
@@ -2125,7 +2125,7 @@ static void MX_TIM1_Init(void)
  80014d2:	3748      	adds	r7, #72	; 0x48
  80014d4:	46bd      	mov	sp, r7
  80014d6:	bd80      	pop	{r7, pc}
- 80014d8:	2000004c 	.word	0x2000004c
+ 80014d8:	20000044 	.word	0x20000044
  80014dc:	40010000 	.word	0x40010000
 
 080014e0 <MX_TIM2_Init>:
@@ -2235,7 +2235,7 @@ static void MX_TIM2_Init(void)
  800156e:	3718      	adds	r7, #24
  8001570:	46bd      	mov	sp, r7
  8001572:	bd80      	pop	{r7, pc}
- 8001574:	20000094 	.word	0x20000094
+ 8001574:	2000008c 	.word	0x2000008c
 
 08001578 <MX_GPIO_Init>:
   * @brief GPIO Initialization Function
@@ -2864,11 +2864,11 @@ LoopFillZerobss:
   ldr r0, =_sdata
  800181c:	20000000 	.word	0x20000000
   ldr r1, =_edata
- 8001820:	2000002c 	.word	0x2000002c
+ 8001820:	20000024 	.word	0x20000024
   ldr r2, =_sidata
  8001824:	080038f0 	.word	0x080038f0
   ldr r2, =_sbss
- 8001828:	20000030 	.word	0x20000030
+ 8001828:	20000028 	.word	0x20000028
   ldr r4, =_ebss
  800182c:	20000114 	.word	0x20000114
 
@@ -3004,9 +3004,9 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
  80018c6:	3708      	adds	r7, #8
  80018c8:	46bd      	mov	sp, r7
  80018ca:	bd80      	pop	{r7, pc}
- 80018cc:	20000020 	.word	0x20000020
- 80018d0:	20000028 	.word	0x20000028
- 80018d4:	20000024 	.word	0x20000024
+ 80018cc:	20000018 	.word	0x20000018
+ 80018d0:	20000020 	.word	0x20000020
+ 80018d4:	2000001c 	.word	0x2000001c
 
 080018d8 <HAL_IncTick>:
  * @note This function is declared as __weak to be overwritten in case of other 
@@ -3032,7 +3032,7 @@ __weak void HAL_IncTick(void)
  80018f0:	f85d 7b04 	ldr.w	r7, [sp], #4
  80018f4:	4770      	bx	lr
  80018f6:	bf00      	nop
- 80018f8:	20000028 	.word	0x20000028
+ 80018f8:	20000020 	.word	0x20000020
  80018fc:	20000110 	.word	0x20000110
 
 08001900 <HAL_GetTick>:
@@ -4294,8 +4294,8 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, ui
  8002028:	40023c00 	.word	0x40023c00
  800202c:	40023800 	.word	0x40023800
  8002030:	080038d0 	.word	0x080038d0
- 8002034:	20000020 	.word	0x20000020
- 8002038:	20000024 	.word	0x20000024
+ 8002034:	20000018 	.word	0x20000018
+ 8002038:	2000001c 	.word	0x2000001c
 
 0800203c <HAL_RCC_GetHCLKFreq>:
   * @note   The SystemCoreClock CMSIS variable is used to store System Clock Frequency
@@ -4315,7 +4315,7 @@ uint32_t HAL_RCC_GetHCLKFreq(void)
  8002048:	f85d 7b04 	ldr.w	r7, [sp], #4
  800204c:	4770      	bx	lr
  800204e:	bf00      	nop
- 8002050:	20000020 	.word	0x20000020
+ 8002050:	20000018 	.word	0x20000018
 
 08002054 <HAL_RCC_GetSysClockFreq>:
   *

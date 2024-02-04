@@ -1,6 +1,6 @@
 distance
-Servo_Angle
-control_output
+servoAngle
+pidOutput
 error
 integral
 derivative
