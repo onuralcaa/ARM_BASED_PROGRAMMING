@@ -79,7 +79,7 @@ void delay_uS(uint16_t us)
 // PID kontrol değişkenleri
 float Kp = 0.0075; // P (Proportional) katsayısı
 float Ki = 0.0001; // I (Integral) katsayısı
-float Kd = 0.0025; // D (Derivative) katsayısı
+float Kd = 0.0005; // D (Derivative) katsayısı
 
 
 // Hesaplanan PID kontrol çıkışı
@@ -158,8 +158,8 @@ uint32_t Read_HCSR04()
 	}
 
 	distance_temp = (float)local_time/15.1;
-	HAL_Delay(100);
 	return distance_temp;
+	DWT_Delay_us(10);
 }
 
 void Servo1_Angle(int angle1)
@@ -251,7 +251,7 @@ int main(void)
 	  //Mesafe hesaplanması*************************
 	  distance = Read_HCSR04(); //cm cinsinden mesafe
 	  distance -= 3.1; //offset
-
+/*
 	  // PID kontrolünü hesapla
 	  calculatePID();
 
@@ -259,20 +259,21 @@ int main(void)
 	  // Servo açısını güncelle
 	      servoAngle = servoAngle + pidOutput * (-1);
 
+
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 35.0)
+	      if (servoAngle < 30.0)
 	      {
-	          servoAngle = 35.0;
+	          servoAngle = 30.0;
 	      }
 
-	      else if (servoAngle > 48.0)
+	      else if (servoAngle > 52.0)
 	      {
-	          servoAngle = 48.0;
+	          servoAngle = 52.0;
 	      }
 
 	  Servo3_Angle(servoAngle);
 
-
+*/
 	  //Read_ADC();
 
 	      //HAL_Delay(1000);
@@ -286,8 +287,8 @@ int main(void)
 
 //-----------SERVO AYARLARI-------------------------------------------
 	  Servo1_Angle(90);
-	  Servo2_Angle(45);
-	  //Servo3_Angle(45);
+	  Servo2_Angle(60);
+	  Servo3_Angle(45);
 
 
   }
