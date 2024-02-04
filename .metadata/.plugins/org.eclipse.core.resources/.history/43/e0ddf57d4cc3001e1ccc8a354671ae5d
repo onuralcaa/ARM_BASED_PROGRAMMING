@@ -77,9 +77,9 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL****************************
 
 // PID kontrol değişkenleri
-double Kp = 0.25; // P (Proportional) katsayısı
+double Kp = 0.55; // P (Proportional) katsayısı
 double Ki = 0; // I (Integral) katsayısı
-double Kd = 0.0015; // D (Derivative) katsayısı
+double Kd = 0.0025; // D (Derivative) katsayısı
 
 // Hesaplanan PID kontrol çıkışı
 double pidOutput = 0.0;
