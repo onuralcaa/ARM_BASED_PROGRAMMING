@@ -104,10 +104,6 @@ void calculatePID() {
     // Hata hesapla
     error = setpoint - distance;
 
-    if(error > 13) error = 13;
-        else if(error < -13) error = -13;
-        else error = error;
-
     // İntegral hesapla
     integral += error;
 
