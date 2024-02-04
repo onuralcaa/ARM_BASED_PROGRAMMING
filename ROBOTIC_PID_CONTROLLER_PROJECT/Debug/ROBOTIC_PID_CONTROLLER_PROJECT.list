@@ -1321,12 +1321,12 @@ void PID_Control()
  8000f3c:	6013      	str	r3, [r2, #0]
 
 	    // İntegral hesapla
-	    integral += error;
+	    integral -= error;
  8000f3e:	4b39      	ldr	r3, [pc, #228]	; (8001024 <PID_Control+0x234>)
  8000f40:	ed93 7a00 	vldr	s14, [r3]
  8000f44:	4b34      	ldr	r3, [pc, #208]	; (8001018 <PID_Control+0x228>)
  8000f46:	edd3 7a00 	vldr	s15, [r3]
- 8000f4a:	ee77 7a27 	vadd.f32	s15, s14, s15
+ 8000f4a:	ee77 7a67 	vsub.f32	s15, s14, s15
  8000f4e:	4b35      	ldr	r3, [pc, #212]	; (8001024 <PID_Control+0x234>)
  8000f50:	edc3 7a00 	vstr	s15, [r3]
 

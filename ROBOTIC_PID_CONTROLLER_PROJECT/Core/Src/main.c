@@ -160,7 +160,7 @@ void PID_Control()
 	        else error = error;
 
 	    // İntegral hesapla
-	    integral += error;
+	    integral -= error;
 
 	    if(integral > 6) integral = 6;
 	    else if(integral < -6) integral = -6;
