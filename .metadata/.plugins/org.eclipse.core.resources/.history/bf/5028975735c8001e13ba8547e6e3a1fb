@@ -200,7 +200,7 @@ void Servo2_Angle(int angle2)
 	//angle2 += 45; //offset değeri
 
 	__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, angle2);
- }
+}
 
 void Servo3_Angle(int angle3)
 {
@@ -299,7 +299,7 @@ int main(void)
 
 //-----------SERVO AYARLARI-------------------------------------------
 	  //Servo1_Angle(90);
-	  Servo2_Angle(75);
+	  Servo2_Angle(56);
 	  //Servo3_Angle(48);
 
 

@@ -186,7 +186,7 @@ void Servo1_Angle(int angle1)
 
 	angle1 += 45; //offset değeri
 
-	__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, angle1);
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, angle1);
 
 }
 
@@ -197,17 +197,17 @@ void Servo2_Angle(int angle2)
 	if(angle2 > 90)
 		angle2 = 90;
 
-	//angle2 += 45; //offset değeri
+	angle2 += 45; //offset değeri
 
-	__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, angle2);
- }
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, angle2);
+}
 
 void Servo3_Angle(int angle3)
 {
 
 	angle3 += 45; //offset değeri
 
-	__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, angle3);
+	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, angle3);
 }
 
 
@@ -255,9 +255,6 @@ int main(void)
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 
 
-
-
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -298,9 +295,9 @@ int main(void)
 
 
 //-----------SERVO AYARLARI-------------------------------------------
-	  //Servo1_Angle(90);
-	  Servo2_Angle(75);
-	  //Servo3_Angle(48);
+	  Servo1_Angle(90);
+	  Servo2_Angle(56);
+	  Servo3_Angle(48);
 
 
   }
