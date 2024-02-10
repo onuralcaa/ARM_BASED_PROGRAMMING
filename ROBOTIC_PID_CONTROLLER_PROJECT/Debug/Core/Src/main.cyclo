@@ -3,8 +3,8 @@ main.c:123:6:PID_Control	7
 main.c:180:6:Servo1_Angle	3
 main.c:193:6:Servo2_Angle	3
 main.c:205:6:Servo3_Angle	1
-main.c:221:5:main	1
+main.c:221:5:main	3
 main.c:314:6:SystemClock_Config	4
-main.c:368:13:MX_TIM2_Init	8
-main.c:436:13:MX_GPIO_Init	1
-main.c:475:6:Error_Handler	1
+main.c:368:13:MX_TIM1_Init	7
+main.c:441:13:MX_GPIO_Init	1
+main.c:479:6:Error_Handler	1

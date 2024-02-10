@@ -1,30 +1,11 @@
-19:55:50 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
-../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
-  106 | //**********************************************************************
-      |   
-arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
- 
-arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
-arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
-   text	   data	    bss	    dec	    hex	filename
-  11616	     20	   1644	  13280	   33e0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
-Finished building: default.size.stdout
- 
-Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
- 
-19:56:02 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+20:23:11 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
 make -j8 all 
 arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
    text	   data	    bss	    dec	    hex	filename
-  11616	     20	   1644	  13280	   33e0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+  10064	     20	   1644	  11728	   2dd0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
 Finished building: default.size.stdout
  
-19:56:32 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+20:27:31 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
@@ -36,15 +17,155 @@ Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
 arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
 arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
    text	   data	    bss	    dec	    hex	filename
-  11616	     20	   1644	  13280	   33e0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
 Finished building: default.size.stdout
  
 Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
  
-20:04:44 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+20:28:29 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
 arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
    text	   data	    bss	    dec	    hex	filename
-  11616	     20	   1644	  13280	   33e0	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
 Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:28:59 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:29:24 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:29:50 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:30:17 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:32:05 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:32:33 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:106:2: warning: "/*" within comment [-Wcomment]
+  106 | //**********************************************************************
+      |   
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:33:10 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  10176	     20	   1644	  11840	   2e40	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
+ 
+20:33:50 **** Incremental Build of configuration Debug for project ROBOTIC_PID_CONTROLLER_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ROBOTIC_PID_CONTROLLER_PROJECT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\ROBOTIC_PID_CONTROLLER_PROJECT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOTIC_PID_CONTROLLER_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ROBOTIC_PID_CONTROLLER_PROJECT.elf
+ 
+arm-none-eabi-size   ROBOTIC_PID_CONTROLLER_PROJECT.elf 
+arm-none-eabi-objdump -h -S  ROBOTIC_PID_CONTROLLER_PROJECT.elf  > "ROBOTIC_PID_CONTROLLER_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  13068	     36	   1668	  14772	   39b4	ROBOTIC_PID_CONTROLLER_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ROBOTIC_PID_CONTROLLER_PROJECT.list
  
