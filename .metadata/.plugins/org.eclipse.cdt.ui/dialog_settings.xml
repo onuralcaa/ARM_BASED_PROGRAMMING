@@ -14,7 +14,9 @@
 		<item key="askReindex.detail" value="0"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item key="size.width" value="692"/>
-		<item key="size.height" value="180"/>
+		<item key="size.width" value="857"/>
+		<item key="size.height" value="181"/>
+	</section>
+	<section name="NewClassWizardPage">
 	</section>
 </section>
