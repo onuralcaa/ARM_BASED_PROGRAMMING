@@ -50,6 +50,7 @@ TIM_HandleTypeDef htim2;
 //uint16_t adc_value = 0;
 
 float distance; //0-255 olcum araligi
+unsigned int sayac;
 
 /* USER CODE END PV */
 
@@ -77,9 +78,9 @@ void delay_uS(uint16_t us)
 //************************PID KONTROL BOLUMU****************************
 
 // PID kontrol değişkenleri
-float Kp = 0.175; // P (Proportional) katsayısı
-float Ki = 0.0001; // I (Integral) katsayısı
-float Kd = 0.0025; // D (Derivative) katsayısı
+float Kp = 0.075; // P (Proportional) katsayısı
+float Ki = 0.0; // I (Integral) katsayısı
+float Kd = 0.01; // D (Derivative) katsayısı
 
 
 // Hesaplanan PID kontrol çıkışı
@@ -162,9 +163,11 @@ void PID_Control()
 	    // İntegral hesapla
 	    integral -= error;
 
+	    /*
 	    if(integral > 6) integral = 6;
 	    else if(integral < -6) integral = -6;
 	    else integral = integral;
+        */
 
 	    // Türev hesapla
 	    derivative = error - lastError;
@@ -260,6 +263,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+	  /*
 	  PID_Control();
 
 	  // Servo açısını güncelle
@@ -267,9 +272,9 @@ int main(void)
 
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 35.0)
+	      if (servoAngle < 40.0)
 	      {
-	          servoAngle = 35.0;
+	          servoAngle = 50.0;
 	      }
 
 	      else if (servoAngle > 50.0)
@@ -279,7 +284,7 @@ int main(void)
 
 	  Servo3_Angle(servoAngle);
 
-
+*/
 	  //Read_ADC();
 
 	      //HAL_Delay(1000);
@@ -293,8 +298,8 @@ int main(void)
 
 //-----------SERVO AYARLARI-------------------------------------------
 	  Servo1_Angle(90);
-	  Servo2_Angle(59);
-	  //Servo3_Angle(45);
+	  Servo2_Angle(56);
+	  Servo3_Angle(48);
 
 
   }
