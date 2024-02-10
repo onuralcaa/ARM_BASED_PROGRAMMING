@@ -248,14 +248,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 
-
-
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-
-
-
 
 
   /* USER CODE END 2 */
@@ -265,22 +260,22 @@ int main(void)
   while (1)
   {
 
-
 	  PID_Control();
+	  HAL_Delay(500);
 
 	  // Servo açısını güncelle
 	      servoAngle = servoAngle + pidOutput * (-1);
 
 
 	      // Servo açısını sınırla (0 ile 90 arasında)
-	      if (servoAngle < 40.0)
+	      if (servoAngle < 35.0)
 	      {
-	          servoAngle = 50.0;
+	          servoAngle = 35.0;
 	      }
 
-	      else if (servoAngle > 50.0)
+	      else if (servoAngle > 55.0)
 	      {
-	          servoAngle = 50.0;
+	          servoAngle = 55.0;
 	      }
 
 	  Servo3_Angle(servoAngle);
@@ -288,7 +283,7 @@ int main(void)
 
 	  //Read_ADC();
 
-	      //HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
