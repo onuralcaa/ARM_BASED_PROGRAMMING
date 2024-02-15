@@ -1,0 +1,13 @@
+spi_flash.c:6:9:SPIFLASH_disk_initialize	4	static
+spi_flash.c:13:9:SPI_Read_Byte	8	static
+spi_flash.c:18:9:SPI_Write_Byte	32	static
+spi_flash.c:27:5:W25X_GetChipID	16	static
+spi_flash.c:47:6:W25X_Read_StatusReg	16	static
+spi_flash.c:67:6:W25X_Write_Enable	8	static
+spi_flash.c:83:6:W25X_Wait_Busy	8	static
+spi_flash.c:90:6:W25X_Erase_Sector	16	static
+spi_flash.c:107:6:W25X_Erase_Block	16	static
+spi_flash.c:124:6:W25X_Erase_Chip	8	static
+spi_flash.c:138:6:W25X_Read_Bytes	40	static
+spi_flash.c:156:6:W25X_Read_Sector	32	static
+spi_flash.c:198:6:W25X_Write_Sector	24	static

@@ -1,0 +1,8 @@
+LCDConf_FlexColor.c:111:13:LcdWriteReg	16	static
+LCDConf_FlexColor.c:126:11:LcdReadReg	4	static
+LCDConf_FlexColor.c:138:13:LcdWriteData	16	static
+LCDConf_FlexColor.c:153:13:LcdWriteDataMultiple	16	static
+LCDConf_FlexColor.c:170:13:LcdReadDataMultiple	16	static
+LCDConf_FlexColor.c:176:6:LcdInit	16	static
+LCDConf_FlexColor.c:331:6:LCD_X_Config	136	static
+LCDConf_FlexColor.c:382:5:LCD_X_DisplayDriver	32	static
