@@ -1796,3 +1796,13 @@ org.osgi.service.prefs.BackingStoreException: Exception occurred while saving pr
 	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 77 2024-02-15 16:36:23.559
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-02-15 16:36:23.559
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-02-15 16:36:23.559
+!MESSAGE C:\Users\onura\STM32CubeIDE\workspace_1.11.0\013_2_SPI_FLASH_EXAMPLE overlaps the location of another project: '013_2_SPI_FLASH_EXAMPLE'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-02-15 16:36:23.559
+!MESSAGE Project is null
