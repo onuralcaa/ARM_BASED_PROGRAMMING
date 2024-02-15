@@ -58,6 +58,16 @@ static void MX_SPI2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+//Değişkenler ilk olarak main de tanımlandı fakat yazma işlemi hata verdiğinden sonradan global olarak tanımlandı.
+
+    FATFS     fs;
+	FRESULT   res;
+
+	FIL 	  file;
+	char buffer[100];
+	char brw;
+
+	char write_buffer[50] = {"STM32 FatsFS yazma denemesi."};
 /* USER CODE END 0 */
 
 /**
@@ -67,14 +77,6 @@ static void MX_SPI2_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
-	FATFS     fs;
-	FRESULT   res;
-
-	FIL 	  file;
-	char buffer[100];
-	char byteread;
-
 
   /* USER CODE END 1 */
 
@@ -100,6 +102,8 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
+  //DOSYA OKUMA
+
   res = f_mount(&fs, "", 0); //sd kartın mount(aktif) edilmesini sağlar.
   if(res != FR_OK)
   {
@@ -109,19 +113,32 @@ int main(void)
   res = f_open(&file, "test.txt", FA_READ);
   if(res == FR_OK) //Dosya içeriğinin okunması.
   {
-	  res = f_read(&file, buffer, sizeof(buffer), byteread); //br değeriyle okunan karakter sayısı geri döndürülür.
-
+	  res = f_read(&file, buffer, sizeof(buffer), brw); //br değeriyle okunan karakter sayısı geri döndürülür.
 
 	  if(res == FR_OK) __NOP(); //birşey yapma.
 	  else __NOP();
 
   }
 
-  else
-  {
-
-  }
   fclose(&file);
+
+
+  //DOSYAYA YAZMA
+
+  res = f_open(&file, "test2.txt", FA_CREATE_ALWAYS | FA_WRITE); //Dosya yoksa oluştur.
+    if(res == FR_OK)
+    {
+  	  res = f_write(&file, write_buffer, sizeof(write_buffer), brw);
+
+  	  if(res == FR_OK) __NOP(); //birşey yapma.
+  	  else __NOP();
+
+    }
+    fclose(&file);
+
+
+
+
 
 
   /* USER CODE END 2 */

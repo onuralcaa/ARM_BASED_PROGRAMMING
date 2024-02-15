@@ -1,32 +1,7 @@
-14:06:32 **** Incremental Build of configuration Debug for project 013_1_FATFS_file_system ****
+14:21:25 **** Incremental Build of configuration Debug for project 013_1_FATFS_file_system ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../FATFS/Target -I../FATFS/App -I../Middlewares/Third_Party/FatFs/src -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:112:48: warning: passing argument 4 of 'f_read' makes pointer from integer without a cast [-Wint-conversion]
-  112 |    res = f_read(&file, buffer, sizeof(buffer), byteread); //br değeriyle okunan karakter sayısı geri döndürülür.
-      |                                                ^~~~~~~~
-      |                                                |
-      |                                                char
-In file included from ../FATFS/App/fatfs.h:26,
-                 from ../Core/Src/main.c:21:
-../Middlewares/Third_Party/FatFs/src/ff.h:244:54: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'char'
-  244 | FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);   /* Read data from the file */
-      |                                                ~~~~~~^~
-../Core/Src/main.c:124:3: warning: implicit declaration of function 'fclose'; did you mean 'f_close'? [-Wimplicit-function-declaration]
-  124 |   fclose(&file);
-      |   ^~~~~~
-      |   f_close
-../Core/Src/main.c:112:10: warning: 'byteread' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  112 |    res = f_read(&file, buffer, sizeof(buffer), byteread); //br değeriyle okunan karakter sayısı geri döndürülür.
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "013_1_FATFS_file_system.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\013_1_FATFS_file_system\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="013_1_FATFS_file_system.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 013_1_FATFS_file_system.elf
- 
 arm-none-eabi-size   013_1_FATFS_file_system.elf 
-arm-none-eabi-objdump -h -S  013_1_FATFS_file_system.elf  > "013_1_FATFS_file_system.list"
    text	   data	    bss	    dec	    hex	filename
-  21856	    144	   1744	  23744	   5cc0	013_1_FATFS_file_system.elf
+  22696	    196	   2972	  25864	   6508	013_1_FATFS_file_system.elf
 Finished building: default.size.stdout
- 
-Finished building: 013_1_FATFS_file_system.list
  
