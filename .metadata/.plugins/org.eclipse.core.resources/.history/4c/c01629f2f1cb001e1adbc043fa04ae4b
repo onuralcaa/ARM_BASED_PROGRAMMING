@@ -71,10 +71,6 @@ int main(void)
 	FATFS     fs;
 	FRESULT   res;
 
-	FIL 	  file;
-	char buffer[100];
-	char byteread;
-
 
   /* USER CODE END 1 */
 
@@ -106,22 +102,6 @@ int main(void)
 	 while(1); //mount edilmezse kilitle.
   }
 
-  res = f_open(&file, "test.txt", FA_READ);
-  if(res == FR_OK) //Dosya içeriğinin okunması.
-  {
-	  res = f_read(&file, buffer, sizeof(buffer), byteread); //br değeriyle okunan karakter sayısı geri döndürülür.
-
-
-	  if(res == FR_OK) __NOP(); //birşey yapma.
-	  else __NOP();
-
-  }
-
-  else
-  {
-
-  }
-  fclose(&file);
 
 
   /* USER CODE END 2 */

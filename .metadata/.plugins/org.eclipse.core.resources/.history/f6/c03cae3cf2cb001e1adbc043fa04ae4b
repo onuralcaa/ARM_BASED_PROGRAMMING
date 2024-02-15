@@ -73,7 +73,6 @@ int main(void)
 
 	FIL 	  file;
 	char buffer[100];
-	char byteread;
 
 
   /* USER CODE END 1 */
@@ -109,12 +108,7 @@ int main(void)
   res = f_open(&file, "test.txt", FA_READ);
   if(res == FR_OK) //Dosya içeriğinin okunması.
   {
-	  res = f_read(&file, buffer, sizeof(buffer), byteread); //br değeriyle okunan karakter sayısı geri döndürülür.
-
-
-	  if(res == FR_OK) __NOP(); //birşey yapma.
-	  else __NOP();
-
+	  f_read(&file, buffer, sizeof(buffer), br); //br değeriyle okunan karakter sayısı geri döndürülür.
   }
 
   else
