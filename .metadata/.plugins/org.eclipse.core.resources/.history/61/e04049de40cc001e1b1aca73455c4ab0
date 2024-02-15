@@ -402,14 +402,14 @@ void LCD_X_Config(void) {
   GUIDRV_FlexColor_Config(pDevice, &Config);
   //
   // Set controller and operation mode
-  //16 bit e göre ayar yapıldı.
+  //
   PortAPI.pfWrite16_A0  = LcdWriteReg;
   PortAPI.pfWrite16_A1  = LcdWriteData;
   PortAPI.pfWriteM16_A1 = LcdWriteDataMultiple;
 
 
   GUIDRV_FlexColor_SetFunc(pDevice, &PortAPI, GUIDRV_FLEXCOLOR_F66709, GUIDRV_FLEXCOLOR_M16C0B16);//ILI9341, 16bit color, 16 bit bus, no cache
-}  //data bus 16 bit
+}
 
 /*********************************************************************
 *

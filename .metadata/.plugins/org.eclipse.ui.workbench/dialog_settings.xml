@@ -27,6 +27,7 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\014_3_STM32_ILI9341_STEMWIN_16BIT_3.2inch"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\013_2_STM32_SPI_Flash"/>
 		</list>
 	</section>
