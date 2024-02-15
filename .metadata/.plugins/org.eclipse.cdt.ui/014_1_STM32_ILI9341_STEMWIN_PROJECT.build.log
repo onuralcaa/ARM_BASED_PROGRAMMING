@@ -1,0 +1,22 @@
+17:04:37 **** Incremental Build of configuration Debug for project 014_1_STM32_ILI9341_STEMWIN_PROJECT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../GUI/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:98:3: warning: implicit declaration of function 'MainLCDTask'; did you mean 'MainTask'? [-Wimplicit-function-declaration]
+   98 |   MainLCDTask();
+      |   ^~~~~~~~~~~
+      |   MainTask
+arm-none-eabi-gcc -o "014_1_STM32_ILI9341_STEMWIN_PROJECT.elf" @"objects.list"  -l:libSTemWin.a -mcpu=cortex-m4 -T"C:\Users\onura\STM32CubeIDE\workspace_1.11.0\014_1_STM32_ILI9341_STEMWIN_PROJECT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="014_1_STM32_ILI9341_STEMWIN_PROJECT.map" -Wl,--gc-sections -static -L../GUI/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 014_1_STM32_ILI9341_STEMWIN_PROJECT.elf
+ 
+arm-none-eabi-size   014_1_STM32_ILI9341_STEMWIN_PROJECT.elf 
+arm-none-eabi-objdump -h -S  014_1_STM32_ILI9341_STEMWIN_PROJECT.elf  > "014_1_STM32_ILI9341_STEMWIN_PROJECT.list"
+   text	   data	    bss	    dec	    hex	filename
+  65360	    500	   2492	  68352	  10b00	014_1_STM32_ILI9341_STEMWIN_PROJECT.elf
+Finished building: default.size.stdout
+ 
+Finished building: 014_1_STM32_ILI9341_STEMWIN_PROJECT.list
+ 
+
+17:04:38 Build Finished. 0 errors, 1 warnings. (took 1s.98ms)
+

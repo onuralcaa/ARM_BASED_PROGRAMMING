@@ -1,0 +1,8 @@
+LCDConf_FlexColor.c:111:13:LcdWriteReg	1
+LCDConf_FlexColor.c:126:11:LcdReadReg	1
+LCDConf_FlexColor.c:138:13:LcdWriteData	1
+LCDConf_FlexColor.c:153:13:LcdWriteDataMultiple	2
+LCDConf_FlexColor.c:170:13:LcdReadDataMultiple	2
+LCDConf_FlexColor.c:176:6:LcdInit	2
+LCDConf_FlexColor.c:331:6:LCD_X_Config	1
+LCDConf_FlexColor.c:382:5:LCD_X_DisplayDriver	2

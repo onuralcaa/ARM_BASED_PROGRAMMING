@@ -1806,3 +1806,9 @@ org.osgi.service.prefs.BackingStoreException: Exception occurred while saving pr
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-02-15 16:36:23.559
 !MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-15 16:50:48.016
+!MESSAGE Indexed '014_1_STM32_ILI9341_STEMWIN_PROJECT' (19 sources, 81 headers) in 3.53 sec: 4,376 declarations; 17,620 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0091%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-02-15 17:01:18.555
+!MESSAGE Indexed '014_1_STM32_ILI9341_STEMWIN_PROJECT' (26 sources, 94 headers) in 1.77 sec: 9,281 declarations; 29,896 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0051%)
