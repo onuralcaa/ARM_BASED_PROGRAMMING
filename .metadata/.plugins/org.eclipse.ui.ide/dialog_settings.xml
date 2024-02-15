@@ -9,6 +9,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\014_3_STM32_ILI9341_STEMWIN_16BIT_3.2ınch"/>
+			<item value="C:\Users\onura\OneDrive\Masaüstü\014_2_STM32_ILI9341_EMWIN_FATFS"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\013_2_STM32_SPI_Flash"/>
 			<item value="C:\Users\onura\OneDrive\Masaüstü\Kişisel Çalışmalarım\STM_Ders\001_1_SYSTEM_CLOCK_CONFIG_AND_PLL_SETTINGS"/>
 			<item value="C:\Users\onura\OneDrive\Masaüstü\002_I2C_EXAMPLE_MPU6050\Core"/>

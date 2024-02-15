@@ -1,0 +1,8 @@
+../Core/Src/LCDConf_FlexColor.c:190:13:LcdWriteReg	16	static
+../Core/Src/LCDConf_FlexColor.c:202:11:LcdReadReg	4	static
+../Core/Src/LCDConf_FlexColor.c:214:13:LcdWriteData	16	static
+../Core/Src/LCDConf_FlexColor.c:226:13:LcdWriteDataMultiple	16	static
+../Core/Src/LCDConf_FlexColor.c:241:13:LcdReadDataMultiple	16	static
+../Core/Src/LCDConf_FlexColor.c:247:6:LcdInit	8	static
+../Core/Src/LCDConf_FlexColor.c:385:6:LCD_X_Config	136	static
+../Core/Src/LCDConf_FlexColor.c:435:5:LCD_X_DisplayDriver	32	static
