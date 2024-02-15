@@ -1,0 +1,16 @@
+bsp_spi_flash.c:21:6:SPI_FLASH_Init	4	static
+bsp_spi_flash.c:27:6:SPI_FLASH_SectorErase	16	static
+bsp_spi_flash.c:48:6:SPI_FLASH_BulkErase	8	static
+bsp_spi_flash.c:64:6:SPI_FLASH_PageWrite	24	static
+bsp_spi_flash.c:96:6:SPI_FLASH_BufferWrite	32	static
+bsp_spi_flash.c:204:6:SPI_FLASH_BufferRead	24	static
+bsp_spi_flash.c:225:10:SPI_FLASH_ReadJedecDeviceID	24	static
+bsp_spi_flash.c:248:10:SPI_FLASH_ReadDeviceID	16	static
+bsp_spi_flash.c:270:6:SPI_FLASH_StartReadSequence	16	static
+bsp_spi_flash.c:282:6:SPI_FLASH_PowerDown	8	static
+bsp_spi_flash.c:292:6:SPI_FLASH_WakeUp	8	static
+bsp_spi_flash.c:301:9:SPI_FLASH_ReadByte	8	static
+bsp_spi_flash.c:308:9:SPI_FLASH_SendByte	32	static
+bsp_spi_flash.c:319:6:SPI_FLASH_WriteEnable	8	static
+bsp_spi_flash.c:330:6:SPI_FLASH_WaitForWriteEnd	16	static
+bsp_spi_flash.c:347:10:SPI_TimeOut_UserCallBack	16	static

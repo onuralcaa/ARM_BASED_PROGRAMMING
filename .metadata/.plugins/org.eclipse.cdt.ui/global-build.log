@@ -1,7 +1,72 @@
-14:21:25 **** Incremental Build of configuration Debug for project 013_1_FATFS_file_system ****
+14:45:51 **** Incremental Build of configuration Debug for project 013_2_SPI_FLASH_EXAMPLE ****
 make -j8 all 
-arm-none-eabi-size   013_1_FATFS_file_system.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22696	    196	   2972	  25864	   6508	013_1_FATFS_file_system.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../FATFS/Target -I../FATFS/App -I../Middlewares/Third_Party/FatFs/src -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:10: warning: implicit declaration of function '_mkfs'; did you mean 'f_mkfs'? [-Wimplicit-function-declaration]
+  103 |   fres = _mkfs("", FM_ANY, 0, buffer, sizeof(buffer));
+      |          ^~~~~
+      |          f_mkfs
+../Core/Src/main.c:105:21: error: 'SFlash_Driver' undeclared (first use in this function)
+  105 |   FATFS_LinkDriver(&SFlash_Driver, SFLASHPath);
+      |                     ^~~~~~~~~~~~~
+../Core/Src/main.c:105:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:105:36: warning: passing argument 2 of 'FATFS_LinkDriver' from incompatible pointer type [-Wincompatible-pointer-types]
+  105 |   FATFS_LinkDriver(&SFlash_Driver, SFLASHPath);
+      |                                    ^~~~~~~~~~
+      |                                    |
+      |                                    FIL *
+In file included from ../FATFS/App/fatfs.h:27,
+                 from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:67:62: note: expected 'char *' but argument is of type 'FIL *'
+   67 | uint8_t FATFS_LinkDriver(const Diskio_drvTypeDef *drv, char *path);
+      |                                                        ~~~~~~^~~~
+../Core/Src/main.c:108:26: warning: passing argument 2 of 'f_mount' from incompatible pointer type [-Wincompatible-pointer-types]
+  108 |   fres = f_mount(&FatFs, &SFLASHPath, 0);
+      |                          ^~~~~~~~~~~
+      |                          |
+      |                          FIL (*)[]
+In file included from ../FATFS/App/fatfs.h:26,
+                 from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FatFs/src/ff.h:268:42: note: expected 'const TCHAR *' {aka 'const char *'} but argument is of type 'FIL (*)[]'
+  268 | FRESULT f_mount (FATFS* fs, const TCHAR* path, BYTE opt);   /* Mount/Unmount a logical drive */
+      |                             ~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:114:17: warning: passing argument 1 of 'f_open' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |   fres = f_open(&SFLASHPath, "test.txt", FA_CREATE_ALWAYS | FA_WRITE);
+      |                 ^~~~~~~~~~~
+      |                 |
+      |                 FIL (*)[]
+In file included from ../FATFS/App/fatfs.h:26,
+                 from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FatFs/src/ff.h:242:22: note: expected 'FIL *' but argument is of type 'FIL (*)[]'
+  242 | FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);    /* Open or create a file */
+      |                 ~~~~~^~
+../Core/Src/main.c:121:19: warning: passing argument 1 of 'f_write' from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |    fres = f_write(&SFLASHPath, &str, sizeof(str), brw);
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   FIL (*)[]
+In file included from ../FATFS/App/fatfs.h:26,
+                 from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FatFs/src/ff.h:245:23: note: expected 'FIL *' but argument is of type 'FIL (*)[]'
+  245 | FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw); /* Write data to the file */
+      |                  ~~~~~^~
+../Core/Src/main.c:121:51: warning: passing argument 4 of 'f_write' makes pointer from integer without a cast [-Wint-conversion]
+  121 |    fres = f_write(&SFLASHPath, &str, sizeof(str), brw);
+      |                                                   ^~~
+      |                                                   |
+      |                                                   int
+In file included from ../FATFS/App/fatfs.h:26,
+                 from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FatFs/src/ff.h:245:61: note: expected 'UINT *' {aka 'unsigned int *'} but argument is of type 'int'
+  245 | FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw); /* Write data to the file */
+      |                                                       ~~~~~~^~
+../Core/Src/main.c:123:3: warning: implicit declaration of function 'fclose'; did you mean 'f_close'? [-Wimplicit-function-declaration]
+  123 |   fclose(&SFLASHPath);
+      |   ^~~~~~
+      |   f_close
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:49:5: warning: array 'SFLASHPath' assumed to have one element
+   49 | FIL SFLASHPath[];
+      |     ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
