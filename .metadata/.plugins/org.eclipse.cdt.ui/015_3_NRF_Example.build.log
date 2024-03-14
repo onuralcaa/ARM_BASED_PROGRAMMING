@@ -1,0 +1,10 @@
+12:12:12 **** Incremental Build of configuration Debug for project 015_3_NRF_Example ****
+make -j8 all 
+arm-none-eabi-size   015_3_NRF_Example.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12724	     20	   1780	  14524	   38bc	015_3_NRF_Example.elf
+Finished building: default.size.stdout
+ 
+
+12:12:13 Build Finished. 0 errors, 0 warnings. (took 330ms)
+

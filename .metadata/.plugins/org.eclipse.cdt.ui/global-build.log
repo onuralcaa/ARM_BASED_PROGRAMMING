@@ -1,7 +1,7 @@
-11:37:43 **** Incremental Build of configuration Debug for project 015_2_STM32_SSD1306_INA219 ****
+12:12:12 **** Incremental Build of configuration Debug for project 015_3_NRF_Example ****
 make -j8 all 
-arm-none-eabi-size   015_2_STM32_SSD1306_INA219.elf 
+arm-none-eabi-size   015_3_NRF_Example.elf 
    text	   data	    bss	    dec	    hex	filename
-  36908	    496	   2328	  39732	   9b34	015_2_STM32_SSD1306_INA219.elf
+  12724	     20	   1780	  14524	   38bc	015_3_NRF_Example.elf
 Finished building: default.size.stdout
  

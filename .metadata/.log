@@ -8827,3 +8827,26 @@ java.lang.Exception: The project description file (.project) for '014_2_STM32_IL
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 11:37:43.147
 !MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-14 12:12:01.289
+!MESSAGE Indexed '015_3_NRF_Example' (24 sources, 102 headers) in 2.53 sec: 8,537 declarations; 30,877 references; 2 unresolved inclusions; 42 syntax errors; 145 unresolved names (0.37%)
+
+!ENTRY org.eclipse.core.resources 4 77 2024-03-14 12:12:08.464
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-03-14 12:12:08.464
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-03-14 12:12:08.464
+!MESSAGE C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_3_NRF_Example overlaps the location of another project: '015_3_NRF_Example'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 12:12:08.472
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2024-03-14 12:12:12.966
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-03-14 12:12:12.966
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-03-14 12:12:12.966
+!MESSAGE C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_3_NRF_Example overlaps the location of another project: '015_3_NRF_Example'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 12:12:12.966
+!MESSAGE Project is null

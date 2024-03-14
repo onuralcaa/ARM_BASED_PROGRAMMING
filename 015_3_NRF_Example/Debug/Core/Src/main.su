@@ -1,8 +1,8 @@
-main.c:73:5:main	8	static
-main.c:130:6:SystemClock_Config	88	static
-main.c:173:13:MX_SPI1_Init	8	static
-main.c:211:13:MX_GPIO_Init	40	static
-main.c:253:6:HAL_GPIO_EXTI_Callback	16	static
-main.c:265:6:NRFSendData	16	static
-main.c:274:6:NRF_main_init	8	static
-main.c:319:6:Error_Handler	4	static
+../Core/Src/main.c:73:5:main	8	static
+../Core/Src/main.c:134:6:SystemClock_Config	88	static
+../Core/Src/main.c:177:13:MX_SPI1_Init	8	static
+../Core/Src/main.c:215:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:257:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/main.c:269:6:NRFSendData	16	static
+../Core/Src/main.c:278:6:NRF_main_init	8	static
+../Core/Src/main.c:323:6:Error_Handler	4	static
