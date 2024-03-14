@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;015_5_STM32_FREETROS_EXAMPLE&apos; to &apos;015_5_STM32_FREERTOS_EXAMPLE&apos;" description="Rename resource &apos;015_5_STM32_FREETROS_EXAMPLE&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/015_5_STM32_FREETROS_EXAMPLE" name="015_5_STM32_FREERTOS_EXAMPLE" stamp="1710445622022" updateReferences="true"/>
+</session>

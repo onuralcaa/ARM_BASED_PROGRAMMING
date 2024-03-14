@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_5_STM32_FREETROS_EXAMPLE"/>
+			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_4_STM32_WS2812"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_3_NRF_Example"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_2_STM32_SSD1306_INA219"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_1_SSD1306_LCD_Example"/>
