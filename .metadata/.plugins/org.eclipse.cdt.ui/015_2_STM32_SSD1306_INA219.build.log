@@ -1,0 +1,10 @@
+11:37:43 **** Incremental Build of configuration Debug for project 015_2_STM32_SSD1306_INA219 ****
+make -j8 all 
+arm-none-eabi-size   015_2_STM32_SSD1306_INA219.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36908	    496	   2328	  39732	   9b34	015_2_STM32_SSD1306_INA219.elf
+Finished building: default.size.stdout
+ 
+
+11:37:43 Build Finished. 0 errors, 0 warnings. (took 316ms)
+

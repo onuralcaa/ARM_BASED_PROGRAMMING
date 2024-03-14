@@ -8794,3 +8794,36 @@ java.lang.Exception: The project description file (.project) for '014_2_STM32_IL
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 11:12:22.499
 !MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2024-03-14 11:14:04.479
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-03-14 11:14:04.479
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-03-14 11:14:04.479
+!MESSAGE C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_1_SSD1306_LCD_Example overlaps the location of another project: '015_1_SSD1306_LCD_Example'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 11:14:04.479
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-14 11:37:30.492
+!MESSAGE Indexed '015_2_STM32_SSD1306_INA219' (26 sources, 107 headers) in 3.1 sec: 8,852 declarations; 36,663 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.32%)
+
+!ENTRY org.eclipse.core.resources 4 77 2024-03-14 11:37:37.892
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-03-14 11:37:37.892
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-03-14 11:37:37.892
+!MESSAGE C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_2_STM32_SSD1306_INA219 overlaps the location of another project: '015_2_STM32_SSD1306_INA219'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 11:37:37.906
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2024-03-14 11:37:43.147
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-03-14 11:37:43.147
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-03-14 11:37:43.147
+!MESSAGE C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_2_STM32_SSD1306_INA219 overlaps the location of another project: '015_2_STM32_SSD1306_INA219'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2024-03-14 11:37:43.147
+!MESSAGE Project is null
