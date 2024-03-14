@@ -1,7 +1,7 @@
-12:12:12 **** Incremental Build of configuration Debug for project 015_3_NRF_Example ****
+21:56:03 **** Incremental Build of configuration Debug for project 015_4_STM32_WS2812 ****
 make -j8 all 
-arm-none-eabi-size   015_3_NRF_Example.elf 
+arm-none-eabi-size   015_4_STM32_WS2812.elf 
    text	   data	    bss	    dec	    hex	filename
-  12724	     20	   1780	  14524	   38bc	015_3_NRF_Example.elf
+  17500	    120	   2272	  19892	   4db4	015_4_STM32_WS2812.elf
 Finished building: default.size.stdout
  
