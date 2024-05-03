@@ -1,0 +1,16 @@
+../LWIP/Target/ethernetif.c:135:6:HAL_ETH_RxCpltCallback	16	static
+../LWIP/Target/ethernetif.c:144:6:HAL_ETH_TxCpltCallback	16	static
+../LWIP/Target/ethernetif.c:153:6:HAL_ETH_ErrorCallback	16	static
+../LWIP/Target/ethernetif.c:175:13:low_level_init	64	static
+../LWIP/Target/ethernetif.c:287:14:low_level_output	80	static
+../LWIP/Target/ethernetif.c:342:22:low_level_input	24	static
+../LWIP/Target/ethernetif.c:363:13:ethernetif_input	24	static
+../LWIP/Target/ethernetif.c:420:7:ethernetif_init	16	static
+../LWIP/Target/ethernetif.c:471:6:pbuf_free_custom	24	static
+../LWIP/Target/ethernetif.c:494:7:sys_jiffies	8	static
+../LWIP/Target/ethernetif.c:505:7:sys_now	8	static
+../LWIP/Target/ethernetif.c:521:6:ethernet_link_thread	16	static
+../LWIP/Target/ethernetif.c:539:6:HAL_ETH_RxAllocateCallback	32	static
+../LWIP/Target/ethernetif.c:561:6:HAL_ETH_RxLinkCallback	40	static
+../LWIP/Target/ethernetif.c:598:6:HAL_ETH_TxFreeCallback	16	static
+../LWIP/Target/ethernetif.c:613:13:ethernetif_notify_conn_changed	16	static

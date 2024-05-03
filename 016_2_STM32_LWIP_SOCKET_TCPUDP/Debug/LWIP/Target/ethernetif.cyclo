@@ -1,0 +1,16 @@
+ethernetif.c:135:6:HAL_ETH_RxCpltCallback	1
+ethernetif.c:144:6:HAL_ETH_TxCpltCallback	1
+ethernetif.c:153:6:HAL_ETH_ErrorCallback	2
+ethernetif.c:175:13:low_level_init	2
+ethernetif.c:287:14:low_level_output	6
+ethernetif.c:342:22:low_level_input	2
+ethernetif.c:363:13:ethernetif_input	5
+ethernetif.c:420:7:ethernetif_init	2
+ethernetif.c:471:6:pbuf_free_custom	2
+ethernetif.c:494:7:sys_jiffies	1
+ethernetif.c:505:7:sys_now	1
+ethernetif.c:521:6:ethernet_link_thread	1
+ethernetif.c:539:6:HAL_ETH_RxAllocateCallback	2
+ethernetif.c:561:6:HAL_ETH_RxLinkCallback	3
+ethernetif.c:598:6:HAL_ETH_TxFreeCallback	1
+ethernetif.c:613:13:ethernetif_notify_conn_changed	1
