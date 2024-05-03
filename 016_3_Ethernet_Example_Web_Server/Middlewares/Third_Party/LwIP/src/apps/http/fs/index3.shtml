@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STM32 Web Server</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+	<br>Value1: <!--#tag1--></br>
+	<br>Value2: <!--#tag2--></br>
+                   
+</body>
+</html>
