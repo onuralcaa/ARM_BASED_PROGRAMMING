@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\016_1_Ethernet_Example"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_5_STM32_FREETROS_EXAMPLE"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_4_STM32_WS2812"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\015_3_NRF_Example"/>
@@ -54,5 +55,8 @@
 		</list>
 	</section>
 	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item key="OUTSIDE_LOCATION" value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\016_1_Ethernet_Example"/>
 	</section>
 </section>

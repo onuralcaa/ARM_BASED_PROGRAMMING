@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;016_1_Ethernet_Example/Ethernet_Example.ioc&apos; to &apos;016_1_Ethernet_Example.ioc&apos;" description="Rename resource &apos;Ethernet_Example.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Ethernet_Example.ioc" name="016_1_Ethernet_Example.ioc" stamp="1714757064820" updateReferences="true"/>
+</session>
