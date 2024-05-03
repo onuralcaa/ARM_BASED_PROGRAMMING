@@ -1,0 +1,15 @@
+../Core/Src/tftpserver.c:112:7:tftp_send_message	32	static
+../Core/Src/tftpserver.c:142:5:tftp_construct_error_message	24	static
+../Core/Src/tftpserver.c:167:5:tftp_send_error_message	560	static
+../Core/Src/tftpserver.c:189:5:tftp_send_data_packet	560	static
+../Core/Src/tftpserver.c:212:5:tftp_send_ack_packet	40	static
+../Core/Src/tftpserver.c:238:6:tftp_cleanup_rd	16	static
+../Core/Src/tftpserver.c:261:6:tftp_cleanup_wr	16	static
+../Core/Src/tftpserver.c:287:6:tftp_send_next_block	32	static
+../Core/Src/tftpserver.c:310:6:rrq_recv_callback	32	static
+../Core/Src/tftpserver.c:353:6:wrq_recv_callback	32	static
+../Core/Src/tftpserver.c:426:5:tftp_process_read	32	static
+../Core/Src/tftpserver.c:480:5:tftp_process_write	32	static
+../Core/Src/tftpserver.c:528:6:process_tftp_request	64	static
+../Core/Src/tftpserver.c:605:6:recv_callback_tftp	24	static
+../Core/Src/tftpserver.c:622:6:tftpd_init	16	static

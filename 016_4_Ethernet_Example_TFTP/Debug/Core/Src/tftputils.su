@@ -1,0 +1,9 @@
+../Core/Src/tftputils.c:52:13:tftp_decode_op	16	static
+../Core/Src/tftputils.c:60:7:tftp_extract_block	24	static
+../Core/Src/tftputils.c:69:6:tftp_extract_filename	16	static
+../Core/Src/tftputils.c:77:6:tftp_set_opcode	16	static
+../Core/Src/tftputils.c:87:6:tftp_set_errorcode	16	static
+../Core/Src/tftputils.c:97:6:tftp_set_errormsg	16	static
+../Core/Src/tftputils.c:105:6:tftp_set_block	32	static
+../Core/Src/tftputils.c:115:6:tftp_set_data_message	24	static
+../Core/Src/tftputils.c:123:7:tftp_is_correct_ack	16	static
