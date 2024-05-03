@@ -13,7 +13,7 @@
 
 # Haberleşme Protokolleri
 
-- - UART (Universal Asynchronous Receiver/Transmitter)
+- UART (Universal Asynchronous Receiver/Transmitter)
 - SPI (Serial Peripheral Interface)
 - I2C (Inter-Integrated Circuit)
 - CAN (Controller Area Network)
