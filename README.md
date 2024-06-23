@@ -30,3 +30,15 @@
 - Akış Kontrolü ve Hata Denetimi
 - Bağlantı Kurma ve Bağlantı Sonlandırma
 - Hız ve Verimlilik
+
+
+## SPI Haberleşme protokolü
+
+SPI (Serial Peripheral Interface), mikrodenetleyiciler ve diğer entegre devreler arasında yüksek hızlı veri iletimi için kullanılan bir seri haberleşme protokolüdür. SPI, dört ana hat kullanır:
+
+1. **MOSI (Master Out Slave In)**: Master cihazdan Slave cihazına veri gönderir.
+2. **MISO (Master In Slave Out)**: Slave cihazdan Master cihaza veri gönderir.
+3. **SCLK (Serial Clock)**: Master cihaz tarafından üretilen saat sinyali.
+4. **SS (Slave Select)**: Hangi Slave cihazın aktif olduğunu belirleyen sinyal.
+
+SPI, tam çift yönlü (full-duplex) veri iletimi sağlar ve genellikle yüksek hızlarda çalışır. Master cihaz, saat sinyalini kontrol eder ve veri iletimini senkronize eder. Slave cihazlar, SS hattı aracılığıyla seçilir ve veri iletimi gerçekleştirilir. SPI, basit yapısı ve yüksek hızı nedeniyle birçok uygulamada tercih edilir.
