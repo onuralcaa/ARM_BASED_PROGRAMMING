@@ -1,0 +1,6 @@
+../Core/Src/PersonelGecisDLG.c:105:13:_cbDialog	16	static
+../Core/Src/PersonelGecisDLG.c:129:9:CreatePersonelGecis	24	static
+../Core/Src/PersonelGecisDLG.c:137:6:RFID_Card_Check_ID	16	static
+../Core/Src/PersonelGecisDLG.c:151:6:CheckDataBase	40	static
+../Core/Src/PersonelGecisDLG.c:193:12:_GetData	32	static
+../Core/Src/PersonelGecisDLG.c:209:6:RFID_Reader	32	static

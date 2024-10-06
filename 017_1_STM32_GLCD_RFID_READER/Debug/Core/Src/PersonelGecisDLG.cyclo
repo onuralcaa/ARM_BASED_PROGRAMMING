@@ -1,0 +1,6 @@
+PersonelGecisDLG.c:105:13:_cbDialog	1
+PersonelGecisDLG.c:129:9:CreatePersonelGecis	1
+PersonelGecisDLG.c:137:6:RFID_Card_Check_ID	2
+PersonelGecisDLG.c:151:6:CheckDataBase	6
+PersonelGecisDLG.c:193:12:_GetData	1
+PersonelGecisDLG.c:209:6:RFID_Reader	5

@@ -1,0 +1,10 @@
+19:24:31 **** Incremental Build of configuration Debug for project 017_1_STM32_GLCD_RFID_READER ****
+make -j8 all 
+arm-none-eabi-size   017_1_STM32_GLCD_RFID_READER.elf 
+   text	   data	    bss	    dec	    hex	filename
+  89288	    404	  30284	 119976	  1d4a8	017_1_STM32_GLCD_RFID_READER.elf
+Finished building: default.size.stdout
+ 
+
+19:24:32 Build Finished. 0 errors, 0 warnings. (took 392ms)
+

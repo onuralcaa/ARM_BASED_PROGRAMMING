@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\017_1_STM32_GLCD_RFID_READER"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\016_4_Ethernet_Example_TFTP"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\016_3_Ethernet_Example_Web_Server"/>
 			<item value="C:\Users\onura\STM32CubeIDE\workspace_1.11.0\016_2_STM32_LWIP_SOCKET_TCPUDP"/>

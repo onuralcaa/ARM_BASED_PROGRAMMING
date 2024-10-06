@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;017_1_STM32_GLCD_RFID_READER/STM32_GLCD_RFID_READER.ioc&apos; to &apos;017_1_STM32_GLCD_RFID_READER.ioc&apos;" description="Rename resource &apos;STM32_GLCD_RFID_READER.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="STM32_GLCD_RFID_READER.ioc" name="017_1_STM32_GLCD_RFID_READER.ioc" stamp="1715371224552" updateReferences="true"/>
+</session>
